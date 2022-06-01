@@ -1,0 +1,417 @@
+	    /*REMOVER BIBLIOTECA - DISPLAY I2C NO FINAL*/
+
+//sdcard
+#include <SD.h>
+#include <SPI.h>
+
+// ========================================DS3231======================================================
+// --- Bibliotecas Auxiliares ---
+/*
+
+  DS3231    -> Arduino UNO
+  -----------------------------------------
+  VCC pin   -> Analógico 2 (utilizado como digital 17)
+  GND pin   -> Analógico 3 (utilizado como digital 16)
+  SDA pin   -> Analógico 4 (SDA)
+  SCL pin   -> Analógico 5 (SCL)
+
+*/
+#include <DS3231.h>          //Inclui a biblioteca do DS3231 Shield
+
+
+// ====================================================================================================
+// --- Mapeamento de Hardware ---
+#define    vcc    17
+#define    gnd    16
+
+
+// ====================================================================================================
+// --- Declaração de Objetos ---
+DS3231  rtc(SDA, SCL);
+Time t;
+int horas, ano, minutos;
+
+
+// ===========================================DS3231===================================================
+
+
+File myFile;
+
+int pinCS = 10; // Pin 10 on Arduino Uno -> 53
+
+
+
+
+/* remover comentário - > only works with arduino mega
+  #include "Nextion.h"
+
+  //id pagina, id componente, nome componente
+
+  NexWaveform s0 = NexWaveform(1, 1, "wave_form");
+  //add nextext page 0
+*/
+
+//====================================================
+
+/*===============NEXTION===============*/
+//============INTERFACE GRÁFICA====ARDUINO NANO====
+//biblioteca
+#include <Nextion.h>
+//criar objeto
+//ID PAGE, ID COMPONENT, NAME
+NexDSButton button_1 = NexDSButton(0, 1, "MODIFICAR");
+NexTouch *nex_listen_list[] =
+{
+  //events that will be expected by the serial interface.
+  &button_1,
+  NULL
+};
+//button storage variable.
+uint32_t number;
+
+
+
+#include <Wire.h>
+#include <Adafruit_MCP4725.h>
+#include <Adafruit_INA219.h>
+#include <LiquidCrystal_I2C.h>
+
+LiquidCrystal_I2C lcd(0x3F, 20, 4);
+Adafruit_INA219 ina219(0X40);
+Adafruit_MCP4725 dac;
+
+const int Q2 = 8;
+const int Q3 = 9;
+const int anal00 = A0;
+const int anal01 = A1;
+int anal00value = 0;
+int anal01value = 0;
+float anal00output = 0.0;
+float anal01output = 0.0;
+float current = 0.0;
+
+int btflag = 0;
+
+// medida de corrente
+float voltage_V = 0, shuntVoltage_mV, busVoltage_V;
+float current_mA = 0;
+float power_mW = 0;
+float energy_Wh = 0;
+long time_s = 0;
+
+
+
+void charge_discharge_battery()
+{
+  Serial.print("var_set_value: ");
+  Serial.println(number);
+  //cout << self.name <<endl;
+  // HIGH Q3 --> CHARGE BATTERY
+  // LOW Q2 --> CHARGE BATTERY
+
+  //=====================
+
+  // LOW Q3 --> DISCHARGE BATTERY
+  // HIGH Q2 --> DISCHARGE BATTERY
+  /*
+    button_1.getValue(&number);
+    if (number == 1) {
+    //CHARGE BATTERY
+    digitalWrite(Q3, HIGH); // P - CHANNEL
+    digitalWrite(Q2, LOW); // N -  CHANNEL
+    }
+    else {
+    //the value will be stored in the variable -> so if this value be equal 0 (number==0)(the battery will be discharged)
+    //DISCHARGE BATTERY
+    digitalWrite(Q3, LOW); // P - CHANNEL
+    digitalWrite(Q2, HIGH); // N -  CHANNEL
+    }
+  */
+  digitalWrite(Q3, HIGH); // P - CHANNEL
+  digitalWrite(Q2, LOW); // N -  CHANNEL
+}
+
+
+
+// Amplifier
+const int Rsense = 10;
+
+
+//===================================================
+
+
+void setup() {
+  Serial.begin(9600);
+  //DS3231
+
+  pinMode(vcc, OUTPUT);
+  pinMode(gnd, OUTPUT);
+  digitalWrite(vcc, HIGH);
+  digitalWrite(gnd,  LOW);
+  rtc.begin();
+
+  //SD
+  pinMode(pinCS, OUTPUT);
+  //SD
+  //Nextion --> dac
+  nexInit();
+  dac.begin(0x60);
+  // INA 219
+  ina219.begin();
+  ina219.setCalibration_32V_1A();
+  // ina219.setCalibration_16V_400mA();
+  pinMode(Q2, OUTPUT);
+  pinMode(Q3, OUTPUT);
+  pinMode(anal00, INPUT);
+  pinMode(anal01, INPUT);
+
+  // LCD
+  lcd.init();                      // initialize the lcd
+  lcd.backlight();//Power on the back light
+}
+// class
+class var {
+  public:
+    void read_All();
+    void writing_sd_card();
+    void wave_form();
+    void get_data_from_display();
+};
+
+
+/*======*/
+String data_from_display = "";
+String corrente_display;
+String pot_corte_superior;
+String pot_corte_inferior;
+
+/*var*/
+double corrente_display_doub;
+double pot_cot_sup;
+double pot_cot_inf;
+
+/**/
+void var::get_data_from_display() {
+  if (Serial2.available()) {
+    delay(30);
+    while (Serial2.available()) {
+      data_from_display += char(Serial2.read());
+    }
+    Serial.println(data_from_display);
+  }
+  if (data_from_display.substring(0, 4) == "corrente") {
+    /*
+      Serial.println("pot_corte_superior" + String(data_from_display.substring(4)));
+      corrente_display
+    */
+    corrente_display = data_from_display.substring(4);
+    corrente_display_doub = corrente_display.toDouble();
+  }
+  if (data_from_display.substring(0, 5) == "pot_sup") {
+    /*
+      Serial.println("pot_corte_inferior" + String(data_from_display.substring(5)));
+    */
+    pot_corte_superior = data_from_display.substring(5);
+    pot_cot_sup = pot_corte_superior.toDouble();
+  }
+
+  if (data_from_display.substring(0, 5) == "pot_inf") {
+    /*
+      Serial.println("count is" + String(data_from_display.substring(5)));
+    */
+    pot_corte_inferior = data_from_display.substring(5);
+    pot_cot_inf = pot_corte_inferior.toDouble();
+  }
+  data_from_display = "";
+}
+/*======*/
+
+void var::read_All() {
+  //função principal
+  nexLoop(nex_listen_list);
+  charge_discharge_battery();
+
+  // setando a corrente através de potenciometro
+  anal00value = analogRead(anal00);
+  anal00output = map(anal00value, 0, 1023, 0, 400);
+  current = anal00output;
+  // Calculate required voltage drop over Rsense
+  float setVoltage = current * Rsense / 1000;
+
+  // Set DAC Value
+  int dacValue = setVoltage / 5 * 4096; // 2^12
+  if (dacValue > 4095 || dacValue < 0)
+  {
+    Serial.println("Error: specified value is out of range");
+  }
+  else
+  {
+    dac.setVoltage(dacValue, false);
+  }
+
+  // Leitura de voltagem através de porta A1
+  anal01value = analogRead(anal01);
+  float voltagem = map(anal01value, 0, 1023, 0, 5);
+
+  // LEITURA DE POTENCIAL E CORRENTE
+  // INA219 medida de corrente
+  float shuntvoltage = 0;
+  float busvoltage = 0;
+  float current_mA = 0;
+  float loadvoltage = 0;
+  float power_mW = 0;
+
+
+  time_s = millis() / (1000); // convert time to sec
+  busVoltage_V = ina219.getBusVoltage_V();
+  shuntVoltage_mV = ina219.getShuntVoltage_mV();
+  voltage_V = busVoltage_V + (shuntVoltage_mV / 1000);
+  current_mA = ina219.getCurrent_mA();
+  //power_mW = ina219.getPower_mW();
+  power_mW = current_mA * voltage_V;
+  energy_Wh = (power_mW * time_s) / 3600;
+  Serial.print("ina 219:  ");
+  Serial.println(current_mA);
+
+
+  lcd.setCursor(0, 0);
+  lcd.print("I (set): ");
+  lcd.setCursor(9, 0);
+  lcd.print(current, 3);
+  lcd.setCursor(18, 0);
+  lcd.print("mA");
+
+  lcd.setCursor(0, 1);
+  lcd.print("I(mAmp): ");
+  lcd.setCursor(9, 1);
+  lcd.print(current_mA, 3);
+  lcd.setCursor(18, 1);
+  lcd.print("mA");
+
+
+  lcd.setCursor(0, 2); //we start writing from the first row first column
+  lcd.print("Sunt V:"); //16 characters poer line
+  lcd.setCursor(9, 2);
+  lcd.print(shuntVoltage_mV, 3);
+  lcd.setCursor(19, 2);
+  lcd.print("V");
+
+  lcd.setCursor(0, 3); //we start writing from the first row first column
+  lcd.print("A1 volt :"); //16 characters poer line
+  lcd.setCursor(9, 3);
+  lcd.print(voltagem, 3);
+  lcd.setCursor(10, 3);
+  lcd.setCursor(19, 3);
+  lcd.print("V");
+  delay(100);
+
+}
+
+
+void var::wave_form() {
+  /*
+    //1 ciclo
+
+    s0.addValue(0, self.pot );// channel 0
+
+    //2 ciclo
+
+    s0.addValue(1, self.pot );// channel 1
+
+    //3 ciclo
+
+    s0.addValue(2, self.pot );// channel 2
+
+    //4 ciclo
+
+    s0.addValue(3, self.pot );// channel 3
+  */
+}
+
+
+//sdcard
+void var::writing_sd_card() {
+  // SD Card Initialization
+  if (SD.begin())
+  {
+    Serial.println("SD card is ready to use.");
+  } else
+  {
+    Serial.println("SD card initialization failed");
+    return;
+  }
+
+  // Create/Open file
+  myFile = SD.open("test12.txt", FILE_WRITE);
+
+
+  //=============
+  //comentar as requisições caso o shield DS3231 não esteja conectado -> do contrário o código não será executado da maneira correta
+  //para salvar os valores informados pelo shield DS3231, adicionar o nome da variavel na estrutura de condição abaixo.
+  t = rtc.getTime();
+  horas = t.hour;
+  ano   = t.year;
+  minutos = t.min;
+  //=============
+
+
+  // if the file opened okay, write to it:
+  if (myFile) {
+    Serial.println("Writing to file...");
+    // Write to file -> (adicionar colunas) - print_in_line
+    myFile.print("corrente:");
+    myFile.print(corrente_display_doub);
+    myFile.print(", ");
+
+    myFile.print("potencial_de_corte_superior:");
+    myFile.print(pot_cot_sup);
+    myFile.print(", ");
+
+    myFile.print("potencial_de_corte_inferior:");
+    myFile.print(pot_cot_inf);
+    myFile.print(", ");
+
+    myFile.print("horas ");
+    myFile.print(horas);
+    myFile.print(", ");
+
+    myFile.print("minutos: ");
+    myFile.print(minutos);
+    myFile.print(", ");
+
+    myFile.print("ano: ");
+    myFile.println(ano);
+    //print in line na última saida
+
+    myFile.close(); // close the file
+    Serial.println("Done.");
+  }
+  // if the file didn't open, print an error:
+  else {
+    Serial.println("error opening test.txt");
+  }
+
+  // Reading the file
+  myFile = SD.open("test12.txt");
+  if (myFile) {
+    Serial.println("Read:");
+    // Reading the whole file
+    while (myFile.available()) {
+      Serial.write(myFile.read());
+    }
+    myFile.close();
+  }
+  else {
+    Serial.println("error opening test.txt");
+  }
+}
+
+void loop() {
+  var object; // creating object
+  object.read_All(); // call method
+  object.get_data_from_display(); //call method
+  object.writing_sd_card();// call method
+  delay(1000);
+}
+	  
+  
