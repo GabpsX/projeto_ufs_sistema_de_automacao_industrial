@@ -1,23 +1,9 @@
 html {
     scroll-behavior: smooth;
 }
-.menu {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 999;
-    padding-top: -5px;
-    height: 60px;
-    background-color: #29292e;
-}
 
-.menu p{
-    font-weight: 600;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    position: relative;
-    right:480px;
-    top:6px;
-}
+
+
 
 nav img {
     

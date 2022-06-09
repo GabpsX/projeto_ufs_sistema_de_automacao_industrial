@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <!--boo-->
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Chemical Engineering">
+    <meta name="keywords" content="HTML,CSS,Engineering,Chemical">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>GabpsX</title>
+</head>
+
+<style>
+
+#back-to-top:hover{
+  opacity: 0.8;
+  background-color: rgb(5, 155, 255);
+}
+
+section{
+    -webkit-font-smoothing: antialiased;
+}
+.table-rd-corner,h4, .side_mid_section {
+  position: relative;
+  top: 60px;
+}
+#Download{
+  position: relative;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  top: 60px;
+  width: 90%;
+  height: 100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#button_1 {
+  position: relative;
+  top: 25%;
+  border-radius: .6em;
+  border: none;
+  background-color: #0d9c6c;
+  color: #f1f1f1;
+  width: 120px;
+  height: 50px;
+  font-weight: 700;
+  display: table;
+  margin: 0 auto;
+}
+#button_1:hover{
+  background-color: #0e8aff;
+}
+@media (max-width: 600px){
+  #nav_side_mid_section {
+    background-color: #0e8aff;
+    display: none;
+  }
+  #article_side_mid_section{
+    background-color: #0f2dec;
+    width: 95%;
+    margin: auto;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    left: -10px;
+  }
+}
+
+#PFD:hover{
+  color: #424242; 
+-webkit-transition: all .3s ease-in;
+-moz-transition: all .3s ease-in;
+-ms-transition: all .3s ease-in;
+-o-transition: all .3s ease-in;
+transition: all .3s ease-in;
+opacity: 1;
+transform: scale(1.15);
+-ms-transform: scale(1.15); /* IE 9 */
+-webkit-transform: scale(1.15); /* Safari and Chrome */
+
+}
+#PID:hover{
+  color: #424242; 
+-webkit-transition: all .3s ease-in;
+-moz-transition: all .3s ease-in;
+-ms-transition: all .3s ease-in;
+-o-transition: all .3s ease-in;
+transition: all .3s ease-in;
+opacity: 1;
+transform: scale(1.15);
+-ms-transform: scale(1.15); /* IE 9 */
+-webkit-transform: scale(1.15); /* Safari and Chrome */
+
+}
+
+
+</style>
+
+<body>
+
+
+<nav class="menu">
+  <a  href="index.html"><img src="https://raw.githubusercontent.com/GabpsX/GabpsX/a488afe575e5a193d5a22f85ef60cba16d7d1251/docs/icons8-github.gif" alt="Logo"></a>
+  <p>Prodap UFS protótipo experimental</p>
+  <div id="myNav" class="overlay">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <div class="overlay-content">
+          <a href="index.html"><img src="img/home.png" />Home</a>
+
+          <a href="#Download"><img src="img/downloads.png" />Download</a>
+      
+          <a href="#footer-w"><img src="img/sobre.png" />About</a>
+      </div>
+    </div>
+    <span style="font-size:30px;cursor:pointer;color: #f1f1f1;border:none;position: relative;top: 10%;" onclick="openNav()">&#9776;</span>
+</nav>
+
+<script>
+  function openNav() {
+    document.getElementById("myNav").style.display = "block";
+  }
+  
+  function closeNav() {
+    document.getElementById("myNav").style.display = "none";
+  }
+</script>
+
+
+<section class="side_mid_section">
+  <nav id="nav_side_mid_section">
+    <ul>
+      <li><a href="#">#1</a></li>
+      <li><a href="#">#2</a></li>
+      <li><a href="#">#3</a></li>
+    </ul>
+  </nav>
+  
+  <article id="article_side_mid_section">
+    <h1>Process Flow Diagram - PFD</h1>
+    <img id="PFD" src="https://gabpsx-projeto-u-f-s.w3spaces.com/IMG/PFD_-_Process_Flow_Diagram.png?bypass-cache=22510441" alt="fluxogram_process">
+    
+    <br>
+    <h1>Piping and Instrumentation Diagram - P&ID</h1>
+    <img id = "PID" src="https://gabpsx-projeto-u-f-s.w3spaces.com/IMG/PiD.png?bypass-cache=16874314" alt="fluxogram_process">
+  </article>
+</section>
+
+
+
+<style>
+
+  .side_mid_section {
+    display: -webkit-flex;
+    display: flex;
+  }
+  
+  /* Style the navigation menu */
+  #nav_side_mid_section {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    background: #44475a;
+    padding: 20px;
+    width: 33%;
+    margin-top: 0.6cm;
+    margin-left: 0.7em;
+    margin-right: 0.7em;
+    border-radius: 0.7em;;
+    align-items: center;
+  }
+  
+  /* Style the list inside the menu */
+  #nav_side_mid_section ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  /* Style the content */
+  #article_side_mid_section {
+    border-radius: .5em;
+    color: aliceblue;
+    -webkit-flex: 3;
+    -ms-flex: 3;
+    flex: 3;
+    background-color: #282a36;
+    padding: 10px;
+
+    margin-top: 0.2cm;
+    margin-right: 0.2em;
+  }
+  #article_side_mid_section h1{
+    text-align: center;
+  }
+  #article_side_mid_section img{
+    width: 80%;
+    border-radius: 0.5em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
+  @media (max-width: 600px) {
+    .side_mid_section {
+      -webkit-flex-direction: column;
+      flex-direction: column;
+    }
+  }
+</style>
+
+
+
+
+
+<style>
+
+  table,h4 {
+    text-align: center;
+    margin-top: 2em;
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 98%;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+    overflow: hidden;
+    
+  }
+  #margin-tx{
+    border: 2px solid #0565f7;
+    position: relative;
+    left: 10px;
+    
+  }
+  td{
+    border: 2px solid #0565f7;
+    text-align: left;
+    padding: 8px;
+    text-align: center;
+    
+  }
+  
+  tr:nth-child(even) {
+    background-color: #0e8aff;
+  }
+
+  
+  </style>
+
+  
+  
+  
+  <table class = "table-rd-corner">
+    <h4 class="align-tx">Especificação e dimensionamento dos equipamentos e instrumentos necessários.</h4>
+    <tr>
+      <th id="margin-tx">Equipamentos</th>
+      <th id="margin-tx">Sensores Industriais</th>
+      <th id="margin-tx">Orçamento</th>
+    </tr>
+    <tr>
+      <td>----</td>
+      <td>----</td>
+      <td>----</td>
+    </tr>
+    <tr>
+      <td>----</td>
+      <td>----</td>
+      <td>----</td>
+    </tr>
+    <tr>
+      <td>----</td>
+      <td>----</td>
+      <td>----</td>
+    </tr>
+    <tr>
+      <td>----</td>
+      <td>----</td>
+      <td>----</td>
+    </tr>
+    <tr>
+      <td>----</td>
+      <td>----</td>
+      <td>----</td>
+    </tr>
+    <tr>
+      <td>----</td>
+      <td>----</td>
+      <td>----</td>
+    </tr>
+  </table>
+
+<section id="Download">
+  <button id="button_1" type="button" onclick="location.href='https://github.com/GabpsX/projeto_u-f-s_-prodap_sistema_de_automa--o_industrial/raw/main/docs/.idea/inspectionProfiles/Prodap%20UFS%20prot%C3%B3tipo%20experimental.rar'" type="button">Download</button>
+</section>
+
+
+  <br>
+  </div>
+  <br>
+<hr>
+<footer id="footer-w">
+  <!-- Copyright -->
+  <div class="text-center p-3">
+    © 2022 Copyright:
+    <a class="text-white_1" href="">Developed by GabpsX.</a>
+    <button id ="back-to-top" type="button" class="btn btn-success">Back to top</button>
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->
+       
+    <script>
+       var btn = document.querySelector("#back-to-top");
+       btn.addEventListener("click", function() {
+          window.scrollTo(0, 0);
+       });
+    </script>
+ </section>
+
+
+</body>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/scripts.js"></script>
+<script src="js/script_menu.js"></script>
+
+<script>
+    function myFunction() {
+      var x = document.getElementById("myLinks");
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+        x.style.display = "block";
+      }
+    }
+</script>
+<script src="js/data.js"></script>
+</html>
