@@ -1,361 +1,457 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<style>
-    *{
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        user-select: none;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-    .positionrelative {
-        position: fixed;
-        overflow: hidden;
-        position:relative;
-        width:90%;
-        margin-left: auto;
-        margin-right: auto;
-        box-shadow: 5px 5px 5px #888888;
-        border: 2px solid rgb(235, 235, 235);;
-        height: 100px;
-        background-color: rgb(255, 249, 249);
-        border-radius: 10px;
-    }
-   .mario_ani {
-        border-radius: 10px;
-        position: absolute;
-        bottom: 0;
-        width: 4.1em;
-        top: auto;
-        animation: mario-animation 4.1s infinite linear;
-     
-    }
-    .bowser_ani {
-        border-radius: 10px;
-        position: absolute;
-        bottom: 0;
-        width: 10.1em;
-        top: auto;
-        animation: bowser_animation 4s infinite linear;
-     
-    }
-   @keyframes mario-animation {
-       from{
-        left: -190px;
-       }
-       to {
-            left: 100%;
-       }
-   }
-   @keyframes bowser_animation {
-       from{
-        left: -130px;
-       }
-       to {
-            left: 100%;
-       }
-   }
-
-   .logo{
-        position: absolute;
-        width: 80px;
-        top:12%;
-        bottom: 50%;
-    }
-    .engenharia{
-        position: absolute;
-        margin-left: 90px;
-        top:12%;
-        bottom: 50%;
-    }
-    .sec-1 {
-        border-radius: 6px;
-        top: 20px;
-        position: relative;
-        overflow: hidden;
-        width: 88%;
-        margin-left: auto;
-        margin-right: auto;
-        box-shadow: 5px 5px 5px #888;
-        border: 2px solid rgb(235, 235, 235);
-    }
-    .sec-2 {
-        border-radius: 6px;
-        top: 30px;
-        position: relative;
-        overflow: hidden;
-        width: 88%;
-        margin-left: auto;
-        margin-right: auto;
-        box-shadow: 5px 5px 5px #888;
-        border: 2px solid rgb(235, 235, 235);
-    }
-    #PFD{
-        width: 80%;
-    }
-    #PID{
-        width: 80%;
-    }
-    #article_side_mid_section{
-        text-align: center;
-    }
-
-</style>
-<header>
-    <div class="positionrelative">
-        <div class="positionabsolute">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+   </head>
+   <style>
+      *{
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      user-select: none;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+      .positionrelative {
+      position: fixed;
+      overflow: hidden;
+      position:relative;
+      width:90%;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 5px 5px 5px #888888;
+      border: 2px solid rgb(235, 235, 235);;
+      height: 100px;
+      background-color: rgb(255, 249, 249);
+      border-radius: 10px;
+      }
+      .mario_ani {
+      border-radius: 10px;
+      position: absolute;
+      bottom: 0;
+      width: 4.1em;
+      top: auto;
+      animation: mario-animation 4.1s infinite linear;
+      }
+      .bowser_ani {
+      border-radius: 10px;
+      position: absolute;
+      bottom: 0;
+      width: 10.1em;
+      top: auto;
+      animation: bowser_animation 4s infinite linear;
+      }
+      @keyframes mario-animation {
+      from{
+      left: -190px;
+      }
+      to {
+      left: 100%;
+      }
+      }
+      @keyframes bowser_animation {
+      from{
+      left: -130px;
+      }
+      to {
+      left: 100%;
+      }
+      }
+      .logo{
+      position: absolute;
+      width: 80px;
+      top:12%;
+      bottom: 50%;
+      }
+      .engenharia{
+      position: absolute;
+      margin-left: 90px;
+      top:12%;
+      bottom: 50%;
+      }
+      .sec-1 {
+      border-radius: 6px;
+      top: 20px;
+      position: relative;
+      overflow: hidden;
+      width: 88%;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 5px 5px 5px #888;
+      border: 2px solid rgb(235, 235, 235);
+      }
+      .sec-2 {
+      border-radius: 6px;
+      top: 30px;
+      position: relative;
+      overflow: hidden;
+      width: 88%;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 5px 5px 5px #888;
+      border: 2px solid rgb(235, 235, 235);
+      }
+      #PFD{
+      width: 80%;
+      }
+      #PID{
+      width: 80%;
+      }
+      #article_side_mid_section{
+      text-align: center;
+      }
+   </style>
+   <header>
+      <div class="positionrelative">
+         <div class="positionabsolute">
             <img src="engenharia-quimica-logo.png" alt="" class="logo">
             <h2 class="engenharia">Engenharia Química</h2>
             <img src="mario_ani.gif" alt="" class="mario_ani">
             <img src="bowser-ani.gif" alt="" class="bowser_ani">
-        </div>
-    </div>
-</header>
-<body>
-    <section class="sec-1">
-        <article id="article_side_mid_section">
+         </div>
+      </div>
+   </header>
+   <body>
+      <section class="sec-1">
+         <article id="article_side_mid_section">
             <h1>Process Flow Diagram - PFD</h1>
             <img onclick="on()" id="PFD" src="https://gabpsx-projeto-u-f-s.w3spaces.com/IMG/PFD_-_Process_Flow_Diagram.png?bypass-cache=22510441" alt="fluxogram_process">
-          </article>
-    </section>
-
-    <section class="sec-2">
-        <article id="article_side_mid_section">
+         </article>
+      </section>
+      <section class="sec-2">
+         <article id="article_side_mid_section">
             <h1>Piping and Instrumentation Diagram - P&ID</h1>
             <img onclick="on2()" id = "PID" src="https://gabpsx-projeto-u-f-s.w3spaces.com/IMG/PiD.png?bypass-cache=16874314" alt="fluxogram_process">
-      </article>
-    
-    </section>
-    <footer>
-        <!-- Copyright -->
-        <div class="text-center p-3">
+         </article>
+      </section>
+      <style>
+        .sec-4{
+            text-align: center;
+            border-radius: 6px;
+            top: 60px;
+            position: relative;
+            overflow: hidden;
+            width: 88%;
+            margin-left: auto;
+            margin-right: auto;
+            box-shadow: 5px 5px 5px #888;
+            border: 2px solid rgb(235, 235, 235);
+        }
+        .sec-3 {
+            text-align: center;
+            border-radius: 6px;
+            top: 40px;
+            position: relative;
+            overflow: hidden;
+            width: 88%;
+            margin-left: auto;
+            margin-right: auto;
+            box-shadow: 5px 5px 5px #888;
+            border: 2px solid rgb(235, 235, 235);
+        }
+            table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+            }
+
+            td, th {
+            text-decoration: none;
+            border: 1px solid #dddddd;
+            text-align: center;
+            padding: 8px;
+            }
+            
+            tr:nth-child(even) {
+            background-color: #dddddd;
+            }
+        </style>
+      <section class="sec-3">
+        <table>
+            <h2>Equipamentos Pertinentes ao Protótipo</h2>
+            <tr>
+               <th>Quantidade</th>
+               <th>Especificação e dimensionamento</th>
+               <th>Preço - R$</th>
+            </tr>
+            
+            <tr>
+               <td>Trocador de calor - <strong>1</strong></td>
+               <td>--</td>
+               <td>--</td>
+            </tr>
+            <tr>
+               <td>Válvulas - <strong>4</strong></td>
+               <td>--</td>
+               <td>--</td>
+            </tr>
+            <tr>
+               <td>Tanques - <strong>1</strong></td>
+               <td>--</td>
+               <td>--</td>
+            </tr>
+            <tr>
+               <td>Bomba centrífuga - <strong>4</strong></td>
+               <td>--</td>
+               <td>--</td>
+            </tr>
+            <tr>
+               <td>Ebulidor Industrial - <strong>1</strong></td>
+               <td>--</td>
+               <td>--</td>
+            </tr>
+            <tr>
+               <td>Tanque de resfriamento - <strong>1</strong</td>
+               <td>--</td>
+               <td>--</td>
+            </tr>
+         </table>
+      </section>
+
+      <section class="sec-4">
+        <h2>Instrumentos necessários para a automação</h2>
+        <table>
+        <tr>
+            <td>Controlador lógico - CLP</td>
+            <td>16 entradas e 16 saídas.</td>
+            <td>R$ 3.994,15</td>
+         </tr>
+         <tr>
+            <td>Transmissor de Pressão - <strong>4</strong</td>
+            <td>--</td>
+            <td>R$ 2.800</td>
+         </tr>
+         <tr>
+            <td>Transmissor de Temperatura - <strong>4</strong</td>
+            <td>--</td>
+            <td>--</td>
+         </tr>
+         <tr>
+            <td>Sensor de Vazão - <strong>4</strong</td>
+            <td>--</td>
+            <td>--</td>
+         </tr>
+        </table>
+      </section>
+      <footer>
+         <!-- Copyright -->
+         <div class="text-center p-3">
             © 2022 Copyright:
             <a class="text-w" href="">Developed by GabpsX.</a>
             <button id ="back-to-top" type="button"><img src="up-arrow.png" alt="" class="footerimg"></button>
-            
-        </div>
-        <!-- Copyright -->
-    </footer>
-<style>
-        footer{
-            background-color: #424242;
-            position: relative;
-            z-index: 999;
-            height: 70px;
-            width: 100%;
-            top: 110px;
-            box-shadow: 5px 5px 5px #888888;
-            border: 2px solid #888888;
-            border-radius: 5px;
-            color: aliceblue;
-            text-align: center;
-            bottom: 0;
-            overflow: hidden;
-        }
-        .text-center{
-            position: relative;
-            top: 26%;
-        }
-        .text-w{
-            position: relative;
-            text-decoration: none;
-            color: aliceblue;
-        }
-        .footerimg{
-            width: 40px;
-        }
-        #back-to-top{
-            position:fixed;
-            bottom: 0;
-            right: auto;
-            width:auto;
-            height: auto;
-        }
-        @media(max-width: 900px){
-            footer{
-                background-color: #020a1b;
-                box-shadow: 5px 5px 5px #888888;
-                border: 2px solid #888888;
-
-        }
-    }
-</style>
-<script>
-var mybutton = document.getElementById("back-to-top");
-window.onscroll = function() {scrollFunction()};
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    mybutton.style.display = "block";
-  } else {
-    mybutton.style.display = "none";
-  }
-}
-function topFunction() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-}
-</script>
-<script>
-    var btn = document.querySelector("#back-to-top");
-    btn.addEventListener("click", function() {
-       window.scrollTo(0, 0);
-    });
-</script>
-<script>
-    function on() {
-      document.getElementById("overlay").style.display = "block";
-    }
-    
-    function off() {
-      document.getElementById("overlay").style.display = "none";
-    }
-
-    function on2() {
-      document.getElementById("overlay2").style.display = "block";
-    }
-    
-    function off2() {
-      document.getElementById("overlay2").style.display = "none";
-    }
-    </script>
-</body>
-<section class="hiddensec">
-    <style>
-        /*IMG 1*/
-        #overlay {
-          margin-left: auto;
-          margin-right: auto;
-          position: fixed;
-          display: none;
-          height: 100%;
-          width: 100%;
-          top: 0;
-          left: 0;
-          right: 0;
-          bottom: 0;
-          background-color: rgba(0,0,0,0.5);
-          z-index: 2;
-          cursor: pointer;
-        }
-        #overlay{
-            width: 70%;
-            text-align: center;
-        }
-        img{
-            width: 100%;
-        }
-
-        #PFD-1:hover {
-            transition: transform .5s ease;
-            -moz-transform: scale(1.2);
-            -webkit-transform: scale(1.2);
-            transform: scale(1.15);
-        }
-        .close-pfd {
-            top: -20;
-            border-radius: 5px;
-            left: calc(-50vw + 50%);
-            right: calc(-50vw + 50%);
-            margin-left: auto;
-            margin-right: auto;
-            border: 2px solid #ff0000;
-            background-color: pink;
-            margin-bottom: 40px;
-            width: 90px;
-        }
-        .close-pfd:hover{
-            color: #ff0000;
-            border: 2px solid #5600f7;
-            background-color: rgb(44, 93, 201);
-        }
-        </style>
-
-    <style>
-            /*IMG2*/
-        #overlay2 {
-            margin-left: auto;
-            margin-right: auto;
-            position: fixed;
-            display: none;
-            height: 100%;
-            width: 100%;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: rgba(0,0,0,0.5);
-            z-index: 2;
-            cursor: pointer;
-        }
-        #overlay2{
-                position: absolute;
-                width: 70%;
-                text-align: center;
-            }
-        #PID-1:hover {
-                transition: transform .5s ease;
-                -moz-transform: scale(1.2);
-                -webkit-transform: scale(1.2);
-                transform: scale(1.15);
-            }
-        .close-PID {
-                top: -20;
-                border-radius: 5px;
-                left: calc(-50vw + 50%);
-                right: calc(-50vw + 50%);
-                margin-left: auto;
-                margin-right: auto;
-                border: 2px solid #ff0000;
-                background-color: pink;
-                margin-bottom: 40px;
-                width: 90px;
-            }
-        .close-PID:hover{
-                color: #ff0000;
-                border: 2px solid #5600f7;
-                background-color: rgb(44, 93, 201);
-            }
-    </style>
-</head>
-
-<body>
-        <div id="overlay" >
-            <h1 onclick="off()" class="close-pfd">&#10799;</h1>
-            <img id="PFD-1" src="https://gabpsx-projeto-u-f-s.w3spaces.com/IMG/PFD_-_Process_Flow_Diagram.png?bypass-cache=22510441" alt="fluxogram_process">
-        </div>
-        <div id="overlay2" >
-            <h1 onclick="off2()" class="close-PID">&#10799;</h1>
-            <img id = "PID-1" src="https://gabpsx-projeto-u-f-s.w3spaces.com/IMG/PiD.png?bypass-cache=16874314" alt="fluxogram_process">
-        </div>
-        <style>
-           @media(max-width: 1200px) {
-            .engenharia{
-                margin-top: 5.5%;
-                font-size: 1.3em;
-            }
-            #overlay,#overlay2{
-                    background-color: transparent;
-                    width:80%;
-                    margin:0 auto;
-                    background:white;
-                    color:black;
-                    padding:35px;
-                    position:absolute;
-                    top:5%;
-                    z-index:1000;
-                    display:none;
-                    /* CSS 3 */
-                    -webkit-border-radius:10px;
-                    -moz-border-radius:10px;
-                    -o-border-radius:10px;
-                    border-radius:10px;
-                }
-            }
-        </style>
-</section>
+         </div>
+         <!-- Copyright -->
+      </footer>
+      <style>
+         footer{
+         background-color: #424242;
+         position: relative;
+         z-index: 999;
+         height: 70px;
+         width: 100%;
+         top: 110px;
+         box-shadow: 5px 5px 5px #888888;
+         border: 2px solid #888888;
+         border-radius: 5px;
+         color: aliceblue;
+         text-align: center;
+         bottom: 0;
+         overflow: hidden;
+         }
+         .text-center{
+         position: relative;
+         top: 26%;
+         }
+         .text-w{
+         position: relative;
+         text-decoration: none;
+         color: aliceblue;
+         }
+         .footerimg{
+         width: 40px;
+         }
+         #back-to-top{
+         position:fixed;
+         bottom: 0;
+         right: auto;
+         width:auto;
+         height: auto;
+         }
+         @media(max-width: 900px){
+         footer{
+         background-color: #020a1b;
+         box-shadow: 5px 5px 5px #888888;
+         border: 2px solid #888888;
+         }
+         }
+      </style>
+      <script>
+         var mybutton = document.getElementById("back-to-top");
+         window.onscroll = function() {scrollFunction()};
+         function scrollFunction() {
+           if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+             mybutton.style.display = "block";
+           } else {
+             mybutton.style.display = "none";
+           }
+         }
+         function topFunction() {
+           document.body.scrollTop = 0;
+           document.documentElement.scrollTop = 0;
+         }
+      </script>
+      <script>
+         var btn = document.querySelector("#back-to-top");
+         btn.addEventListener("click", function() {
+            window.scrollTo(0, 0);
+         });
+      </script>
+      <script>
+         function on() {
+           document.getElementById("overlay").style.display = "block";
+         }
+         
+         function off() {
+           document.getElementById("overlay").style.display = "none";
+         }
+         
+         function on2() {
+           document.getElementById("overlay2").style.display = "block";
+         }
+         
+         function off2() {
+           document.getElementById("overlay2").style.display = "none";
+         }
+      </script>
+   </body>
+   <section class="hiddensec">
+      <style>
+         /*IMG 1*/
+         #overlay {
+         margin-left: auto;
+         margin-right: auto;
+         position: fixed;
+         display: none;
+         height: 100%;
+         width: 100%;
+         top: 0;
+         left: 0;
+         right: 0;
+         bottom: 0;
+         background-color: rgba(0,0,0,0.5);
+         z-index: 2;
+         cursor: pointer;
+         }
+         #overlay{
+         width: 70%;
+         text-align: center;
+         }
+         img{
+         width: 100%;
+         }
+         #PFD-1:hover {
+         transition: transform .5s ease;
+         -moz-transform: scale(1.2);
+         -webkit-transform: scale(1.2);
+         transform: scale(1.15);
+         }
+         .close-pfd {
+         top: -20;
+         border-radius: 5px;
+         left: calc(-50vw + 50%);
+         right: calc(-50vw + 50%);
+         margin-left: auto;
+         margin-right: auto;
+         border: 2px solid #ff0000;
+         background-color: pink;
+         margin-bottom: 40px;
+         width: 90px;
+         }
+         .close-pfd:hover{
+         color: #ff0000;
+         border: 2px solid #5600f7;
+         background-color: rgb(44, 93, 201);
+         }
+      </style>
+      <style>
+         /*IMG2*/
+         #overlay2 {
+         margin-left: auto;
+         margin-right: auto;
+         position: fixed;
+         display: none;
+         height: 100%;
+         width: 100%;
+         top: 0;
+         left: 0;
+         right: 0;
+         bottom: 0;
+         background-color: rgba(0,0,0,0.5);
+         z-index: 2;
+         cursor: pointer;
+         }
+         #overlay2{
+         position: absolute;
+         width: 70%;
+         text-align: center;
+         }
+         #PID-1:hover {
+         transition: transform .5s ease;
+         -moz-transform: scale(1.2);
+         -webkit-transform: scale(1.2);
+         transform: scale(1.15);
+         }
+         .close-PID {
+         top: -20;
+         border-radius: 5px;
+         left: calc(-50vw + 50%);
+         right: calc(-50vw + 50%);
+         margin-left: auto;
+         margin-right: auto;
+         border: 2px solid #ff0000;
+         background-color: pink;
+         margin-bottom: 40px;
+         width: 90px;
+         }
+         .close-PID:hover{
+         color: #ff0000;
+         border: 2px solid #5600f7;
+         background-color: rgb(44, 93, 201);
+         }
+      </style>
+      <div id="overlay" >
+         <h1 onclick="off()" class="close-pfd">&#10799;</h1>
+         <img id="PFD-1" src="https://gabpsx-projeto-u-f-s.w3spaces.com/IMG/PFD_-_Process_Flow_Diagram.png?bypass-cache=22510441" alt="fluxogram_process">
+      </div>
+      <div id="overlay2" >
+         <h1 onclick="off2()" class="close-PID">&#10799;</h1>
+         <img id = "PID-1" src="https://gabpsx-projeto-u-f-s.w3spaces.com/IMG/PiD.png?bypass-cache=16874314" alt="fluxogram_process">
+      </div>
+      <style>
+         @media(max-width: 1200px) {
+         .engenharia{
+         margin-top: 5.5%;
+         font-size: 1.3em;
+         }
+         #overlay,#overlay2{
+         background-color: transparent;
+         width:80%;
+         margin:0 auto;
+         background:white;
+         color:black;
+         padding:35px;
+         position:absolute;
+         top:5%;
+         z-index:1000;
+         display:none;
+         /* CSS 3 */
+         -webkit-border-radius:10px;
+         -moz-border-radius:10px;
+         -o-border-radius:10px;
+         border-radius:10px;
+         }
+         }
+      </style>
+   </section>
 </html>
