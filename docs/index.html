@@ -104,6 +104,7 @@
     #article_side_mid_section{
         text-align: center;
     }
+
 </style>
 <header>
     <div class="positionrelative">
@@ -119,14 +120,14 @@
     <section class="sec-1">
         <article id="article_side_mid_section">
             <h1>Process Flow Diagram - PFD</h1>
-            <img id="PFD" src="https://gabpsx-projeto-u-f-s.w3spaces.com/IMG/PFD_-_Process_Flow_Diagram.png?bypass-cache=22510441" alt="fluxogram_process">
+            <img onclick="on()" id="PFD" src="https://gabpsx-projeto-u-f-s.w3spaces.com/IMG/PFD_-_Process_Flow_Diagram.png?bypass-cache=22510441" alt="fluxogram_process">
           </article>
     </section>
 
     <section class="sec-2">
         <article id="article_side_mid_section">
             <h1>Piping and Instrumentation Diagram - P&ID</h1>
-            <img id = "PID" src="https://gabpsx-projeto-u-f-s.w3spaces.com/IMG/PiD.png?bypass-cache=16874314" alt="fluxogram_process">
+            <img onclick="on2()" id = "PID" src="https://gabpsx-projeto-u-f-s.w3spaces.com/IMG/PiD.png?bypass-cache=16874314" alt="fluxogram_process">
       </article>
     
     </section>
@@ -205,5 +206,130 @@ function topFunction() {
        window.scrollTo(0, 0);
     });
 </script>
+<script>
+    function on() {
+      document.getElementById("overlay").style.display = "block";
+    }
+    
+    function off() {
+      document.getElementById("overlay").style.display = "none";
+    }
+
+    function on2() {
+      document.getElementById("overlay2").style.display = "block";
+    }
+    
+    function off2() {
+      document.getElementById("overlay2").style.display = "none";
+    }
+    </script>
 </body>
+<section class="hiddensec">
+    <style>
+        /*IMG 1*/
+        #overlay {
+          margin-left: auto;
+          margin-right: auto;
+          position: fixed;
+          display: none;
+          height: 100%;
+          width: 100%;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: rgba(0,0,0,0.5);
+          z-index: 2;
+          cursor: pointer;
+        }
+        #overlay{
+            width: 70%;
+            text-align: center;
+        }
+        img{
+            width: 100%;
+        }
+
+        #PFD-1:hover {
+            transition: transform .5s ease;
+            -moz-transform: scale(1.2);
+            -webkit-transform: scale(1.2);
+            transform: scale(1.15);
+        }
+        .close-pfd {
+            top: -20;
+            border-radius: 5px;
+            left: calc(-50vw + 50%);
+            right: calc(-50vw + 50%);
+            margin-left: auto;
+            margin-right: auto;
+            border: 2px solid #ff0000;
+            background-color: pink;
+            margin-bottom: 40px;
+            width: 90px;
+        }
+        .close-pfd:hover{
+            color: #ff0000;
+            border: 2px solid #5600f7;
+            background-color: rgb(44, 93, 201);
+        }
+        </style>
+
+    <style>
+            /*IMG2*/
+        #overlay2 {
+            margin-left: auto;
+            margin-right: auto;
+            position: fixed;
+            display: none;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0,0,0,0.5);
+            z-index: 2;
+            cursor: pointer;
+        }
+        #overlay2{
+                width: 70%;
+                text-align: center;
+            }
+        #PID-1:hover {
+                transition: transform .5s ease;
+                -moz-transform: scale(1.2);
+                -webkit-transform: scale(1.2);
+                transform: scale(1.15);
+            }
+        .close-PID-1 {
+                top: -20;
+                border-radius: 5px;
+                left: calc(-50vw + 50%);
+                right: calc(-50vw + 50%);
+                margin-left: auto;
+                margin-right: auto;
+                border: 2px solid #ff0000;
+                background-color: pink;
+                margin-bottom: 40px;
+                width: 90px;
+            }
+        .close-PID-1:hover{
+                color: #ff0000;
+                border: 2px solid #5600f7;
+                background-color: rgb(44, 93, 201);
+            }
+    </style>
+</head>
+<body>
+        <div id="overlay" >
+          <h1 onclick="off()" class="close-pfd">&#10799;</h1>
+          <img id="PFD-1" src="https://gabpsx-projeto-u-f-s.w3spaces.com/IMG/PFD_-_Process_Flow_Diagram.png?bypass-cache=22510441" alt="fluxogram_process">
+        </div>
+        <div id="overlay2" >
+            <h1 onclick="off2()" class="close-PID">&#10799;</h1>
+            <img id = "PID-1" src="https://gabpsx-projeto-u-f-s.w3spaces.com/IMG/PiD.png?bypass-cache=16874314" alt="fluxogram_process">
+        </div>
+       
+</section>
 </html>
