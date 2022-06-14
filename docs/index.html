@@ -293,6 +293,7 @@ function topFunction() {
             cursor: pointer;
         }
         #overlay2{
+                position: absolute;
                 width: 70%;
                 text-align: center;
             }
@@ -321,6 +322,7 @@ function topFunction() {
             }
     </style>
 </head>
+
 <body>
         <div id="overlay" >
             <h1 onclick="off()" class="close-pfd">&#10799;</h1>
@@ -330,6 +332,30 @@ function topFunction() {
             <h1 onclick="off2()" class="close-PID">&#10799;</h1>
             <img id = "PID-1" src="https://gabpsx-projeto-u-f-s.w3spaces.com/IMG/PiD.png?bypass-cache=16874314" alt="fluxogram_process">
         </div>
-       
+        <style>
+           @media(max-width: 1200px) {
+            #overlay,#overlay2{
+                    background-color: transparent;
+                    width:80%;
+                    margin:0 auto;
+                    background:white;
+                    color:black;
+                    padding:35px;
+                    position:absolute;
+                    top:5%;
+                    z-index:1000;
+                    display:none;
+                    /* CSS 3 */
+                    -webkit-border-radius:10px;
+                    -moz-border-radius:10px;
+                    -o-border-radius:10px;
+                    border-radius:10px;
+                }
+                #PFD-1 {
+                    height: 50%;
+                    width: 100%;
+                }
+            }
+        </style>
 </section>
 </html>
