@@ -1,5 +1,5 @@
 #menu-icon {
-    width: 2em;
+    width: 1.5em;
     position: absolute;
     right: 0;
     top: 2%;
@@ -12,9 +12,9 @@
     margin-right: auto;
 }
 @keyframes animation-button {
-    from {background-color: rgb(54, 255, 27);
+    from {background-color: rgb(119, 0, 255);
     }
-    to {background-color: yellow;
+    to {background-color: rgb(255, 255, 0);
     }
   }
   
@@ -94,3 +94,4 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
