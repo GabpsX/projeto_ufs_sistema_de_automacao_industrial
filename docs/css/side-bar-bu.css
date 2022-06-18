@@ -5,23 +5,31 @@
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: rgb(233, 233, 233);
+    background-color: rgb(58, 54, 245);
     overflow-x: hidden;
-    transition: 0.5s;
+    transition: 1.2s;
     padding-top: 60px;
+    border-bottom-right-radius: 8em;
+    shape-rendering: auto;
+    box-shadow: 5px 5px 5px 5px gray;
   }
-  
+  .sidenav span{
+    color: #f1f1f1;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
   .sidenav a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 25px;
-    color: #818181;
+    color: #ffffff;
     display: block;
     transition: 0.3s;
   }
   
   .sidenav a:hover {
-    color: #f1f1f1;
+    color: #00ff9d;
   }
   
   .sidenav .closebtn {

@@ -5,7 +5,7 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-    .positionrelative {
+.positionrelative {
     position: fixed;
     overflow: hidden;
     position:relative;
@@ -15,7 +15,7 @@
     box-shadow: 5px 5px 5px #888888;
     border: 2px solid rgb(235, 235, 235);;
     height: 100px;
-    background-color: rgb(255, 249, 249);
+    background-color: transparent;
     border-radius: 10px;
     }
     .mario_ani {
