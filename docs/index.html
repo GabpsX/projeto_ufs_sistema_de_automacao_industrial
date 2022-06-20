@@ -5,6 +5,12 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel="stylesheet" href="css/style.css" class="rel">
+
+      <!-- Katex -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.11/katex.min.js" integrity="sha512-1kNZVA50gKlorLAWU83+SdOAUwABzfFFQ4WuOAZTeS/UhNhnm9zU7rDv/Q5NEzSnr5u2L6uhR/+8icjjmHjSnQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.11/katex.min.css" integrity="sha512-J8je2SgrCzA7hNBeiCJiA6oETHTTdp3We3EriOgJp6POycGLcDXj5dSwWlAPQcYGeaQ4N3uf30aOg/Nt5pxW2g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+       <!-- Katex -->
+
       <title>GabpsX</title>
    </head>
    <header>
@@ -21,6 +27,7 @@
       </div>
    </header>
    <body id="main">
+      
       <section class="sec-1">
          <article id="article_side_mid_section">
             <h1>Process Flow Diagram - PFD</h1>
@@ -105,6 +112,30 @@
             <td>--</td>
          </tr>
         </table>
+      </section>
+      <section class="calculos-sec">
+         <div id="Bombas-hidr">
+            <h3 id="Bombas-hidr-txt">Bomba Hidráulica</h3>
+            <h3 id="Bombas-hidr-txt1">Exemplo:</h3>
+            <li id="Bombas-hidr-txt2">Cálculo de Vazão:</li>
+            <h1 id='Vazbombhi'></h1>
+            <li>Q = Vazão➜</li>
+            <li>v = volume (cm<sup>3</sup>)➜ 5</li>
+            <li>n = Rotação (rpm)➜ 3.450</li>
+            <li>η = Eficiência da bomba➜ 90% </li>
+            <h1 id='Vazbombhi2'></h1>
+            <h1 id='Vazbombhi3'></h1>
+            <img src="img/bomba-hid.gif" alt="" id="img-bomba">
+         </div>
+            <script>
+               
+               document.getElementById('Vazbombhi').innerHTML = katex.renderToString('Q = \\frac{v ∙n∙η}{1000}')
+
+               document.getElementById('Vazbombhi2').innerHTML = katex.renderToString('Q = \\frac{5 ∙3.450∙0.9}{1000} = {15.525 L/min}')
+               document.getElementById('Vazbombhi3').innerHTML = katex.renderToString('Q = \\frac{15.525}{60} = {0.258755 m³/s}')
+
+            </script>
+         <div id="Bombas-centrifu"></div>
       </section>
       <footer>
          <!-- Copyright -->

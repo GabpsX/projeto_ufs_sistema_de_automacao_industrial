@@ -175,3 +175,46 @@
             border: 2px solid #888888;
             }
             }
+            .calculos-sec {
+                border-radius: 6px;
+                top: 70px;
+                position: relative;
+                overflow: hidden;
+                width: 88%;
+                margin-left: auto;
+                margin-right: auto;
+                box-shadow: 5px 5px 5px #888;
+                border: 2px solid rgb(235, 235, 235);
+                }
+            #Bombas-hidr{
+                margin-left: auto;
+                margin-right: auto;
+                text-align: left;
+                position: relative;
+                padding-right: 30px;
+                padding-left: 30px;
+            }
+            #Bombas-hidr-txt{
+                padding: 5px;
+                position: relative;
+                right: 0;
+                text-align: center;
+            }
+            #img-bomba{
+                position:absolute;
+                top: -1%;
+                right: 0;
+                float: right;
+                width: 50%;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+                
+            }
+            @media(max-width:900px){
+                #img-bomba{
+                    position:relative;
+                    width: 15em;
+                    -webkit-font-smoothing: antialiased;
+                    -moz-osx-font-smoothing: grayscale;
+                }
+            }
