@@ -218,3 +218,14 @@
                     -moz-osx-font-smoothing: grayscale;
                 }
             }
+            .calculos-sec2 {
+                border-radius: 6px;
+                top: 90px;
+                position: relative;
+                overflow: hidden;
+                width: 88%;
+                margin-left: auto;
+                margin-right: auto;
+                box-shadow: 5px 5px 5px #888;
+                border: 2px solid rgb(235, 235, 235);
+            }
