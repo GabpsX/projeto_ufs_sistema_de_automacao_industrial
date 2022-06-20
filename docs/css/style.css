@@ -1,10 +1,6 @@
-@media only screen and (min-width: 1000px) {    
-    body { font-size: 18px; }    
-}
-@media only screen and (min-width: 4000px) {    
-    body { font-size: 28px; }
-}
+
 *{
+    
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     user-select: none;
