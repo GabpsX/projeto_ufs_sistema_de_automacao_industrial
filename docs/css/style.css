@@ -1,23 +1,26 @@
-
 *{
-    
+
+    font-smooth: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     user-select: none;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.positionabsolute{
+    display: flex;
+    justify-content: space-between;
+}
 .positionrelative {
-    position: fixed;
+    background-color: white;
+    width: 90%;
     overflow: hidden;
     position:relative;
-    width:90%;
     margin-left: auto;
     margin-right: auto;
     box-shadow: 5px 5px 5px #888888;
     border: 2px solid rgb(235, 235, 235);;
     height: 90px;
-    background-color: transparent;
     border-radius: 10px;
     }
     .mario_ani {
@@ -68,12 +71,14 @@
         font-weight:670;
         font-size: 1.6em
     }
-    media(max-width: 444px){
-    .engenharia {
+
+    @media(max-width: 444px){
+        .engenharia {
         margin-left: 90px;
         margin-top: 35px;
+        }
     }
-    }
+
     .sec-1 {
     border-radius: 6px;
     top: 20px;

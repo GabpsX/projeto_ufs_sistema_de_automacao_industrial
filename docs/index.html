@@ -13,6 +13,7 @@
 
       <title>GabpsX</title>
    </head>
+   <!-- update --flexbox-- -->
    <header>
       <span style="font-size:30px;cursor:pointer" onclick="openNav()"><img src="img/icon-menu-dark.png" alt="" id="menu-icon"></span>
       <div class="positionrelative">
@@ -20,7 +21,7 @@
          <div class="positionabsolute">
             <img src="img/engenharia-quimica-logo.png" alt="" class="logo">
             
-               <p class="engenharia">Engenharia Química</p>
+            <p class="engenharia">Engenharia Química</p>
             <img src="img/mario_ani.gif" alt="" class="mario_ani">
             <img src="img/bowser-ani.gif" alt="" class="bowser_ani">
            
@@ -151,22 +152,27 @@
             <li id="Bombas-hidr-txt2">Cálculo de Vazão:</li>
          
          <li>Q = Vazão➜</li>
-         <li>v = volume (cm<sup>3</sup>)➜ 5</li>
-         <li>n = Rotação (rpm)➜ 3.450</li>
-         <li>η = Eficiência da bomba➜≈ 80 a 90% </li>
+         <li>Φ = Área (cm<sup>2</sup>)➜ 5</li>
+         <li>V = Velocidade (m/s<sup>-1</sup>)</li>
+         <li>d = diametro (m)</li>
          
          <h1 id='Vazbombh2'></h1>
          <h1 id='Vazbombh3'></h1>
+         <p>Equação de bernoulli</p>
+         <h1 id='Vazbombh4.1'></h1>
          <h1 id='Vazbombh4'></h1>
       </div>
       </section>
       <script>
                
-         document.getElementById('Vazbombh2').innerHTML = katex.renderToString('Q = \\frac{v ∙n∙η}{1000}')
+         document.getElementById('Vazbombh2').innerHTML = katex.renderToString('Q = {Φ ∙ V} -> Φ = \\frac{π∙d^2}{4}')
 
-         document.getElementById('Vazbombh3').innerHTML = katex.renderToString('Q = \\frac{5 ∙3.450∙0.9}{1000} = {15.525 L/min}')
+         document.getElementById('Vazbombh3').innerHTML = katex.renderToString('Q = {Φ ∙ V} -> Φ = \\frac{π∙0.0508^2}{4}')
+
+         document.getElementById('Vazbombh4.1').innerHTML = katex.renderToString('\\frac{v^2}{2g}+\\frac{p}{γ}+z = \\frac{v^2}{2g}+\\frac{p}{γ}+z\\subsubsection{subsubsection}')
+                                    
          document.getElementById('Vazbombh4').innerHTML = katex.renderToString('Q = \\frac{15.525}{60} = {0.258755 m³/s}')
-
+         
       </script>
 
       <footer>
@@ -372,12 +378,14 @@
        <link rel="stylesheet" href="css/side-bar-bu.css" class="stylesh">
        <script src="css/dark-mode.js"></script>
        <style>
-         #main {
+         body {
            background-color: white;
          }
-         
-         .dark-mode {
-           background-color: #303030;
+         .dark-mode{
+            background-color: #1b1b1b;
+         }
+         section{
+            background-color: white;
          }
          </style>
 </html>
