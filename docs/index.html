@@ -137,7 +137,7 @@
                document.getElementById('Vazbombhi').innerHTML = katex.renderToString('Q = \\frac{v ∙n∙η}{1000}')
 
                document.getElementById('Vazbombhi2').innerHTML = katex.renderToString('Q = \\frac{5 ∙3.450∙0.9}{1000} = {15.525 L/min}')
-               document.getElementById('Vazbombhi3').innerHTML = katex.renderToString('Q = \\frac{15.525}{60} = {0.258755 m³/s}')
+               document.getElementById('Vazbombhi3').innerHTML = katex.renderToString('Q = \\frac{15.525}{60} = {0.258755 L/h}')
 
             </script>
          <div id="Bombas-centrifu"></div>
@@ -163,8 +163,35 @@
          <h1 id='Vazbombh4'></h1>
       </div>
       </section>
+
+      <section class="calculos-sec3">
+         <h5>Cálculos</h5>
+         <li>Água fria</li>
+         <p>Vazão = 18.63 l/min -> 0.31 l/s</p>
+         <li>Água quente</li>
+         <p>Vazão = 12.42 l/min -> 0.21 l/s</p>
+         <hr>
+         <li id="area"></li>
+         <li id="velocidade_em_1"></li>
+         <br>
+         <li id="velocidade_em_2"></li>
+
+         <h5>Balanço de energia</h5>
+         <li>-Q = m(x1 - x2) = mcp(Tqe-Tqs)</li>
+         <h5>Determinando a Transferência de Calor</h5>
+         <li>ṁ = 0.21 kg/s</li>
+         <li>q = 0.21 ∙ 4.18 ∙ (45 - 15) = 26.334 kj/s</li>
+         <br>
+         <h5>Temperatura (Tfs -> Água quente)</h5>
+         <li id="temp_2"></li>
+      </section>
       <script>
-               
+         document.getElementById('area').innerHTML = katex.renderToString('A = {π  ∙ r^2} -> {π∙0.075^2} = {0.01767m²}')
+         document.getElementById('velocidade_em_1').innerHTML = katex.renderToString('A = \\frac{0.01863}{0.01767} -> {1.054 m/s}')
+
+         document.getElementById('velocidade_em_2').innerHTML = katex.renderToString('A = \\frac{0.01242}{0.01767} -> {0.7028 m/s}')
+         document.getElementById('temp_2').innerHTML = katex.renderToString('Tfs = Tfe +\\frac{ q}{ṁ ∙ 4178} -> 100°C+\\frac{26.334 kj/s}{(0.31 kg/s)∙4,.18}=79.67°C')
+
          document.getElementById('Vazbombh2').innerHTML = katex.renderToString('Q = {Φ ∙ V} -> Φ = \\frac{π∙d^2}{4}')
 
          document.getElementById('Vazbombh3').innerHTML = katex.renderToString('Q = {Φ ∙ V} -> Φ = \\frac{π∙0.0508^2}{4}')

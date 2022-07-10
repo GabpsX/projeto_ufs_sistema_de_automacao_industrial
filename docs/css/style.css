@@ -250,6 +250,18 @@
                 box-shadow: 5px 5px 5px #888;
                 border: 2px solid rgb(235, 235, 235);
             }
+            .calculos-sec3 {
+                padding: 5px;
+                border-radius: 6px;
+                top: 100px;
+                position: relative;
+                overflow: hidden;
+                width: 88%;
+                margin-left: auto;
+                margin-right: auto;
+                box-shadow: 5px 5px 5px #888;
+                border: 2px solid rgb(235, 235, 235);
+            }
             #Bombas-hidr2-txt{
                 padding: 5px;
                 position: relative;
