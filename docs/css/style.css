@@ -168,7 +168,7 @@
         footer{
             background-color: #424242;
             position: relative;
-            z-index: 999;
+            z-index: 1;
             height: 70px;
             width: 100%;
             top: 110px;
@@ -297,20 +297,17 @@
 
 
                 .show-pop-up {
-                    border-bottom-right-radius: 5px;
-                    border-bottom-left-radius: 5px;
-                    background-color: #282a35;
+                    background-color: transparent;
                     color: #dddddd;
                     position: relative;
                     height: 60px;
                     display: flex;
-                    text-align: center;
                     justify-content: space-evenly;
                     align-items: center;
                     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
                     font-size: 16px;
                     top: -16px;
-                    width: 103%;
+                    width: 100%;
                 }
                 *{
                     margin: 0;
@@ -321,11 +318,17 @@
 
 
 
-
+                ay{
+                    width: 100%;
+                }
                 .t-p{
                     position: relative;
                     top: -5px;
                 }
+
+
+
+                
                 ay{
                     border-radius: 5px;
                     height: 5px;
