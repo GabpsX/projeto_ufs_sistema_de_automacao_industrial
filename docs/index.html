@@ -41,7 +41,8 @@
       </div>
       <section class="d3_container space_container">
          <h1 class="color_wh font_size">3D viewer</h1>
-         <button onclick="show()" id="activ_bd">Show</button>
+         <Button id="activ_bd" type="button" onclick="show('detail[0]')" id="button_alert_nv" >Show</Button>
+
       </section>
       <body>
          <script type="module" src="model-viewer.min.js"></script>
@@ -56,16 +57,17 @@
                <p id="text_color_alert_nv">Mobile 2GB RAM <br>Snapdragon 425 Qualcomm SDM425</BR></p>
                <div style="display: flex;">
 
-                  <Button class="btn" type="button" onclick="removeDiv('detail[0]')" id="button_alert_nv" onclick="remove_div">Disable</Button>
+                  <Button class="btn" type="button" onclick="removeDiv('detail[0]')" id="button_alert_nv" >Disable</Button>
                   &nbsp;
-
                   <Button class="btn" type="button" id="button_alert_nv" onclick="removepup()">OK</Button>
                </div>
             </section>
          </section>
          <script>
-            function show(){
+            function show(id){
               document.getElementById(id).style.display = 'block';
+
+              
              }
          </script>
          <script>
