@@ -41,6 +41,7 @@
       </div>
       <section class="d3_container space_container">
          <h1 class="color_wh font_size">3D viewer</h1>
+         <button onclick="show()" id="activ_bd">Show</button>
       </section>
       <body>
          <script type="module" src="model-viewer.min.js"></script>
@@ -53,19 +54,33 @@
             <section class="alert_nv" id="detail[0]">
                <p>Warning: disable 3D view if necessary!</p>
                <p id="text_color_alert_nv">Mobile 2GB RAM <br>Snapdragon 425 Qualcomm SDM425</BR></p>
-               <Button class="btn" type="button" onclick="removeDiv('detail[0]')" id="button_alert_nv" onclick="remove_div">Disable</Button>
-               <br>
-               <Button class="btn" type="button" id="button_alert_nv" onclick="removepup()">OK</Button>
+               <div style="display: flex;">
+
+                  <Button class="btn" type="button" onclick="removeDiv('detail[0]')" id="button_alert_nv" onclick="remove_div">Disable</Button>
+                  &nbsp;
+
+                  <Button class="btn" type="button" id="button_alert_nv" onclick="removepup()">OK</Button>
+               </div>
             </section>
          </section>
          <script>
+            function show(){
+              document.getElementById(id).style.display = 'block';
+             }
+         </script>
+         <script>
             function removeDiv(id){
               document.getElementById(id).style.display = 'none';
-              document.getElementById.stytl
+
+              var x = document.getElementById('activ_bd');
+
+               x.style.display = 'block';
+              
              }
          </script>
          <script>
             function removepup(){
+
                document.querySelectorAll(".alert_nv").forEach(el => el.remove());
              }
          </script>
