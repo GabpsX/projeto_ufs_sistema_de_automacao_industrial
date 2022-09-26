@@ -52,9 +52,10 @@ background-color: rgba(75, 188, 240, 0.7);
 
 
 .alert_nv{
+    border: 0.1em solid rgb(202, 196, 196);
     position: absolute;
     z-index: 9999;
-    background-color: rgb(152, 152, 219);
+    background-color: rgb(247, 242, 242);
     width: 150px;
     height: 150px;
     text-align: center;
@@ -65,6 +66,9 @@ background-color: rgba(75, 188, 240, 0.7);
     margin-top: 5%;
     color: white;
 }
+.alert_nv p{
+    color: black;
+}
 #text_color_alert_nv{
     color: red;
     font-weight: 900;
@@ -74,9 +78,14 @@ background-color: rgba(75, 188, 240, 0.7);
     background-color: red;
     color: white;
     font-weight: 900;
-    width: 60px;
-    height: 20px;
+    width: 90px;
+    height: 30px;
     border: none;
     border-radius: 4px;
     margin-top: 5%;
+    font-size: 1em;
+}
+
+#button_alert_nv:hover{
+    background-color:rgb(45, 143, 235);
 }
