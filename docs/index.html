@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel="stylesheet" href="css/style.css" class="rel">
       <!-- Katex -->
-      <link rel="stylesheet" href="d3_style.css">
+      <link rel="stylesheet" href="css/d3_style.css">
       <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.11/katex.min.js" integrity="sha512-1kNZVA50gKlorLAWU83+SdOAUwABzfFFQ4WuOAZTeS/UhNhnm9zU7rDv/Q5NEzSnr5u2L6uhR/+8icjjmHjSnQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.11/katex.min.css" integrity="sha512-J8je2SgrCzA7hNBeiCJiA6oETHTTdp3We3EriOgJp6POycGLcDXj5dSwWlAPQcYGeaQ4N3uf30aOg/Nt5pxW2g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
       <!-- Katex -->
@@ -37,60 +37,27 @@
       <h1>3D P&ID</h1>
  
     </header>
+    <section class="alert_nv">
+      <p>Warning: disable 3D view if necessary!</p>
+      <p id="text_color_alert_nv">Mobile 3GB RAM <br>Snapdragon 425 Qualcomm SDM425</BR></p>
+      <Button id="button_alert_nv" onclick="remove_div">Disable</Button>
+    </section>
     <div class="uf_prodp">
      PSP20220072 - Protótipo experimental com sistema de automação industrial
     </div>
+    <section class="d3_container space_container">
+      <h1 class="color_wh font_size">3D viewer</h1>
+   </section>
     <body>
        <script type="module" src="model-viewer.min.js"></script>
        <section class="d3_container">
-          <h1 class="color_wh font_size">3D viewer</h1>
           <model-viewer id="prompt-demo" camera-controls touch-action="pan-y" interaction-prompt="none" src="Projeto.glb" alt="Neil Armstrong's Spacesuit from the Smithsonian Digitization Programs Office and National Air and Space Museum" shadow-intensity="1" ar>
              <div class="dot" slot="finger0"></div>
              <div class="dot" slot="finger1"></div>
           </model-viewer>
        </section>
        <div id="aSide"></div>
-       <style>
 
-          *{
-          text-decoration: none;
-          list-style: none;
-          font-style: none;
-          font-family: 'Roboto', sans-serif;
-          margin: 0;
-          }
-          @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
-          .color_wh{
-          margin-left: 5%;
-          color: white;
-          }
-          .d3_container {
-          margin: 0;
-          height: 100%;
-          background-color: #333;
-          }
-          .d3_container model-viewer {
-          margin-left: auto;
-          margin-right: auto;
-          height: 600px;
-          width: 95%;
-          border-radius: 8px;
-          border: none;
-          }
-       </style>
-       <style>
-          .dot{
-          display: block;
-          position: absolute;
-          width: 20px;
-          height: 20px;
-          transform: translateX(-50%) translateY(-50%);
-          border-radius: 50%;
-          box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.7), 0px 0px 5px 1px rgba(6, 21, 240, 0.8);
-          border: 1px solid rgba(255, 255, 255, 0.9);
-          background-color: rgba(75, 188, 240, 0.7);
-          }
-       </style>
        <script>
           const modelViewerPrompt = document.querySelector("#prompt-demo");
           

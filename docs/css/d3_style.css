@@ -1,0 +1,82 @@
+
+*{
+text-decoration: none;
+list-style: none;
+font-style: none;
+font-family: 'Roboto', sans-serif;
+margin: 0;
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+.color_wh{
+margin-left: 5%;
+color: white;
+}
+.d3_container {
+transition: width 6s;
+margin: 0;
+height: 100%;
+background-color: rgb(226, 226, 226);
+border-radius: 8px;
+}
+.d3_container:hover {
+    -webkit-transition: background-color 1000ms linear;
+    -ms-transition: background-color 1000ms linear;
+    transition: background-color 1000ms linear;
+    background-color: rgb(11, 63, 206);
+}
+.d3_container model-viewer {
+margin-left: auto;
+margin-right: auto;
+height: 500px;
+width: 95%;
+border-radius: 8px;
+border: none;
+
+}
+
+.dot{
+display: block;
+position: absolute;
+width: 20px;
+height: 20px;
+transform: translateX(-50%) translateY(-50%);
+border-radius: 50%;
+box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.7), 0px 0px 5px 1px rgba(6, 21, 240, 0.8);
+border: 1px solid rgba(255, 255, 255, 0.9);
+background-color: rgba(75, 188, 240, 0.7);
+}
+
+.space_container{
+    margin-bottom: 10px;
+}
+
+
+.alert_nv{
+    position: absolute;
+    z-index: 9999;
+    background-color: rgb(152, 152, 219);
+    width: 150px;
+    height: 150px;
+    text-align: center;
+    border-radius: 8px;
+    padding: 2%;
+    position: fixed;
+    top: 0;
+    margin-top: 5%;
+    color: white;
+}
+#text_color_alert_nv{
+    color: red;
+    font-weight: 900;
+}
+
+#button_alert_nv{
+    background-color: red;
+    color: white;
+    font-weight: 900;
+    width: 60px;
+    height: 20px;
+    border: none;
+    border-radius: 4px;
+    margin-top: 5%;
+}
