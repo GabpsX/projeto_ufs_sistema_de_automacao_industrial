@@ -122,7 +122,6 @@ overflow: hidden;
 width: 88%;
 margin-left: auto;
 margin-right: auto;
-box-shadow: 5px 5px 5px #888;
 border: 2px solid rgb(235, 235, 235);
 }
 .sec-3 {
@@ -134,7 +133,6 @@ overflow: hidden;
 width: 88%;
 margin-left: auto;
 margin-right: auto;
-box-shadow: 5px 5px 5px #888;
 border: 2px solid rgb(235, 235, 235);
 }
 table {
@@ -192,8 +190,8 @@ height: auto;
 @media(max-width: 900px){
 footer{
 background-color: #020a1b;
-box-shadow: 5px 5px 5px #888888;
-border: 2px solid #888888;
+
+
 }
 }
 .calculos-sec {
@@ -205,7 +203,7 @@ overflow: hidden;
 width: 88%;
 margin-left: auto;
 margin-right: auto;
-box-shadow: 5px 5px 5px #888;
+
 border: 2px solid rgb(235, 235, 235);
 }
 #Bombas-hidr{
@@ -248,7 +246,7 @@ overflow: hidden;
 width: 88%;
 margin-left: auto;
 margin-right: auto;
-box-shadow: 5px 5px 5px #888;
+
 border: 2px solid rgb(235, 235, 235);
 }
 .calculos-sec3 {
@@ -260,7 +258,7 @@ overflow: hidden;
 width: 92%;
 margin-left: auto;
 margin-right: auto;
-box-shadow: 5px 5px 5px #888;
+
 border: 2px solid rgb(235, 235, 235);
 }
 #Bombas-hidr2-txt{
