@@ -42,8 +42,47 @@
       <section class="d3_container space_container">
          <h1 class="color_wh font_size">3D viewer</h1>
          <Button id="activ_bd" type="button" onclick="show('detail[0]')" id="button_alert_nv" >Show</Button>
+         <Button id="desactiv_bd" type="button" onclick="hide('detail[0]')" id="button_alert_nv" >Close</Button>
 
       </section>
+
+      <script>
+
+         function show(id){
+           document.getElementById(id).style.display = 'block';
+
+           document.querySelectorAll(".alert_nv").forEach(el => el.remove());
+
+           var u = document.getElementById('desactiv_bd');
+
+           u.style.display = 'block'
+
+
+           var h = document.getElementById('activ_bd');
+
+           h.style.display = 'none'
+           
+          }
+
+          function hide(id){
+            document.getElementById(id).style.display = 'none';
+
+
+            var u = document.getElementById('desactiv_bd');
+
+            u.style.display = 'none'
+
+           var h = document.getElementById('activ_bd');
+
+           h.style.display = 'block'
+           
+          }
+
+
+      </script>
+
+
+
       <body>
          <script type="module" src="model-viewer.min.js"></script>
          <section id="detail[0]" class="d3_container">
@@ -63,13 +102,11 @@
                </div>
             </section>
          </section>
-         <script>
-            function show(id){
-              document.getElementById(id).style.display = 'block';
 
-              
-             }
-         </script>
+
+
+
+         
          <script>
             function removeDiv(id){
               document.getElementById(id).style.display = 'none';

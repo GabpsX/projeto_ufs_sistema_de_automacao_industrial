@@ -91,16 +91,33 @@
     align-items: center;
     justify-content: space-evenly;
     }
-    #activ_bd{
+    #activ_bd
+    {
     background-color: rgb(0, 119, 255);
     width: 50px;
     font-weight: 500;
     height: 20px;
     border-radius: 4px;
     color: white;
-    
+    display: none;
     }
-    #activ_bd:hover{
+    #activ_bd:hover
+    {
     color: white;
     background-color: rgb(17, 194, 155);
+    }
+    #desactiv_bd
+    {
+        background-color: rgb(0, 119, 255);
+        width: 50px;
+        font-weight: 500;
+        height: 20px;
+        border-radius: 4px;
+        color: white;
+        display: none;
+    }
+    #desactiv_bd:hover
+    {
+        color: white;
+        background-color: rgb(17, 194, 155);
     }
