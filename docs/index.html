@@ -37,7 +37,9 @@
       <h1>3D P&ID</h1>
       </header>
       <div class="uf_prodp">
+         <!--
          PSP20220072 - Protótipo experimental com sistema de automação industrial
+     -->
       </div>
       <section class="d3_container space_container">
          <h1 class="color_wh font_size">3D viewer</h1>
@@ -101,9 +103,24 @@
                   <Button class="btn" type="button" id="button_alert_nv" onclick="removepup()">OK</Button>
                </div>
             </section>
-         </section>
 
 
+         <section id="detail[0]" class="d4_container">
+            <model-viewer id="prompt-demo" camera-controls touch-action="pan-y" interaction-prompt="none" src="Projeto.glb" alt="Neil Armstrong's Spacesuit from the Smithsonian Digitization Programs Office and National Air and Space Museum" shadow-intensity="1" ar>
+               <div class="dot" slot="finger0"></div>
+               <div class="dot" slot="finger1"></div>
+            </model-viewer>
+            
+            <section class="alert_nv" id="detail[0]">
+               <p>Warning: disable 3D view if necessary!</p>
+               <p id="text_color_alert_nv">Mobile 2GB RAM <br>Snapdragon 425 Qualcomm SDM425</BR></p>
+               <div style="display: flex;">
+
+                  <Button class="btn" type="button" onclick="removeDiv('detail[0]')" id="button_alert_nv" >Disable</Button>
+                  &nbsp;
+                  <Button class="btn" type="button" id="button_alert_nv" onclick="removepup()">OK</Button>
+               </div>
+            </section>
 
 
          
@@ -197,6 +214,7 @@
          </script>
          </style>
    </menu>
+   
    <body id="main">
    <section class="sec-1">
    <article id="article_side_mid_section">
