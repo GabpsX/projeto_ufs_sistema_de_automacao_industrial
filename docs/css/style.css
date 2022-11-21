@@ -1,14 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;700&display=swap');
-*{
-font-smooth: auto;
--webkit-font-smoothing: antialiased;
--moz-osx-font-smoothing: grayscale;
-user-select: none;
-font-family: 'Roboto', sans-serif;
-}
+
 .positionabsolute{
 display: flex;
 justify-content: space-between;
+
 }
 .positionrelative {
 background-color: white;
@@ -153,12 +147,8 @@ footer{
 display: flex;
 justify-content: space-around;
 background-color: #1b1818;
-position: relative;
-z-index: 1;
-height: 70px;
-width: 100%;
-top: 50px;
-border-radius: 5px;
+
+
 color: aliceblue;
 text-align: center;
 bottom: 0;

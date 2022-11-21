@@ -1,15 +1,15 @@
-#menu-icon {
-    width: 1.5em;
-    position: absolute;
-    right: 0;
-    top: 2%;
-    z-index: 9999;
+.material-symbols-outlined {
+    width: 1.0em;
+    max-width:  1.0em;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
     background-color: white;
-    border-radius: 10px;
-    border: solid 1px #ccc;
     display: block;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 2%;
+    border-radius: 1em;
 }
 @keyframes animation-button {
     from {background-color: rgb(119, 0, 255);
@@ -18,9 +18,10 @@
     }
   }
   
-#menu-icon:hover {
+.material-symbols-outlined:hover {
     background-color: aqua;
    animation: animation-button 3s;
+
 }
 #darkandlightmod{
 
@@ -57,7 +58,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
+
   -webkit-transition: .4s;
   transition: .4s;
 }
