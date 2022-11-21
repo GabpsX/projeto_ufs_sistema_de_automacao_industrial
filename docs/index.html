@@ -87,16 +87,15 @@
 
 <div class="container_1"  id="detail[0]">
 
+
    <section class="d3-model">
-      <model-viewer src="Projeto_1.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="poster.webp" shadow-intensity="2" exposure="0.81" environment-image="spruit_sunrise_1k_HDR.hdr" skybox-image="spruit_sunrise_1k_HDR.hdr">
+      <model-viewer src="Projeto_1.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="poster.webp" shadow-intensity="2" environment-image="spruit_sunrise_1k_HDR.hdr" skybox-image="spruit_sunrise_1k_HDR.hdr" auto-rotate exposure="2.00" metallic-factor="5" shadow-softness="2" > </model-viewer>
          <div class="progress-bar hide" slot="progress-bar">
              <div class="update-bar"></div>
          </div>
-         <button slot="ar-button" id="ar-button">
-            
-         </button>
-   
+
      </model-viewer>
+
      <aside  class="content__">
       <ul>
           <li><a href="#">Diagrama de fluxo de processo 3D</a></li>
@@ -105,7 +104,7 @@
    </section>
    
    <section class="d3_model_">
-      <model-viewer src="Projeto_2.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="poster.webp" shadow-intensity="2" exposure="0.81" environment-image="spruit_sunrise_1k_HDR.hdr" skybox-image="spruit_sunrise_1k_HDR.hdr">
+      <model-viewer src="Projeto_2.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="poster.webp" shadow-intensity="2" environment-image="spruit_sunrise_1k_HDR.hdr" skybox-image="spruit_sunrise_1k_HDR.hdr" auto-rotate exposure="1.02"> </model-viewer>
          <div class="progress-bar hide" slot="progress-bar">
              <div class="update-bar"></div>
          </div>
@@ -497,6 +496,171 @@
       background-color: white;
       }
    </style>
+      <script>
+         var btn1 = document.querySelector("#PID");
+         btn1.addEventListener("click", function() {
+            window.scrollTo({left:0, top:0,behavior: "smooth"});
+         });
+      </script>
+      <section class="sec-3">
+      <table>
+      <h2>Equipamentos Pertinentes ao Protótipo</h2>
+      <tr>
+      <th>Quantidade</th>
+      <th>Especificação e dimensionamento</th>
+      <th>Preço - R$</th>
+      </tr>
+      <tr>
+      <td>Trocador de calor - <strong>1</strong></td>
+      <td>--</td>
+      <td>3,190</td>
+      </tr>
+      <tr>
+      <td>Válvulas - <strong>4</strong></td>
+      <td>--</td>
+      <td>600</td>
+      </tr>
+      <tr>
+      <td>Tanques - <strong>1</strong></td>
+      <td>1000 l</td>
+      <td>8,000</td>
+      </tr>
+      <tr>
+      <td>Bomba centrífuga - <strong>4</strong></td>
+      <td>--</td>
+      <td>3,000</td>
+      </tr>
+      <tr>
+      <td>Ebulidor Industrial - <strong>1</strong></td>
+      <td>--</td>
+      <td>100</td>
+      </tr>
+      <tr>
+      <td>Tanque de resfriamento - <strong>1</strong</td>
+      <td>1000 l</td>
+      <td>7,500</td>
+      </tr>
+      </table>
+      </section>
+      <section class="sec-4">
+      <h2>Instrumentos necessários para a automação</h2>
+      <table>
+      <tr>
+      <td>Controlador lógico - CLP</td>
+      <td>16 entradas e 16 saídas.</td>
+      <td>3.994</td>
+      </tr>
+      <tr>
+      <td>Transmissor de Pressão - <strong>4</strong</td>
+      <td>--</td>
+      <td>2.800</td>
+      </tr>
+      <tr>
+      <td>Transmissor de Temperatura - <strong>4</strong</td>
+      <td>--</td>
+      <td>4.800</td>
+      </tr>
+      <tr>
+      <td>Sensor de Vazão - <strong>4</strong</td>
+      <td>--</td>
+      <td>5,000</td>
+      </tr>
+      </table>
+      </section>
+      <section class="calculos-sec">
+      <div id="Bombas-hidr">
+      <h3 id="Bombas-hidr-txt">Bomba Hidráulica</h3>
+      <h3 id="Bombas-hidr-txt1">Exemplo:</h3>
+      <li id="Bombas-hidr-txt2">Cálculo de Vazão:</li>
+      <h1 id='Vazbombhi'></h1>
+      <li>Q = Vazão➜</li>
+      <li>v = volume (cm<sup>3</sup>)➜ 5</li>
+      <li>n = Rotação (rpm)➜ 3.450</li>
+      <li>η = Eficiência da bomba➜≈ 80 a 90% </li>
+      <h2>Água fria</h2>
+      <h1 id='Vazbombhi2'></h1>
+      <h1 id='Vazbombhi3'></h1>
+      <h2>Água quente</h2>
+      <h1 id='Vazbombh42'></h1>
+      <h1 id='Vazbombh4'></h1>
+      <img src="img/bomba-hid.gif" alt="" id="img-bomba">
+      </div>
+      <script>
+         document.getElementById('Vazbombhi').innerHTML = katex.renderToString('Q = \\frac{v ∙n∙η}{1000}')
+         
+         document.getElementById('Vazbombhi2').innerHTML = katex.renderToString('Q = \\frac{6 ∙3.450∙0.9}{1000} = {18.63 l/min}')
+         document.getElementById('Vazbombhi3').innerHTML = katex.renderToString('Q = \\frac{18.63}{1000} = {0.01863 m^3/s}')
+         
+         document.getElementById('Vazbombh42').innerHTML = katex.renderToString('Q = \\frac{4 ∙3.450∙0.9}{1000} = {12.42 l/min}')
+         document.getElementById('Vazbombh4').innerHTML = katex.renderToString('Q = \\frac{12.42}{1000} = {0.01242 m^3/s}')
+         
+      </script>
+      <div id="Bombas-centrifu"></div>
+      </section>
+      <!-- 
+         <section class="calculos-sec2">
+            <h3 id="Bombas-hidr2-txt">Bomba Centrífuga</h3>
+            <img src="https://gabpsx-projeto-u-f-s.w3spaces.com/IMG/envolt.png" alt="">
+            <div id="pad-div-calc">
+               -->
+      <!--
+         <h3 id="Bombas-hidr-txt1">Exemplo:</h3>
+         <li id="Bombas-hidr-txt2">Cálculo de Vazão:</li>
+         
+         <li>Q = Vazão➜</li>
+         <li>Φ = Área (cm<sup>2</sup>)➜ 5</li>
+         <li>V = Velocidade (m/s<sup>-1</sup>)</li>
+         <li>d = diametro (m)</li>
+         
+         <h1 id='Vazbombh2'></h1>
+         <h1 id='Vazbombh3'></h1>
+         <p>Equação de bernoulli</p>
+         <h1 id='Vazbombh4.1'></h1>
+         <h1 id='Vazbombh4'></h1>
+         -->
+      </div>
+      </section>
+      <section class="calculos-sec3">
+      <nav style="padding: 40px" class="padd-sec3">
+      <h3 style="text-align: center;">Cálculos -> Exemplo</h3>
+      <li>Água fria</li>
+      <p>Vazão = 18.63 l/min -> 0.31 l/s</p>
+      <li>Água quente</li>
+      <p>Vazão = 12.42 l/min -> 0.21 l/s</p>
+      <hr>
+      <li>d = 150mm</li>
+      <li id="area"></li>
+      <li id="velocidade_em_1"></li>
+      <br>
+      <li id="velocidade_em_2"></li>
+      <h5>Balanço de energia</h5>
+      <li>-Q = m(x1 - x2) = mcp(Tqe-Tqs)</li>
+      <h5>Determinando a Transferência de Calor</h5>
+      <li>ṁ = 0.21 kg/s</li>
+      <li>q = 0.21 ∙ 4.18 ∙ (45 - 15) = 26.334 kj/s</li>
+      <br>
+      <h5>Temperatura (Tfs -> Água quente)</h5>
+      <li id="temp_2"></li>
+      </nav>
+      </section>
+      <script>
+         document.getElementById('area').innerHTML = katex.renderToString('φ = {π  ∙ r^2} -> {π∙0.075^2} = {0.01767m²}')
+         document.getElementById('velocidade_em_1').innerHTML = katex.renderToString('v = \\frac{0.01863}{0.01767} -> {1.054 m/s}')
+         
+         document.getElementById('velocidade_em_2').innerHTML = katex.renderToString('v = \\frac{0.01242}{0.01767} -> {0.7028 m/s}')
+         document.getElementById('temp_2').innerHTML = katex.renderToString('Tfs = Tfe +\\frac{ q}{ṁ ∙ 4178} -> 100°C+\\frac{26.334 kj/s}{(0.31 kg/s)∙4,.18}=79.67°C')
+         
+         document.getElementById('Vazbombh2').innerHTML = katex.renderToString('Q = {Φ ∙ V} -> Φ = \\frac{π∙d^2}{4}')
+         
+         document.getElementById('Vazbombh3').innerHTML = katex.renderToString('Q = {Φ ∙ V} -> Φ = \\frac{π∙0.0508^2}{4}')
+         
+         document.getElementById('Vazbombh4.1').innerHTML = katex.renderToString('\\frac{v^2}{2g}+\\frac{p}{γ}+z = \\frac{v^2}{2g}+\\frac{p}{γ}+z\\subsubsection{subsubsection}')
+                                    
+         document.getElementById('Vazbombh4').innerHTML = katex.renderToString('Q = \\frac{15.525}{60} = {0.258755 m³/s}')
+         
+   
+      </script>
+
 </body>
 </html>
 
