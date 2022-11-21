@@ -14,9 +14,14 @@
     }
     .content_{   
       display: none;
-  
-  
   }
+  model-viewer{
+
+    width: 100% !important;
+  }
+  .content__{
+display: none;
+}
   }
 
   @media only screen and (min-width: 1000px) {
