@@ -2,12 +2,32 @@
     html,body {
       zoom: .8;
     }
+    
   }
 
   @media only screen and (max-width: 800px) {
     html,body  {
       zoom: .9;        
     }
+    table, th, td {
+
+      font-size: 1em !important;
+ 
+ 
+
+   
+  }
+  
+  .content_1{
+
+      border-radius: 5px !important;
+      background-color: rgb(12, 10, 14);
+      padding: 2%;
+      margin-top: 4%;
+      margin-bottom: 5%;
+      width: 100%;
+
+  }
     .container{
     flex-direction: column-reverse;
 
@@ -20,8 +40,10 @@
     width: 100% !important;
   }
   .content__{
-display: none;
-}
+    display: none;
+  }
+
+  
   }
 
   @media only screen and (min-width: 1000px) {
