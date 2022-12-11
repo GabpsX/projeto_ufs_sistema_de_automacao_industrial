@@ -1,0 +1,57 @@
+@media (min-width:670px){
+
+    .positionrelative{
+        display: flex;
+        justify-content: space-between;
+        
+        }
+        .positionrelative {
+        background-color: white;
+        width: 90%;
+        overflow: hidden;
+        position:relative;
+        margin-left: auto;
+        margin-right: auto;
+        height: 90px;
+        border-radius: 10px;
+        }
+        .mario_ani {
+        border-radius: 10px;
+        position: absolute;
+        bottom: 0;
+        width: 1.5em;
+        top: auto;
+        animation: mario-animation 4.1s infinite linear;
+        }
+        .bowser_ani {
+        border-radius: 10px;
+        position: absolute;
+        bottom: 0;
+        width: 3.9em;
+        top: auto;
+        animation: bowser_animation 4s infinite linear;
+        }
+        @keyframes mario-animation {
+        from{
+        left: -190px;
+        }
+        to {
+        left: 100%;
+        }
+        }
+        @keyframes bowser_animation {
+        from{
+        left: -130px;
+        }
+        to {
+        left: 100%;
+        }
+        }
+        .logo{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+
+}

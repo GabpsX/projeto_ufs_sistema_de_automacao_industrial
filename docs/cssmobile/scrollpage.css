@@ -1,0 +1,76 @@
+@media (max-width:670px) {
+    :root{
+
+        /*
+        --dark-mode-container-menu: #242526;
+        --dark-mode-left-right: #18191a;
+        */
+        --font-color-normal: rgb(241, 241, 241);
+        --font-color-dark: rgb(54, 52, 52);
+        
+        --normal-mode-container-menu: #ffffff;
+        --normal-mode-left-right-body: #f0f2f5;
+
+        --media-inner-border: rgba(255, 255, 255, 0.05);
+        --media-outer-border: #33363A;
+    }
+    /*SCROLL BAR
+    
+    /* width */
+    #right::-webkit-scrollbar {
+        width: 16px;
+    }
+
+    /* Track */
+    #right::-webkit-scrollbar-track {
+        background-color: var(--dark-mode-left-right-body);
+
+
+    }
+    
+    /* Handle */
+    #right::-webkit-scrollbar-thumb {
+        background: transparent; 
+        border-radius: 5px;
+
+    }
+
+
+    /* Handle on hover */
+    #right::-webkit-scrollbar-thumb:hover {
+        background: #bbc5cf; 
+        transition: 1.4s !important;
+        border: 5px solid var(--normal-mode-container-menu);
+        background-clip: content-box;
+    }
+
+
+
+
+    .section {
+        padding: 5% 5% 5% 5% !important;
+    }
+    
+    #right
+    {
+
+        background-color: var(--dark-mode-left-right-body) !important;
+
+        max-height: 90vh;
+        height: 90vh;
+
+
+        top: 64px;
+
+
+
+
+
+
+    }
+
+
+    #right:hover{
+        overflow-y: scroll;
+    }
+}

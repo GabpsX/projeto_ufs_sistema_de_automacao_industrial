@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/auth.css">
+    <script src="https://kit.fontawesome.com/ce0639bc52.js" crossorigin="anonymous"></script>
+    <title>Auth</title>
+</head>
+
+<body>
+
+
+    <section class="container">
+
+        <div class="main_">
+
+           
+            <form>
+                <div class="img_ct"></div>
+                <div class="user">
+                    <i class="fa-solid fa-user fa-bounce"></i>
+                    <input id="user" maxlength="8" placeholder="  Usuário" type="text">
+                </div>
+                
+                <div class="pass">
+                    <i class="fa-solid fa-lock fa-shake"></i>
+                    <input id="pass" maxlength="10" placeholder="  Senha" type="password">
+                </div>
+                <!--
+               <input class="enter_bt" type="submit" value="Entrar"/>
+                -->
+
+               <input  type="button" class="enter_bt" onclick="location.href='index.html';" value="Entrar" />
+
+               <input class="criar_bt" type="submit" value="Criar Usuário"/>
+
+
+            </form>
+
+        </div>
+    </section>
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+     .img_ct{
+         background: url(assets/user.png) no-repeat;
+         background-position: center;
+         background-size: 10em;
+     }
+</style>
+
+
+
+</html>

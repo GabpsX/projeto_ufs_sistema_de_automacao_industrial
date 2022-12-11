@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <script src="https://kit.fontawesome.com/ce0639bc52.js" crossorigin="anonymous"></script>
+      <!--DEKTOP TABLET-->
+      <link rel="stylesheet" href="cssdesktop/header.css">
+      <link rel="stylesheet" href="cssdesktop/side.css">
+      <link rel="stylesheet" href="cssdesktop/content.css">
+      <link rel="stylesheet" href="cssdesktop/scrollpage.css">
+      <link rel="stylesheet" href="cssdesktop/menu.css">
+      <link rel="stylesheet" href="cssdesktop/arrow.css">
+      <link rel="stylesheet" href="cssdesktop/diagram.css">
+      <link rel="stylesheet" href="cssdesktop/animation.css">
+      <!--MOBILE -->
+      <link rel="stylesheet" href="cssmobile/header.css">
+      <link rel="stylesheet" href="cssmobile/menu.css">
+      <link rel="stylesheet" href="cssmobile/animation.css">
+      <link rel="stylesheet" href="cssmobile/side.css">
+      <link rel="stylesheet" href="cssmobile/content.css">
+      <link rel="stylesheet" href="cssmobile/diagram.css">
+      <link rel="stylesheet" href="cssmobile/scrollpage.css">
+      <link rel="stylesheet" href="cssmobile/arrow.css">
+   </head>
+   <body>
+      <header>
+         <div class="header_content">
+            <div class="menu-content">
+               <div class="logo">
+                  <img src="img/engenharia-quimica-logo.png" alt="" class="icon">
+                  <p class="engenharia">Engenharia Química</p>
+               </div>
+               <div class="positionabsolute">
+                  <img src="img/mario_ani.gif" alt="" class="mario_ani">
+                  <img src="img/bowser-ani.gif" alt="" class="bowser_ani">
+               </div>
+               <div class="settings">
+                  <div id="opc">
+                     <a onclick="location.href='login.html';"><i class="fa-solid fa-right-to-bracket"></i></a>
+                     <a href="#settings"><i class="fa-solid fa-gear"></i></a>
+                     <a onclick="change_background_color()" href="#notur"><i class="fa-solid fa-moon"></i></a>
+                  </div>
+                  <a href="javascript:void(0);" class="icon" onclick="menu()">
+                  <i class="fa-regular fa-user fa-beat"style="--fa-animation-duration: 1.1s;--fa-beat-scale: 1.1;"></i>
+                  </a>
+               </div>
+            </div>
+         </div>
+         <script>
+            function menu() {
+              var x = document.getElementById("opc");
+              if (x.style.display === "block") {
+                x.style.display = "none";
+              } else {
+                x.style.display = "block";
+              }
+            }
+         </script>
+      </header>
+      <div id="container">
+         <div id="left" class="section">
+            <ul class="nav menu">
+               <li class="item-101 current active parent">
+                  <a class="diagramas2d arrow-button" href="#project_1">Projeto I 3D<span class="arrow"></span></a>
+               </li>
+               <li class="item-102 parent">
+                  <a class="diagramas2d arrow-button" href="#project_2">Projeto II 3D<span class="arrow"></span></a>
+               </li>
+               <li class="item-103 parent">
+                  
+               </li>
+            </ul>
+         </div>
+         <style>
+            img{
+            width: 100%;
+            }
+         </style>
+         <div id="center" class="section">
+            <div class="quote" id="men_op">
+               <a onclick="redir_2d()" class="diagramas2d arrow-button" href="#">PFD P&ID<span class="arrow"></span></a>
+               <a onclick="redir_d3()" class="diagramas3d arrow-button"href="#">Modelagem 3D<span class="arrow"></span></a>
+            </div>
+            <div class="quote span-2" id="project_1">
+               <div id="article_side_mid_section">
+                  <h1>Diagrama de fluxo de processo 3D</h1>
+                  <hr class="sep_3">
+                  <model-viewer src="Projeto_1.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="poster.webp" shadow-intensity="2" environment-image="spruit_sunrise_1k_HDR.hdr" skybox-image="spruit_sunrise_1k_HDR.hdr" auto-rotate exposure="2.00" metallic-factor="5" shadow-softness="2" > </model-viewer>
+                  <div class="progress-bar hide" slot="progress-bar">
+                     <div class="update-bar"></div>
+                  </div>
+                  </model-viewer>
+               </div>
+            </div>
+            <div class="quote span-2" id="project_2">
+               <div id="article_side_mid_section">
+                  <h1>Diagrama de fluxo de processo 3D</h1>
+                  <hr class="sep_4">
+                  <model-viewer src="Projeto_2.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="poster.webp" shadow-intensity="2" environment-image="spruit_sunrise_1k_HDR.hdr" skybox-image="spruit_sunrise_1k_HDR.hdr" auto-rotate exposure="1.02"> </model-viewer>
+                  <div class="progress-bar hide" slot="progress-bar">
+                     <div class="update-bar"></div>
+                  </div>
+                  </model-viewer>
+               </div>
+            </div>
+            <div class="quote span-2">
+               <div id="overlay__">
+                  <h1>Full Screen Overlay</h1>
+                  <hr class="sep_5">
+                  <div class="actions">
+                     <li class="item-101 current active parent">
+                        <a onclick="on()"  class="diagramas2d arrow-button" href="#">Projeto I 3D<span class="arrow"></span></a>
+                     </li>
+                     <li class="item-101 current active parent">
+                        <a onclick="on2()"  class="diagramas2d arrow-button" href="#">Projeto II 3D<span class="arrow"></span></a>
+                     </li>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <script>
+            function on() {
+              document.getElementById("overlay").style.display = "block";
+            }
+            
+            function off() {
+              document.getElementById("overlay").style.display = "none";
+            }
+            
+            function on2() {
+              document.getElementById("overlay2").style.display = "block";
+            }
+            
+            function off2() {
+              document.getElementById("overlay2").style.display = "none";
+            }
+         </script>
+         <section class="hiddensec">
+         <div id="overlay" class="overlay">
+            <button onclick="off()" class="close-pfd">
+            &#10799;
+            </button>
+            <model-viewer class="full_size_overlay" src="Projeto_1.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="poster.webp" shadow-intensity="2" environment-image="spruit_sunrise_1k_HDR.hdr" skybox-image="spruit_sunrise_1k_HDR.hdr" auto-rotate exposure="1.02"> </model-viewer>
+            <div class="progress-bar hide" slot="progress-bar">
+               <div class="update-bar"></div>
+            </div>
+            </model-viewer>
+         </div>
+         <div id="overlay2" class="overlay">
+            <button onclick="off2()" class="close-PID"">
+            &#10799;
+            </button>
+            <model-viewer class="full_size_overlay" src="Projeto_2.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="poster.webp" shadow-intensity="2" environment-image="spruit_sunrise_1k_HDR.hdr" skybox-image="spruit_sunrise_1k_HDR.hdr" auto-rotate exposure="1.02"> </model-viewer>
+            <div class="progress-bar hide" slot="progress-bar">
+               <div class="update-bar"></div>
+            </div>
+            </model-viewer>
+         </div>
+         <div id="right" class="section">
+            <ul class="nav menu" id="hide_menu">
+               <li class="item-101 current active parent">
+                  <a class="diagramas2d arrow-button" href="#"><i class="fa-solid fa-download fa-shake"></i> Unity P 3D<span class="arrow"></span></a>
+               </li>
+               <li class="item-102 parent">
+                  <a class="diagramas2d arrow-button" href="#"><i class="fa-solid fa-download fa-shake"></i> PFD<span class="arrow"></span></a>
+               </li>
+               <li class="item-103 parent">
+                  <a class="diagramas2d arrow-button" href="#"><i class="fa-solid fa-download fa-shake"></i>P&ID<span class="arrow"></span></a>
+               </li>
+            </ul>
+         </div>
+      </div>
+      <script src="js/script.js"></script>
+      <!--
+         <script src="js/model.js"></script>
+         -->
+      <script type="module" src="model-viewer.min.js"></script>
+      <a href="javascript:void(0);" class="icon_" onclick="menu_downloads()">
+      <i class="fa-solid fa-plus icon_style"></i>
+      </a>
+      <script>
+         function menu_downloads() {
+           var x = document.getElementById("hide_menu");
+           if (x.style.display === "block") {
+             x.style.display = "none";
+             x.style.height = "0";
+           } else {
+             x.style.display = "block";
+             x.style.height = "500px";
+            
+           }
+         }
+      </script>
+   </body>
+</html>
