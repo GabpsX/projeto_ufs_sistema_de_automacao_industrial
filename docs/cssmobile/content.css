@@ -227,8 +227,18 @@
         border-radius: 50%;
    }
    td,th{
-    font-size: 0.64em;
+    font-size: 0.625em;
+    color: white;
+    font-weight: 700;
    }
+   strong{
+    color: white;
+   }
+   td,th{
+    background-color: #426480;
+    border-radius: 3px;
+    height: 30px;
+  }
    table{
     width: 100%;
    }
