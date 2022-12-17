@@ -6,13 +6,11 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Projeto UFS</title>
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.css" integrity="sha384-D+9gmBxUQogRLqvARvNLmA9hS2x//eK1FhVb9PiU86gmcrBrJAQT8okdJ4LMp2uv" crossorigin="anonymous">
-
       <!-- The loading of KaTeX is deferred to speed up page rendering -->
       <script src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.js" integrity="sha384-483A6DwYfKeDa0Q52fJmxFXkcPCFfnXMoXblOkJ4JcA8zATN6Tm78UNL72AKk+0O" crossorigin="anonymous"></script>
-  
       <!-- To automatically render math in text elements, include the auto-render extension: -->
       <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/contrib/auto-render.min.js" integrity="sha384-yACMu8JWxKzSp/C1YV86pzGiQ/l1YUfE8oPuahJQxzehAjEt2GiQuy/BIvl9KyeF" crossorigin="anonymous"
-          onload="renderMathInElement(document.body);"></script>
+         onload="renderMathInElement(document.body);"></script>
       <script src="https://kit.fontawesome.com/ce0639bc52.js" crossorigin="anonymous"></script>
       <!--DEKTOP TABLET-->
       <link rel="stylesheet" href="cssdesktop/header.css">
@@ -51,22 +49,22 @@
                      <a href="#settings"><i class="fa-solid fa-gear"></i></a>
                      <a onclick="change_background_color()" href="#notur"><i class="fa-solid fa-moon"></i></a>
                      <label class="switch">
-                        <input type="checkbox" value="X" onchange="darkmode(this.id,this.checked)">
-                        <span onclick="change_background_color()" class="slider round"></span>
-                      </label>
-                      <script>
+                     <input type="checkbox" value="X" onchange="darkmode(this.id,this.checked)">
+                     <span onclick="change_background_color()" class="slider round"></span>
+                     </label>
+                     <script>
                         function darkmode(chang,chang2) {
                         if(chang2 == true) {
                             var x = document.getElementById("header");
                             x.style.backgroundColor = "#242526";
                             
-
+                        
                             var y = document.getElementById("container");
                             y.style.backgroundColor = "#18191a";
-
+                        
                         }                           
-           
- 
+                        
+                        
                         else {
                             var x = document.getElementById("header");
                             x.style.backgroundColor = "white";
@@ -75,13 +73,12 @@
                            
                         }
                         }
-
-
-
-                    
+                        
+                        
+                        
+                        
                         
                      </script>
-
                   </div>
                   <a href="javascript:void(0);" class="icon" onclick="menu()">
                   <i class="fa-regular fa-user fa-beat"style="--fa-animation-duration: 1.1s;--fa-beat-scale: 1.1;"></i>
@@ -101,254 +98,238 @@
          </script>
       </header>
       <div id="container">
-         <div id="left" class="section">
-            <ul class="nav menu">
-               <li class="item-101 current active parent">
-                  <a class="diagramas2d arrow-button" href="#projeto_1">Diagrama PFD<span class="arrow"></span></a>
-               </li>
-               <li class="item-102 parent">
-                  <a class="diagramas2d arrow-button" href="#projeto_2">Diagrama P&ID<span class="arrow"></span></a>
-               </li>
-               <li class="item-103 parent">
-                  <a class="diagramas2d arrow-button" href="#calculos">Cálculos<span class="arrow"></span></a>
-               </li>
-            </ul>
+      <div id="left" class="section">
+         <ul class="nav menu">
+            <li class="item-101 current active parent">
+               <a class="diagramas2d arrow-button" href="#projeto_1">Diagrama PFD<span class="arrow"></span></a>
+            </li>
+            <li class="item-102 parent">
+               <a class="diagramas2d arrow-button" href="#projeto_2">Diagrama P&ID<span class="arrow"></span></a>
+            </li>
+            <li class="item-103 parent">
+               <a class="diagramas2d arrow-button" href="#calculos">Cálculos<span class="arrow"></span></a>
+            </li>
+         </ul>
+      </div>
+      <style>
+         img{
+         width: 100%;
+         }
+      </style>
+      <div id="center" class="section">
+      <div class="quote" id="men_op">
+         <a onclick="redir_2d()" class="diagramas2d arrow-button" href="#">PFD P&ID<span class="arrow"></span></a>
+         <a onclick="redir_d3()" class="diagramas3d arrow-button"href="#">Modelagem 3D<span class="arrow"></span></a>
+      </div>
+      <div class="quote span-2" id="projeto_1">
+         <div id="article_side_mid_section">
+            <h1>Process Flow Diagram - PFD</h1>
+            <hr class="sep">
+            <img onclick="on()" id="PFD" src="https://grid-template-teste-gabpsx.netlify.app/img/pfd.gif" alt="fluxogram_process">
          </div>
-
-         <style>
-            img{
-            width: 100%;
-            }
-         </style>
-         <div id="center" class="section">
-            <div class="quote" id="men_op">
-               <a onclick="redir_2d()" class="diagramas2d arrow-button" href="#">PFD P&ID<span class="arrow"></span></a>
-               <a onclick="redir_d3()" class="diagramas3d arrow-button"href="#">Modelagem 3D<span class="arrow"></span></a>
-            </div>
-            <div class="quote span-2" id="projeto_1">
-               <div id="article_side_mid_section">
-                  <h1>Process Flow Diagram - PFD</h1>
-                  <hr class="sep">
-                  <img onclick="on()" id="PFD" src="https://grid-template-teste-gabpsx.netlify.app/img/pfd.gif" alt="fluxogram_process">
-               </div>
-            </div>
-            <div class="quote span-2" id="projeto_2">
-               <div id="article_side_mid_section">
-                  <h1>Piping and Instrumentation Diagram - P&ID</h1>
-                  <hr class="sep_2">
-                  <img onclick="on2()" id = "PID" src="https://grid-template-teste-gabpsx.netlify.app/img/PID.gif" alt="fluxogram_process">
-                  <img onclick="on3()" id = "PID" src="https://grid-template-teste-gabpsx.netlify.app/img/pid.png" alt="fluxogram_process">
-               </div>
-            </div>
-            <section class="set-in-line-bt">
-                
-                <button type="button" class="collapsible">Equipamentos Pertinentes ao Protótipo <i class="fa-solid fa-angles-right fa-rotate-90"></i></button>
-                <div class="content">
-                    <section class="content_1">
-                    <table  class="table table-striped table-dark">
-                    <h2>Equipamentos Pertinentes ao Protótipo</h2>
-                    <tr>
-                    <th>Quantidade</th>
-                    <th>Especificação e dimensionamento</th>
-                    <th>Preço - R$</th>
-                    </tr>
-                    <tr>
-                    <td>Trocador de calor - <strong>1</strong></td>
-                    <td>--</td>
-                    <td>3,190</td>
-                    </tr>
-                    <tr>
-                    <td>Válvulas - <strong>4</strong></td>
-                    <td>--</td>
-                    <td>600</td>
-                    </tr>
-                    <tr>
-                    <td>Tanques - <strong>1</strong></td>
-                    <td>1000 l</td>
-                    <td>8,000</td>
-                    </tr>
-                    <tr>
-                    <td>Bomba centrífuga - <strong>4</strong></td>
-                    <td>--</td>
-                    <td>3,000</td>
-                    </tr>
-                    <tr>
-                    <td>Ebulidor Industrial - <strong>1</strong></td>
-                    <td>--</td>
-                    <td>100</td>
-                    </tr>
-                    <tr>
-                    <td>Tanque de resfriamento - <strong>1</strong</td>
-                    <td>1000 l</td>
-                    <td>7,500</td>
-                    </tr>
-                    </table>
-                    </section>
-                    <section class="content_1">
-                    <h2>Instrumentos necessários para a automação</h2>
-                    <table>
-                    <tr>
-                    <td>Controlador lógico - CLP</td>
-                    <td>16 entradas e 16 saídas.</td>
-                    <td>3.994</td>
-                    </tr>
-                    <tr>
-                    <td>Transmissor de Pressão - <strong>4</strong</td>
-                    <td>--</td>
-                    <td>2.800</td>
-                    </tr>
-                    <tr>
-                    <td>Transmissor de Temperatura - <strong>4</strong</td>
-                    <td>--</td>
-                    <td>4.800</td>
-                    </tr>
-                    <tr>
-                    <td>Sensor de Vazão - <strong>4</strong</td>
-                    <td>--</td>
-                    <td>5,000</td>
-                    </tr>
-                    </table>
-                    </section>
-            </section>
-
-            <section class="set-in-line-bt">
-                
-                <button type="button" class="collapsible">Instrumentos necessários para a automação <i class="fa-solid fa-angles-right fa-rotate-90"></i></button>
-                <div class="content">
-                    <section class="content_1">
-                        <div id="Bombas-hidr">
-                           <h3 id="Bombas-hidr-txt">Bomba Hidráulica</h3>
-                           <h3 id="Bombas-hidr-txt1">Exemplo:</h3>
-                           <li id="Bombas-hidr-txt2">Cálculo de Vazão:</li>
-                           <h1 id='Vazbombhi'></h1>
-                           <li>Q = Vazão➜</li>
-                           <li>v = volume (cm<sup>3</sup>)➜ 5</li>
-                           <li>n = Rotação (rpm)➜ 3.450</li>
-                           <li>η = Eficiência da bomba➜≈ 80 a 90% </li>
-                           <h2>Água fria</h2>
-                           <h1 id='Vazbombhi2'></h1>
-                           <h1 id='Vazbombhi3'></h1>
-                           <h2>Água quente</h2>
-                           <h1 id='Vazbombh42'></h1>
-                           <h1 id='Vazbombh4'></h1>
-
-                        </div>
-                        <script>
-                           document.getElementById('Vazbombhi').innerHTML = katex.renderToString('Q = \\frac{v ∙n∙η}{1000}')
-                           
-                           document.getElementById('Vazbombhi2').innerHTML = katex.renderToString('Q = \\frac{6 ∙3.450∙0.9}{1000} = {18.63 l/min}')
-                           document.getElementById('Vazbombhi3').innerHTML = katex.renderToString('Q = \\frac{18.63}{1000} = {0.01863 m^3/s}')
-                           
-                           document.getElementById('Vazbombh42').innerHTML = katex.renderToString('Q = \\frac{4 ∙3.450∙0.9}{1000} = {12.42 l/min}')
-                           document.getElementById('Vazbombh4').innerHTML = katex.renderToString('Q = \\frac{12.42}{1000} = {0.01242 m^3/s}')
-                           
-                        </script>
-                        </div></section>
-            </section>
-
-            <section class="set-in-line-bt" id="calculos">
-                
-                <button type="button" class="collapsible">Cálculos <i class="fa-solid fa-angles-right fa-rotate-90"></i></button>
-                <div class="content">
-                    <section class="content_1">
-                        <nav style="padding: 40px">
-                        <h3 style="text-align: center;">Cálculos -> Exemplo</h3>
-                        <li>Água fria</li>
-                        <p>Vazão = 18.63 l/min -> 0.31 l/s</p>
-                        <li>Água quente</li>
-                        <p>Vazão = 12.42 l/min -> 0.21 l/s</p>
-                        <hr>
-                        <li>d = 150mm</li>
-                        <li id="area"></li>
-                        <li id="velocidade_em_1"></li>
-                        <br>
-                        <li id="velocidade_em_2"></li>
-                        <h5>Balanço de energia</h5>
-                        <li>-Q = m(x1 - x2) = mcp(Tqe-Tqs)</li>
-                        <h5>Determinando a Transferência de Calor</h5>
-                        <li>ṁ = 0.21 kg/s</li>
-                        <li>q = 0.21 ∙ 4.18 ∙ (45 - 15) = 26.334 kj/s</li>
-                        <br>
-                        <h5>Temperatura (Tfs -> Água quente)</h5>
-                        <li id="temp_2"></li>
-                        </nav>
-                        </section>
-                        <script>
-                           document.getElementById('area').innerHTML = katex.renderToString('φ = {π  ∙ r^2} -> {π∙0.075^2} = {0.01767m²}')
-                           document.getElementById('velocidade_em_1').innerHTML = katex.renderToString('v = \\frac{0.01863}{0.01767} -> {1.054 m/s}')
-                           
-                           document.getElementById('velocidade_em_2').innerHTML = katex.renderToString('v = \\frac{0.01242}{0.01767} -> {0.7028 m/s}')
-                           document.getElementById('temp_2').innerHTML = katex.renderToString('Tfs = Tfe +\\frac{ q}{ṁ ∙ 4178} -> 100°C+\\frac{26.334 kj/s}{(0.31 kg/s)∙4,.18}=79.67°C')
-                           
-                           document.getElementById('Vazbombh2').innerHTML = katex.renderToString('Q = {Φ ∙ V} -> Φ = \\frac{π∙d^2}{4}')
-                           
-                           document.getElementById('Vazbombh3').innerHTML = katex.renderToString('Q = {Φ ∙ V} -> Φ = \\frac{π∙0.0508^2}{4}')
-                           
-                           document.getElementById('Vazbombh4.1').innerHTML = katex.renderToString('\\frac{v^2}{2g}+\\frac{p}{γ}+z = \\frac{v^2}{2g}+\\frac{p}{γ}+z\\subsubsection{subsubsection}')
-                                                      
-                           document.getElementById('Vazbombh4').innerHTML = katex.renderToString('Q = \\frac{15.525}{60} = {0.258755 m³/s}')
-                           
-                     
-                        </script>
-            </section>
-            
-                <style>
-                    .collapsible {
-                        background-color:#ffffff;
-                        color: rgb(58, 54, 54);
-                        cursor: pointer;
-                        padding: 18px;
-                        width: 100%;
-                        border: none;
-                        text-align: center;
-                        outline: none;
-                        font-size: 15px;
-                    }
-
-                    .active, .collapsible:hover {
-                    background-color: rgb(243, 242, 242);
-                    }
-
-                    .content {
-                        text-align: justify;
-                        padding: 0 18px;
-                        display: none;
-                        overflow: hidden;
-                        background-color:#ffffff;
-                    }
-                     .set-in-line-bt{
-
-                        font-size: 1em;
-                        padding-top: 6%;
-                        padding-bottom: 6%;
-                        background-color:#ffffff;
-                        text-align: center;
-                        color: white;
-                        color: #fff;
-                        margin-bottom: 0;
-                        position: relative;
-                     }
-                    
-
-
-                  </style>
-
-
-
+      </div>
+      <div class="quote span-2" id="projeto_2">
+         <div id="article_side_mid_section">
+            <h1>Piping and Instrumentation Diagram - P&ID</h1>
+            <hr class="sep_2">
+            <img onclick="on2()" id = "PID" src="https://grid-template-teste-gabpsx.netlify.app/img/PID.gif" alt="fluxogram_process">
+            <img onclick="on3()" id = "PID" src="https://grid-template-teste-gabpsx.netlify.app/img/pid.png" alt="fluxogram_process">
          </div>
-         <div id="right" class="section">
-            <ul class="nav menu" id="hide_menu">
-               <li class="item-101 current active parent">
-                  <a class="diagramas2d arrow-button" href="#"><i class="fa-solid fa-download fa-shake"></i> Unity P 3D<span class="arrow"></span></a>
-               </li>
-               <li class="item-102 parent">
-                  <a class="diagramas2d arrow-button" href="#"><i class="fa-solid fa-download fa-shake"></i> PFD<span class="arrow"></span></a>
-               </li>
-               <li class="item-103 parent">
-                  <a class="diagramas2d arrow-button" href="#"><i class="fa-solid fa-download fa-shake"></i>P&ID<span class="arrow"></span></a>
-               </li>
-            </ul>
-         </div>
+      </div>
+      <section class="set-in-line-bt">
+         <button type="button" class="collapsible">Equipamentos Pertinentes ao Protótipo <i class="fa-solid fa-angles-right fa-rotate-90"></i></button>
+         <div class="content">
+            <section class="content_1">
+               <table  class="table table-striped table-dark">
+                  <h2>Equipamentos Pertinentes ao Protótipo</h2>
+                  <tr>
+                     <th>Quantidade</th>
+                     <th>Especificação e dimensionamento</th>
+                     <th>Preço - R$</th>
+                  </tr>
+                  <tr>
+                     <td>Trocador de calor - <strong>1</strong></td>
+                     <td>--</td>
+                     <td>3,190</td>
+                  </tr>
+                  <tr>
+                     <td>Válvulas - <strong>4</strong></td>
+                     <td>--</td>
+                     <td>600</td>
+                  </tr>
+                  <tr>
+                     <td>Tanques - <strong>1</strong></td>
+                     <td>1000 l</td>
+                     <td>8,000</td>
+                  </tr>
+                  <tr>
+                     <td>Bomba centrífuga - <strong>4</strong></td>
+                     <td>--</td>
+                     <td>3,000</td>
+                  </tr>
+                  <tr>
+                     <td>Ebulidor Industrial - <strong>1</strong></td>
+                     <td>--</td>
+                     <td>100</td>
+                  </tr>
+                  <tr>
+                     <td>Tanque de resfriamento - <strong>1</strong</td>
+                     <td>1000 l</td>
+                     <td>7,500</td>
+                  </tr>
+               </table>
+            </section>
+      </section>
+      <section class="set-in-line-bt">
+      <button type="button" class="collapsible">Instrumentos necessários para a automação <i class="fa-solid fa-angles-right fa-rotate-90"></i></button>
+      <div class="content">
+      <section class="content_1">
+      <h2>Instrumentos necessários para a automação</h2>
+      <table>
+      <tr>
+      <td>Controlador lógico - CLP</td>
+      <td>16 entradas e 16 saídas.</td>
+      <td>3.994</td>
+      </tr>
+      <tr>
+      <td>Transmissor de Pressão - <strong>4</strong</td>
+      <td>--</td>
+      <td>2.800</td>
+      </tr>
+      <tr>
+      <td>Transmissor de Temperatura - <strong>4</strong</td>
+      <td>--</td>
+      <td>4.800</td>
+      </tr>
+      <tr>
+      <td>Sensor de Vazão - <strong>4</strong</td>
+      <td>--</td>
+      <td>5,000</td>
+      </tr>
+      </table>
+      </div>
+      </section>
+      </section>
+      <section class="set-in-line-bt" id="calculos">
+      <button type="button" class="collapsible">Cálculos <i class="fa-solid fa-angles-right fa-rotate-90"></i></button>
+      <div class="content">
+      <section class="content_1">
+      <nav style="padding: 40px">
+      <div id="Bombas-hidr">
+      <h3 id="Bombas-hidr-txt1">Exemplo I:</h3>
+      <h3 id="Bombas-hidr-txt">Bomba Hidráulica</h3>
+      <li id="Bombas-hidr-txt2">Cálculo de Vazão:</li>
+      <h1 id='Vazbombhi'></h1>
+      <li>Q = Vazão➜</li>
+      <li>v = volume (cm<sup>3</sup>)➜ 5</li>
+      <li>n = Rotação (rpm)➜ 3.450</li>
+      <li>η = Eficiência da bomba➜≈ 80 a 90% </li>
+      <h2>Água fria</h2>
+      <h1 id='Vazbombhi2'></h1>
+      <h1 id='Vazbombhi3'></h1>
+      <h2>Água quente</h2>
+      <h1 id='Vazbombh42'></h1>
+      <h1 id='Vazbombh4'></h1>
+      </div>
+      <script>
+         document.getElementById('Vazbombhi').innerHTML = katex.renderToString('Q = \\frac{v ∙n∙η}{1000}')
+         
+         document.getElementById('Vazbombhi2').innerHTML = katex.renderToString('Q = \\frac{6 ∙3.450∙0.9}{1000} = {18.63 l/min}')
+         document.getElementById('Vazbombhi3').innerHTML = katex.renderToString('Q = \\frac{18.63}{1000} = {0.01863 m^3/s}')
+         
+         document.getElementById('Vazbombh42').innerHTML = katex.renderToString('Q = \\frac{4 ∙3.450∙0.9}{1000} = {12.42 l/min}')
+         document.getElementById('Vazbombh4').innerHTML = katex.renderToString('Q = \\frac{12.42}{1000} = {0.01242 m^3/s}')
+         
+      </script>      
+      <hr>
+      <h3 style="text-align: left;">Exemplo II:</h3>
+      <li>Água fria</li>
+      <p>Vazão = 18.63 l/min -> 0.31 l/s</p>
+      <li>Água quente</li>
+      <p>Vazão = 12.42 l/min -> 0.21 l/s</p>
+      <hr>
+      <li>d = 150mm</li>
+      <li id="area"></li>
+      <li id="velocidade_em_1"></li>
+      <br>
+      <li id="velocidade_em_2"></li>
+      <h5>Balanço de energia</h5>
+      <li>-Q = m(x1 - x2) = mcp(Tqe-Tqs)</li>
+      <h5>Determinando a Transferência de Calor</h5>
+      <li>ṁ = 0.21 kg/s</li>
+      <li>q = 0.21 ∙ 4.18 ∙ (45 - 15) = 26.334 kj/s</li>
+      <br>
+      <h5>Temperatura (Tfs -> Água quente)</h5>
+      <li id="temp_2"></li>
+      </nav>
+      </section>
+      <script>
+         document.getElementById('area').innerHTML = katex.renderToString('φ = {π  ∙ r^2} -> {π∙0.075^2} = {0.01767m²}')
+         document.getElementById('velocidade_em_1').innerHTML = katex.renderToString('v = \\frac{0.01863}{0.01767} -> {1.054 m/s}')
+         
+         document.getElementById('velocidade_em_2').innerHTML = katex.renderToString('v = \\frac{0.01242}{0.01767} -> {0.7028 m/s}')
+         document.getElementById('temp_2').innerHTML = katex.renderToString('Tfs = Tfe +\\frac{ q}{ṁ ∙ 4178} -> 100°C+\\frac{26.334 kj/s}{(0.31 kg/s)∙4,.18}=79.67°C')
+         
+         document.getElementById('Vazbombh2').innerHTML = katex.renderToString('Q = {Φ ∙ V} -> Φ = \\frac{π∙d^2}{4}')
+         
+         document.getElementById('Vazbombh3').innerHTML = katex.renderToString('Q = {Φ ∙ V} -> Φ = \\frac{π∙0.0508^2}{4}')
+         
+         document.getElementById('Vazbombh4.1').innerHTML = katex.renderToString('\\frac{v^2}{2g}+\\frac{p}{γ}+z = \\frac{v^2}{2g}+\\frac{p}{γ}+z\\subsubsection{subsubsection}')
+                                    
+         document.getElementById('Vazbombh4').innerHTML = katex.renderToString('Q = \\frac{15.525}{60} = {0.258755 m³/s}')
+         
+         
+      </script>
+      </section>
+      <style>
+      .collapsible {
+      background-color:#ffffff;
+      color: rgb(58, 54, 54);
+      cursor: pointer;
+      padding: 18px;
+      width: 100%;
+      border: none;
+      text-align: center;
+      outline: none;
+      font-size: 15px;
+      }
+      .active, .collapsible:hover {
+      background-color: rgb(243, 242, 242);
+      }
+      .content {
+      text-align: justify;
+      padding: 0 18px;
+      display: none;
+      overflow: hidden;
+      background-color:#ffffff;
+      }
+      .set-in-line-bt{
+      border-radius: .3em;
+      font-size: 1em;
+      padding-top: 6%;
+      padding-bottom: 6%;
+      background-color:#ffffff;
+      text-align: center;
+      color: white;
+      color: #fff;
+      margin-bottom: 0;
+      position: relative;
+      }
+      </style>
+      </div>
+      <div id="right" class="section">
+      <ul class="nav menu" id="hide_menu">
+      <li class="item-101 current active parent">
+      <a class="diagramas2d arrow-button" href="#"><i class="fa-solid fa-download fa-shake"></i> Unity P 3D<span class="arrow"></span></a>
+      </li>
+      <li class="item-102 parent">
+      <a class="diagramas2d arrow-button" href="#"><i class="fa-solid fa-download fa-shake"></i> PFD<span class="arrow"></span></a>
+      </li>
+      <li class="item-103 parent">
+      <a class="diagramas2d arrow-button" href="#"><i class="fa-solid fa-download fa-shake"></i>P&ID<span class="arrow"></span></a>
+      </li>
+      </ul>
+      </div>
       </div>
       <script>
          function on() {
@@ -366,7 +347,7 @@
          function off2() {
            document.getElementById("overlay2").style.display = "none";
          }
-
+         
          function on3() {
            document.getElementById("overlay3").style.display = "block";
          }
@@ -375,9 +356,6 @@
            document.getElementById("overlay3").style.display = "none";
          }
       </script>
-     
-      
-      
       <section class="hiddensec">
       <div id="overlay">
          <button onclick="off()" class="close-pfd">
@@ -391,7 +369,6 @@
          </button>
          <img id = "PID-2" src="https://grid-template-teste-gabpsx.netlify.app/img/PID.gif" alt="fluxogram_process">
       </div>
-
       <div id="overlay3" >
          <button onclick="off3()" class="close-PID">
          &#10799;
@@ -402,7 +379,6 @@
       <a href="javascript:void(0);" class="icon_" onclick="menu_downloads()">
       <i class="fa-solid fa-plus icon_style"></i>
       </a>
-
       <script>
          function menu_downloads() {
            var x = document.getElementById("hide_menu");
@@ -416,22 +392,21 @@
            }
          }
       </script>
-
-    <script>
-        var coll = document.getElementsByClassName("collapsible");
-        var i;
-        
-        for (i = 0; i < coll.length; i++) {
-        coll[i].addEventListener("click", function() {
-            this.classList.toggle("active");
-            var content = this.nextElementSibling;
-            if (content.style.display === "block") {
-            content.style.display = "none";
-            } else {
-            content.style.display = "block";
-            }
-        });
-        }
-    </script>
+      <script>
+         var coll = document.getElementsByClassName("collapsible");
+         var i;
+         
+         for (i = 0; i < coll.length; i++) {
+         coll[i].addEventListener("click", function() {
+             this.classList.toggle("active");
+             var content = this.nextElementSibling;
+             if (content.style.display === "block") {
+             content.style.display = "none";
+             } else {
+             content.style.display = "block";
+             }
+         });
+         }
+      </script>
    </body>
 </html>
