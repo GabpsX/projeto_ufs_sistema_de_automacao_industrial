@@ -4,7 +4,7 @@
       <meta charset="UTF-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Document</title>
+      <title>Projeto UFS</title>
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.css" integrity="sha384-D+9gmBxUQogRLqvARvNLmA9hS2x//eK1FhVb9PiU86gmcrBrJAQT8okdJ4LMp2uv" crossorigin="anonymous">
 
       <!-- The loading of KaTeX is deferred to speed up page rendering -->
@@ -129,14 +129,15 @@
                <div id="article_side_mid_section">
                   <h1>Process Flow Diagram - PFD</h1>
                   <hr class="sep">
-                  <img onclick="on()" id="PFD" src="https://gabpsx-projeto-u-f-s.w3spaces.com/IMG/pfd.gif" alt="fluxogram_process">
+                  <img onclick="on()" id="PFD" src="img/pfd.gif" alt="fluxogram_process">
                </div>
             </div>
             <div class="quote span-2" id="projeto_2">
                <div id="article_side_mid_section">
                   <h1>Piping and Instrumentation Diagram - P&ID</h1>
                   <hr class="sep_2">
-                  <img onclick="on2()" id = "PID" src="https://gabpsx-projeto-u-f-s.w3spaces.com/IMG/PID.gif" alt="fluxogram_process">
+                  <img onclick="on2()" id = "PID" src="img/PID.gif" alt="fluxogram_process">
+                  <img onclick="on3()" id = "PID" src="img/pid.png" alt="fluxogram_process">
                </div>
             </div>
             <section class="set-in-line-bt">
@@ -216,20 +217,20 @@
                 <div class="content">
                     <section class="content_1">
                         <div id="Bombas-hidr">
-                        <h3 id="Bombas-hidr-txt">Bomba Hidráulica</h3>
-                        <h3 id="Bombas-hidr-txt1">Exemplo:</h3>
-                        <li id="Bombas-hidr-txt2">Cálculo de Vazão:</li>
-                        <h1 id='Vazbombhi'></h1>
-                        <li>Q = Vazão➜</li>
-                        <li>v = volume (cm<sup>3</sup>)➜ 5</li>
-                        <li>n = Rotação (rpm)➜ 3.450</li>
-                        <li>η = Eficiência da bomba➜≈ 80 a 90% </li>
-                        <h2>Água fria</h2>
-                        <h1 id='Vazbombhi2'></h1>
-                        <h1 id='Vazbombhi3'></h1>
-                        <h2>Água quente</h2>
-                        <h1 id='Vazbombh42'></h1>
-                        <h1 id='Vazbombh4'></h1>
+                           <h3 id="Bombas-hidr-txt">Bomba Hidráulica</h3>
+                           <h3 id="Bombas-hidr-txt1">Exemplo:</h3>
+                           <li id="Bombas-hidr-txt2">Cálculo de Vazão:</li>
+                           <h1 id='Vazbombhi'></h1>
+                           <li>Q = Vazão➜</li>
+                           <li>v = volume (cm<sup>3</sup>)➜ 5</li>
+                           <li>n = Rotação (rpm)➜ 3.450</li>
+                           <li>η = Eficiência da bomba➜≈ 80 a 90% </li>
+                           <h2>Água fria</h2>
+                           <h1 id='Vazbombhi2'></h1>
+                           <h1 id='Vazbombhi3'></h1>
+                           <h2>Água quente</h2>
+                           <h1 id='Vazbombh42'></h1>
+                           <h1 id='Vazbombh4'></h1>
 
                         </div>
                         <script>
@@ -242,7 +243,7 @@
                            document.getElementById('Vazbombh4').innerHTML = katex.renderToString('Q = \\frac{12.42}{1000} = {0.01242 m^3/s}')
                            
                         </script>
-                        </div>section>
+                        </div></section>
             </section>
 
             <section class="set-in-line-bt" id="calculos">
@@ -365,19 +366,34 @@
          function off2() {
            document.getElementById("overlay2").style.display = "none";
          }
+
+         function on3() {
+           document.getElementById("overlay3").style.display = "block";
+         }
+         
+         function off3() {
+           document.getElementById("overlay3").style.display = "none";
+         }
       </script>
       <section class="hiddensec">
       <div id="overlay">
          <button onclick="off()" class="close-pfd">
          &#10799;
          </button>
-         <img id="PFD-1" src="https://gabpsx-projeto-u-f-s.w3spaces.com/IMG/pfd.gif" alt="fluxogram_process">
+         <img id="PFD-1" src="img/pfd.gif" alt="fluxogram_process">
       </div>
       <div id="overlay2" >
          <button onclick="off2()" class="close-PID"">
          &#10799;
          </button>
-         <img id = "PID-2" src="https://gabpsx-projeto-u-f-s.w3spaces.com/IMG/PID.gif" alt="fluxogram_process">
+         <img id = "PID-2" src="img/PID.gif" alt="fluxogram_process">
+      </div>
+
+      <div id="overlay3" >
+         <button onclick="off3()" class="close-PID">
+         &#10799;
+         </button>
+         <img id = "PID-3" src="img/pid.png" alt="fluxogram_process">
       </div>
       <script src="js/script.js"></script>
       <a href="javascript:void(0);" class="icon_" onclick="menu_downloads()">
