@@ -1,11 +1,6 @@
 @media (max-width:670px) {
-    *{
-        overflow-x: hidden;
-    }
-    table {
 
-        border:1px solid #EEEEEE;
-     }
+
     :root{
        /* --dark-mode-container-menu: #242526;
         --dark-mode-left-right: #18191a;
