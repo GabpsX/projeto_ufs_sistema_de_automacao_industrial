@@ -260,7 +260,27 @@
 
     .slider.round:before {
       border-radius: 50%;
+    }   
+    .collapsible{
+      margin-bottom: .5%;
     }
+    td,th{
+      margin-top: 10px;
+      font-size: 1.0em;
+      color: white;
+      font-weight: 700;
+     }
+     strong{
+      color: white;
+     }
+     td,th{
+      background-color: #426480;
+      border-radius: 3px;
+      height: 30px;
+    }
+     table{
+      width: 100%;
+     }
 
 }
 
