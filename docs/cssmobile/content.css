@@ -1,5 +1,7 @@
 @media (max-width:670px) {
-    
+    *{
+        overflow-x: hidden;
+    }
     table {
 
         border:1px solid #EEEEEE;
