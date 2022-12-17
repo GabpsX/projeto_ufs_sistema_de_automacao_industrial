@@ -1,4 +1,9 @@
 @media (max-width:670px) {
+    
+    table {
+
+        border:1px solid #EEEEEE;
+     }
     :root{
        /* --dark-mode-container-menu: #242526;
         --dark-mode-left-right: #18191a;
@@ -220,5 +225,11 @@
    }
     .slider.round:before {
         border-radius: 50%;
+   }
+   td,th{
+    font-size: 0.7em;
+   }
+   table{
+    width: 100%;
    }
 }
