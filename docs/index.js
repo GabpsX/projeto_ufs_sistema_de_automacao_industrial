@@ -16,7 +16,7 @@ loader.load('assets/trocador de calor.glb', function(glb){
      console.log(glb)
      const root = glb.scene;
      scene.add(root);
-     root.scale.set(13,13,13)
+     root.scale.set(16,16,16)
 
      root.traverse(function(node){
           if (node.isMesh){
@@ -60,7 +60,7 @@ const sizes = {
 }
 
 const camera = new THREE.PerspectiveCamera(75, sizes.width/sizes.height,0.1,100)
-camera.position.set(1,1.5,-2)
+camera.position.set(1,1.5,-1)
 scene.add(camera)
 
 
