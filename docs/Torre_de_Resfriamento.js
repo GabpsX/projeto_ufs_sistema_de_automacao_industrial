@@ -30,31 +30,59 @@ loader.load('assets/Torre de Resfriamento v1.glb', function(glb){
 }
 )
 
-const light1 = new THREE.PointLight(0x9999999,1)
-light1.position.set(50,3, 200)
-scene.add(light1)
 
-const light3 = new THREE.PointLight(0x9999999,1)
-light1.position.set(100,3, 6000)
+
+
+
+
+
+const light3 = new THREE.SpotLight(0xffffff,2)
+light3.position.set(-100,50,50)
+light3.castShadow = true
+light3.shadow.bias = -0.0001
+light3.shadow.mapSize.width = 1024*4
+light3.shadow.mapSize.height = 1024*4
 scene.add(light3)
 
-const light2 = new THREE.PointLight(0x9999999,1)
-light2.position.set(-50,-2, -100)
+const ambient_light = new THREE.AmbientLight(0xffffff,1.5)
+ambient_light.position.set(5,12,0)
+scene.add(ambient_light)
+
+
+const hemiLight = new THREE.HemisphereLight(0xffff80,0x4040ff,1)
+hemiLight.position.set(5,12,0)
+scene.add(hemiLight)
+
+const light = new THREE.DirectionalLight(0xffffff,2.0)
+light.position.set(2,10,1)
+scene.add(light)
+scene.add(light.target)
+
+
+
+const distance = 25.0
+const angle = Math.PI / 4.0
+const penumbra = 0.5
+const decay = 1 
+const light1 = new THREE.SpotLight(
+     0xff8080, 1, distance, angle, penumbra , decay
+) 
+light.position.set(5,12,0)
+light1.target.position.set(-1,0,0)
+
+
+
+const light2 = new THREE.SpotLight(0xffffff,4)
+light.position.set(30,-50,20)
+light.castShadow = true
+light.shadow.bias = -0.0001
+light.shadow.mapSize.width = 1024*4
+light.shadow.mapSize.height = 1024*4
 scene.add(light2)
 
 
-const spotLight = new THREE.SpotLight(0xFFFFFF)
-scene.add(spotLight)
-spotLight.position.set(1,8,4)
-spotLight.intensity = 1.2
-spotLight.angle = 0.45
-spotLight.penumbra = 0.3
-spotLight.castShadow = true
-spotLight.shadow.mapSize.width = 1024
-spotLight.shadow.mapSize.height = 1024
-spotLight.shadow.camera.near = 5
-spotLight.shadow.camera.far = 10
-spotLight.shadow.focus = 1
+
+
 
 
 const sizes = {
@@ -62,8 +90,10 @@ const sizes = {
      height: window.innerHeight
 }
 
-const camera = new THREE.PerspectiveCamera(60, sizes.width/sizes.height,0.1,100)
-camera.position.set(5,2,3)
+
+
+const camera = new THREE.PerspectiveCamera(50, sizes.width/sizes.height,1,5000)
+camera.position.set(0,2,4)
 scene.add(camera)
 
 
@@ -84,9 +114,10 @@ renderer.gammaOuput = true
 /*Effects*/
 
 function animate(){
+     renderer.render(scene,camera)
      requestAnimationFrame(animate)
 
-     renderer.render(scene,camera)
+
 
 }
 animate()
