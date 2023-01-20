@@ -45,20 +45,40 @@
         grid-template-columns: 100% 2%;
    }
     #center {
-        margin-top: 60px;
-       ;
+        margin-top: 60px;;
         padding: 3em;
         display: grid;
         grid-gap: 2em;
         max-height: fit-content;
    }
-    .quote {
-        position: relative;
-        background-color: var(--normal-mode-container-menu);
-        padding: 2em;
-        border-radius: .3em;
-        box-shadow: 0.1px 0.5px 0.5px 0.5px rgba(0,0,0,0.03);
-   }
+   #fullscreen3,#fullscreen2,#fullscreen{
+    background-color: #2196F3;
+    color: #fff;
+    border: 0;
+    border-radius: 5px;
+    height: 30px;
+    width: 80px;
+    margin-left: 3%;
+
+  }
+  #fullscreen3:hover,#fullscreen2:hover,#fullscreen:hover{
+    background-color: #426480;
+  }
+   .quote_wb{
+    display: flex;
+
+
+    flex-direction: column;
+    align-items: center;
+
+    position: relative;
+    background-color: var(--normal-mode-container-menu);
+    padding: 2em;
+
+
+    border-radius: .3em;
+    box-shadow: 0.1px 0.5px 0.5px 0.5px rgba(0,0,0,0.03);
+ }
     h1{
         font-size: 1em;
         text-align: center;

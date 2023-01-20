@@ -7,8 +7,23 @@ import {
 
 
 
-
 const canvas = document.querySelector('.webgl2');
+
+let button = document.getElementById("fullscreen3");
+button.addEventListener('click', function() {
+    if (canvas.requestFullscreen) {
+        canvas.requestFullscreen();
+    } else if (canvas.mozRequestFullScreen) {
+        canvas.mozRequestFullScreen();
+    } else if (canvas.webkitRequestFullscreen) {
+        canvas.webkitRequestFullscreen();
+    }
+});
+ document.exitFullscreen();
+ 
+
+
+
 const scene = new THREE.Scene()
 scene.background = new THREE.Color(0xdddddd)
 const loader = new GLTFLoader()
@@ -16,8 +31,11 @@ loader.load('assets/tanque.glb', function(glb){
      console.log(glb)
      const root = glb.scene;
      scene.add(root);
-     root.scale.set(16,16,16)
+     root.scale.set(500,500,500)
 
+     root.position.y = -30; //ajuste a posição do objeto de acordo com a distância
+
+     root.rotation.y += 120;
      root.traverse(function(node){
           if (node.isMesh){
                node.castShadow = true
@@ -30,28 +48,29 @@ loader.load('assets/tanque.glb', function(glb){
 }
 )
 
-const light1 = new THREE.PointLight(0x9999999,1)
-light1.position.set(50,2, 100)
-scene.add(light1)
 
 
-const light2 = new THREE.PointLight(0x9999999,1)
-light2.position.set(-50,-2, -100)
-scene.add(light2)
+const topLight = new THREE.DirectionalLight(0xffffff, 0.6);
+topLight.position.set(0, 1, 0);
+scene.add(topLight);
+const bottomLight = new THREE.DirectionalLight(0xffffff, 0.6);
+bottomLight.position.set(0, -1, 0);
+scene.add(bottomLight);
+const leftLight = new THREE.DirectionalLight(0xffffff, 0.6);
+leftLight.position.set(-1, 0, 0);
+scene.add(leftLight);
+const rightLight = new THREE.DirectionalLight(0xffffff, 0.6);
+rightLight.position.set(1, 0, 0);
+scene.add(rightLight);
+const frontLight = new THREE.DirectionalLight(0xffffff, 0.6);
+frontLight.position.set(0, 0, 1);
+scene.add(frontLight);
+const backLight = new THREE.DirectionalLight(0xffffff, 0.6);
+backLight.position.set(0, 0, -1);
+scene.add(backLight);
 
 
-const spotLight = new THREE.SpotLight(0xFFFFFF)
-scene.add(spotLight)
-spotLight.position.set(0,8,4)
-spotLight.intensity = 1.2
-spotLight.angle = 0.45
-spotLight.penumbra = 0.3
-spotLight.castShadow = true
-spotLight.shadow.mapSize.width = 1024
-spotLight.shadow.mapSize.height = 1024
-spotLight.shadow.camera.near = 5
-spotLight.shadow.camera.far = 10
-spotLight.shadow.focus = 1
+
 
 
 const sizes = {
@@ -59,9 +78,14 @@ const sizes = {
      height: window.innerHeight
 }
 
-const camera = new THREE.PerspectiveCamera(75, sizes.width/sizes.height,0.1,100)
-camera.position.set(1,1.5,-1)
-scene.add(camera)
+var camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 5000 );
+camera.position.set( 0, 0, 100 ); //Ajuste a posição da câmera de acordo com a posição do objeto
+camera.lookAt( 0, 0, 0 ); //Faz a câmera olhar para o centro do objeto
+
+
+scene.add( camera );
+
+
 
 
 
@@ -71,9 +95,12 @@ const renderer  = new THREE.WebGLRenderer(
      }
 )
 renderer.setSize(sizes.width, sizes.height)
-renderer.setPixelRatio(Math.min(window.devicePixelRatio,2))
-renderer.shadowMap.enabled = true
-renderer.gammaOuput = true
+
+renderer.setPixelRatio( window.devicePixelRatio );
+
+
+renderer.shadowMap.enabled = true;
+renderer.shadowMap.type = THREE.PCFSoftShadowMap;
 
 
 
@@ -82,7 +109,7 @@ renderer.gammaOuput = true
 
 function animate(){
      requestAnimationFrame(animate)
-
+ 
      renderer.render(scene,camera)
 
 }

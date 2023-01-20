@@ -7,8 +7,23 @@ import {
 
 
 
-
 const canvas = document.querySelector('.webgl1');
+
+let button = document.getElementById("fullscreen2");
+button.addEventListener('click', function() {
+    if (canvas.requestFullscreen) {
+        canvas.requestFullscreen();
+    } else if (canvas.mozRequestFullScreen) {
+        canvas.mozRequestFullScreen();
+    } else if (canvas.webkitRequestFullscreen) {
+        canvas.webkitRequestFullscreen();
+    }
+});
+ document.exitFullscreen();
+ 
+
+
+
 const scene = new THREE.Scene()
 scene.background = new THREE.Color(0xdddddd)
 const loader = new GLTFLoader()
@@ -16,8 +31,11 @@ loader.load('assets/Torre de Resfriamento v1.glb', function(glb){
      console.log(glb)
      const root = glb.scene;
      scene.add(root);
-     root.scale.set(16,16,16)
+     root.scale.set(500,500,500)
 
+     root.position.y = -30; //ajuste a posição do objeto de acordo com a distância
+
+     root.rotation.y += 120;
      root.traverse(function(node){
           if (node.isMesh){
                node.castShadow = true
@@ -32,54 +50,24 @@ loader.load('assets/Torre de Resfriamento v1.glb', function(glb){
 
 
 
-
-
-
-
-const light3 = new THREE.SpotLight(0xffffff,2)
-light3.position.set(-100,50,50)
-light3.castShadow = true
-light3.shadow.bias = -0.0001
-light3.shadow.mapSize.width = 1024*4
-light3.shadow.mapSize.height = 1024*4
-scene.add(light3)
-
-const ambient_light = new THREE.AmbientLight(0xffffff,1.5)
-ambient_light.position.set(5,12,0)
-scene.add(ambient_light)
-
-
-const hemiLight = new THREE.HemisphereLight(0xffff80,0x4040ff,1)
-hemiLight.position.set(5,12,0)
-scene.add(hemiLight)
-
-const light = new THREE.DirectionalLight(0xffffff,2.0)
-light.position.set(2,10,1)
-scene.add(light)
-scene.add(light.target)
-
-
-
-const distance = 25.0
-const angle = Math.PI / 4.0
-const penumbra = 0.5
-const decay = 1 
-const light1 = new THREE.SpotLight(
-     0xff8080, 1, distance, angle, penumbra , decay
-) 
-light.position.set(5,12,0)
-light1.target.position.set(-1,0,0)
-
-
-
-const light2 = new THREE.SpotLight(0xffffff,4)
-light.position.set(30,-50,20)
-light.castShadow = true
-light.shadow.bias = -0.0001
-light.shadow.mapSize.width = 1024*4
-light.shadow.mapSize.height = 1024*4
-scene.add(light2)
-
+const topLight = new THREE.DirectionalLight(0xffffff, 0.6);
+topLight.position.set(0, 1, 0);
+scene.add(topLight);
+const bottomLight = new THREE.DirectionalLight(0xffffff, 0.6);
+bottomLight.position.set(0, -1, 0);
+scene.add(bottomLight);
+const leftLight = new THREE.DirectionalLight(0xffffff, 0.6);
+leftLight.position.set(-1, 0, 0);
+scene.add(leftLight);
+const rightLight = new THREE.DirectionalLight(0xffffff, 0.6);
+rightLight.position.set(1, 0, 0);
+scene.add(rightLight);
+const frontLight = new THREE.DirectionalLight(0xffffff, 0.6);
+frontLight.position.set(0, 0, 1);
+scene.add(frontLight);
+const backLight = new THREE.DirectionalLight(0xffffff, 0.6);
+backLight.position.set(0, 0, -1);
+scene.add(backLight);
 
 
 
@@ -90,11 +78,14 @@ const sizes = {
      height: window.innerHeight
 }
 
+var camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 5000 );
+camera.position.set( 0, 0, 100 ); //Ajuste a posição da câmera de acordo com a posição do objeto
+camera.lookAt( 0, 0, 0 ); //Faz a câmera olhar para o centro do objeto
 
 
-const camera = new THREE.PerspectiveCamera(50, sizes.width/sizes.height,1,5000)
-camera.position.set(0,2,4)
-scene.add(camera)
+scene.add( camera );
+
+
 
 
 
@@ -104,9 +95,12 @@ const renderer  = new THREE.WebGLRenderer(
      }
 )
 renderer.setSize(sizes.width, sizes.height)
-renderer.setPixelRatio(Math.min(window.devicePixelRatio,2))
-renderer.shadowMap.enabled = true
-renderer.gammaOuput = true
+
+renderer.setPixelRatio( window.devicePixelRatio );
+
+
+renderer.shadowMap.enabled = true;
+renderer.shadowMap.type = THREE.PCFSoftShadowMap;
 
 
 
@@ -114,10 +108,9 @@ renderer.gammaOuput = true
 /*Effects*/
 
 function animate(){
-     renderer.render(scene,camera)
      requestAnimationFrame(animate)
-
-
+ 
+     renderer.render(scene,camera)
 
 }
 animate()
