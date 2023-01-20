@@ -1,4 +1,21 @@
 @media (min-width:670px){
+
+    :root{
+
+        /*
+        --dark-mode-container-menu: #242526;
+        --dark-mode-left-right: #18191a;
+        */
+        --font-color-normal: rgb(241, 241, 241);
+        --font-color-dark: rgb(54, 52, 52);
+        
+        --normal-mode-container-menu: #ffffff;
+        --normal-mode-left-right-body: #f0f2f5;
+    
+        --media-inner-border: rgba(255, 255, 255, 0.05);
+        --media-outer-border: #33363A;
+    }
+    
     a,
     li,
     ul:-webkit-any-link {
@@ -17,7 +34,7 @@
     .menu 
     /* horizontal menu layout */
      {
-    
+        background-color: var(--normal-mode-container-menu);
         margin: 0;
         width: 100% !important;
         padding: 0;

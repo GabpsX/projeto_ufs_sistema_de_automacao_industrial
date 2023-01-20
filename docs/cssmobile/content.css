@@ -64,6 +64,9 @@
   #fullscreen3:hover,#fullscreen2:hover,#fullscreen:hover{
     background-color: #426480;
   }
+  .quote{
+    background-color: var(--normal-mode-container-menu) !important;
+  }
    .quote_wb{
     display: flex;
 
@@ -72,7 +75,7 @@
     align-items: center;
 
     position: relative;
-    background-color: var(--normal-mode-container-menu);
+    background-color: var(--normal-mode-container-menu) !important;
     padding: 2em;
 
 
