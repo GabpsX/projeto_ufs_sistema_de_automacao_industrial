@@ -34,6 +34,9 @@
                   <img src="img/engenharia-quimica-logo.png" alt="" class="icon">
                   <p class="engenharia">Engenharia Química</p>
                </div>
+               <div id="resolution-alert" class="alert">
+                  <span id="resolution-value"></span>
+              </div>
                <div class="positionabsolute">
                   <img src="img/mario_ani.gif" alt="" class="mario_ani">
                   <img src="img/bowser-ani.gif" alt="" class="bowser_ani">
@@ -43,12 +46,19 @@
                      <a onclick="location.href='login.html';"><i class="fa-solid fa-right-to-bracket"></i></a>
                      <a href="#settings"><i class="fa-solid fa-gear"></i></a>
                      <a onclick="change_background_color()" href="#notur"><i class="fa-solid fa-moon"></i></a>
+                     <button id="increase-button">+</button>
+                     <button id="decrease-button">-</button>
+
+         
                   </div>
                   <a href="javascript:void(0);" class="icon" onclick="menu()">
                   <i class="fa-regular fa-user fa-beat"style="--fa-animation-duration: 1.1s;--fa-beat-scale: 1.1;"></i>
+                  
                   </a>
+
                </div>
             </div>
+
          </div>
          <script>
             function menu() {
@@ -146,7 +156,6 @@
                </div>
                <button id="fullscreen3">Tela Cheia</button>
             </div>
-
 
 
 
@@ -277,4 +286,24 @@
          }
       </script>
    </body>
+
+
+  <style>
+.resolution-alert {
+   
+    top: 300px !important;; /* Posição no eixo Y */
+    right: 10px !important;; /* Posição no eixo X */
+    z-index: 999 !important;; /* Eleva o elemento acima dos outros elementos */
+    padding: 10px !important;; /* Adiciona espaço interno */
+    background-color: #fff !important;; /* Define a cor de fundo */
+    border: 1px solid #ccc !important;; /* Adiciona uma borda */
+    border-radius: 5px !important;; /* Arredonda as bordas */
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3) !important;; /* Adiciona sombra */
+    font-size: 32px;
+    width: 500px !important;
+}
+
+
+
+  </style>
 </html>

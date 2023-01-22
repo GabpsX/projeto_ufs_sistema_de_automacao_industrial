@@ -19,7 +19,7 @@ button.addEventListener('click', function() {
         canvas.webkitRequestFullscreen();
     }
 });
- document.exitFullscreen();
+
  
 
 

@@ -4,10 +4,16 @@ import {
      GLTFLoader
 } from './js/GLTFLoader.js'
 
+import { 
+     EffectComposer 
+} from './js/EffectComposer.js';
 
 
 
-const canvas = document.querySelector('.webgl');
+import { 
+     RenderPass 
+} from './js/RenderPass.js';
+
 
 let button = document.getElementById("fullscreen");
 button.addEventListener('click', function() {
@@ -19,36 +25,89 @@ button.addEventListener('click', function() {
         canvas.webkitRequestFullscreen();
     }
 });
- document.exitFullscreen();
+
+
+const canvas = document.querySelector('.webgl');
+
+
+
+
+
+
+const renderer = new THREE.WebGLRenderer({ canvas });
+
+
+const composer = new EffectComposer(renderer);
+
+
+
+
+// Define a default resolution 1080p
+const defaultWidth = 1920;
+const defaultHeight = 1080;
+renderer.setSize(1920, 1080);
+let currentWidth = defaultWidth;
+let currentHeight = defaultHeight;
+
+// Obtenha os botões
+const increaseButton = document.getElementById("increase-button");
+const decreaseButton = document.getElementById("decrease-button");
+
+const resolutionAlert = document.getElementById("resolution-alert");
+
+increaseButton.addEventListener("click", function(){
+    currentWidth = currentWidth + (currentWidth * 0.1);
+    currentHeight = currentHeight + (currentHeight * 0.1);
+    renderer.setSize(currentWidth, currentHeight);
+
+    resolutionAlert.innerHTML = `3D:${currentHeight.toFixed(0)} p`;
+    resolutionAlert.style.display = "block";
+    setTimeout(() => {
+        resolutionAlert.style.display = "none";
+    }, 2000);
+});
+
+decreaseButton.addEventListener("click", function(){
+    currentWidth = currentWidth - (currentWidth * 0.1);
+    currentHeight = currentHeight - (currentHeight * 0.1);
+    renderer.setSize(currentWidth, currentHeight);
+
+    resolutionAlert.innerHTML = `3D:${currentHeight.toFixed(0)} p`;
+    resolutionAlert.style.display = "block";
+    setTimeout(() => {
+        resolutionAlert.style.display = "none";
+    }, 2000);
+});
+
+const scene = new THREE.Scene();
+const light = new THREE.DirectionalLight(0xffffff);
+light.position.set(1, 1, 1);
+scene.add(light);
+const loader = new GLTFLoader();
+loader.load('assets/trocador de calor.glb', function (gltf) {
+    const root = gltf.scene;
+    scene.add(root);
+    root.scale.set(500, 500, 500);
+    root.position.y = -15;
+    root.rotation.y += 120;
+}, undefined, function (error) {
+    console.error(error);
+});
+
+const camera = new THREE.PerspectiveCamera(75, canvas.clientWidth / canvas.clientHeight, 0.1, 1000);
+camera.position.set(0, 0, 100);
+camera.lookAt(0, 0, 0);
+scene.add(camera);
+const controls = new OrbitControls(camera, renderer.domElement);
+controls.minDistance = 1;
+controls.maxDistance = 1000;
+controls.enablePan = true;
+controls.enableZoom = true;
+controls.enableDamping = true;
+controls.rotateSpeed = 0.5;
+
+
  
-
-
-
-const scene = new THREE.Scene()
-scene.background = new THREE.Color(0xdddddd)
-const loader = new GLTFLoader()
-loader.load('assets/trocador de calor.glb', function(glb){
-     console.log(glb)
-     const root = glb.scene;
-     scene.add(root);
-     root.scale.set(500,500,500)
-
-     root.position.y = -15; //ajuste a posição do objeto de acordo com a distância
-
-     root.rotation.y += 120;
-     root.traverse(function(node){
-          if (node.isMesh){
-               node.castShadow = true
-          }
-     })
-}, function(xhr){
-     console.log((xhr.loaded/xhr.total * 100) + "% Loaded")
-}, function(error){
-     console.log('Erro!')
-}
-)
-
-
 
 var spotLight = new THREE.SpotLight( 0xffffff );
 spotLight.position.set( 100, 1000, 100 );
@@ -71,53 +130,16 @@ scene.add( lightBottom );
 scene.add( lightLeft );
 scene.add( lightRight );
 
-
-const sizes = {
-     width: window.innerWidth,
-     height: window.innerHeight
-}
-
-var camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 5000 );
-camera.position.set( 0, 0, 100 ); //Ajuste a posição da câmera de acordo com a posição do objeto
-camera.lookAt( 0, 0, 0 ); //Faz a câmera olhar para o centro do objeto
+const renderPass = new RenderPass(scene, camera);
+composer.addPass(renderPass);
 
 
-scene.add( camera );
-
-
-
-
-
-const renderer  = new THREE.WebGLRenderer(
-     {    antialias: true,
-          canvas: canvas
-     }
-)
-renderer.setSize(sizes.width, sizes.height)
-
-renderer.setPixelRatio( window.devicePixelRatio );
-
-
-renderer.shadowMap.enabled = true;
-renderer.shadowMap.type = THREE.PCFSoftShadowMap;
-
-
-
-
-/*Effects*/
-
-function animate(){
-     requestAnimationFrame(animate)
+function animate() {
+     requestAnimationFrame(animate);
+     controls.update();
+     spotLight.position.copy( camera.position );
+     renderer.render(scene, camera);
+ }
+ animate();
  
-     renderer.render(scene,camera)
-
-}
-animate()
-
-const controls = new OrbitControls(camera, renderer.domElement)
-controls.addEventListener('change',() => {
-     renderer.render(scene, camera)
-})
-controls.target.set(0,0,0)
-controls.update()
 
