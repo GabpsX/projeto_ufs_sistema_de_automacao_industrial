@@ -37,13 +37,13 @@
                 data: {
                     labels: vazao,
                     datasets: [{
-                        label: 'Vazão',
+                        label: 'Vazão L/min',
                         data: vazao,
                         backgroundColor: 'rgba(255, 99, 132, 0.2)',
                         borderColor: 'green',
                         borderWidth: 1
                     }, {
-                        label: 'Velocidade',
+                        label: 'Velocidade m/s',
                         data: velocidade,
                         backgroundColor: 'rgba(54, 162, 235, 0.2)',
                         borderColor: 'rgba(54, 162, 235, 1)',
