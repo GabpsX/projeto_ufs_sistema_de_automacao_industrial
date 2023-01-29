@@ -280,8 +280,17 @@
          <tbody id="tabela-body">
          </tbody>
        </table>
-       <canvas id="myChart"></canvas>
-
+       
+       <div class="canva">
+   
+         <canvas id="myChart"  class="chartjs-render-monitor"></canvas>
+         <img src="img/Figure_1.png" alt="">
+       </div>
+<script>
+      var canvas = document.getElementsByTagName('canvas')[0];
+      canvas.width  = 400;
+      canvas.height = 300;
+</script>
       </nav>
 
 
@@ -323,9 +332,10 @@
       .active, .collapsible:hover {
       background-color: rgb(243, 242, 242);
       }
+
       .content {
-      text-align: justify;
-      padding: 0 18px;
+
+    
       display: none;
       overflow: hidden;
       background-color:#ffffff;
