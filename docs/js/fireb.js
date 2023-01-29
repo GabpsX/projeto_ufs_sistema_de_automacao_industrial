@@ -13,9 +13,8 @@
 
   firebase.initializeApp(firebaseConfig);
 
-  function atualizarTabela() {
+  function atualizarTabela_grafico() {
     const tabelaBody = document.getElementById("tabela-body");
-  
     firebase.database().ref("Lista_1").on("value", snapshot => {
         tabelaBody.innerHTML = ""; // limpar tabela
         const vazao = snapshot.val();
@@ -32,7 +31,36 @@
                 linha.appendChild(colunaVelocidade);
                 tabelaBody.appendChild(linha);
             }
+            
+            // Criando o gráfico
+            var ctx = document.getElementById('myChart').getContext('2d');
+            var chart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: vazao,
+                    datasets: [{
+                        label: 'Vazão',
+                        data: vazao,
+                        backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                        borderColor: 'rgba(255, 99, 132, 1)',
+                        borderWidth: 1
+                    }, {
+                        label: 'Velocidade',
+                        data: velocidade,
+                        backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                        borderColor: 'rgba(54, 162, 235, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
         });
     });
 }
-atualizarTabela();
+atualizarTabela_grafico();
