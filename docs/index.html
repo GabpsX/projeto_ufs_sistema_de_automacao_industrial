@@ -10,8 +10,7 @@
       <!-- The loading of KaTeX is deferred to speed up page rendering -->
       <script src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.js" integrity="sha384-483A6DwYfKeDa0Q52fJmxFXkcPCFfnXMoXblOkJ4JcA8zATN6Tm78UNL72AKk+0O" crossorigin="anonymous"></script>
       <!-- To automatically render math in text elements, include the auto-render extension: -->
-      <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/contrib/auto-render.min.js" integrity="sha384-yACMu8JWxKzSp/C1YV86pzGiQ/l1YUfE8oPuahJQxzehAjEt2GiQuy/BIvl9KyeF" crossorigin="anonymous"
-         onload="renderMathInElement(document.body);"></script>
+      <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/contrib/auto-render.min.js" integrity="sha384-yACMu8JWxKzSp/C1YV86pzGiQ/l1YUfE8oPuahJQxzehAjEt2GiQuy/BIvl9KyeF" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
       <script src="https://kit.fontawesome.com/ce0639bc52.js" crossorigin="anonymous"></script>
       <!--DEKTOP TABLET-->
       <link rel="stylesheet" href="cssdesktop/header.css">
@@ -37,6 +36,7 @@
       <script src = "js/script3.js" type = "text/javascript"></script>
       -->
    </head>
+
    <body>
       <header id="header">
          <div class="header_content">
@@ -259,15 +259,29 @@
       <li id="velocidade_em_1"></li>
       <br>
       <li id="velocidade_em_2"></li>
-      <h5>Balanço de energia</h5>
+      <h4>Balanço de energia</h4>
       <li>-Q = m(x1 - x2) = mcp(Tqe-Tqs)</li>
-      <h5>Determinando a Transferência de Calor</h5>
+      <h4>Determinando a Transferência de Calor</h4>
       <li>ṁ = 0.21 kg/s</li>
       <li>q = 0.21 ∙ 4.18 ∙ (45 - 15) = 26.334 kj/s</li>
       <br>
-      <h5>Temperatura (Tfs -> Água quente)</h5>
+      <h4>Temperatura (Tfs -> Água quente)</h4>
       <li id="temp_2"></li>
+      <br>
+      <h4>Velocidade de Escoamento do Fluido</h4>
+      <table id="tabela">
+         <thead>
+           <tr>
+             <th>Vazão da bomba (%)</th>
+             <th>Velocidade de escoamento</th>
+           </tr>
+         </thead>
+         <tbody id="tabela-body">
+         </tbody>
+       </table>
       </nav>
+
+
       </section>
       <script>
          document.getElementById('area').innerHTML = katex.renderToString('φ = {π  ∙ r^2} -> {π∙0.075^2} = {0.01767m²}')
@@ -365,7 +379,16 @@
          function off3() {
            document.getElementById("overlay3").style.display = "none";
          }
+       
       </script>
+
+<script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-database.js"></script>
+
+
+<script type="module" src="js/fireb.js"></script>   
+
+
       <section class="hiddensec">
       <div id="overlay">
          <button onclick="off()" class="close-pfd">
@@ -374,7 +397,7 @@
          <img id="PFD-1" src="https://grid-template-teste-gabpsx.netlify.app/img/pfd.gif" alt="fluxogram_process">
       </div>
       <div id="overlay2" >
-         <button onclick="off2()" class="close-PID"">
+         <button onclick="off2()" class="close-PID">
          &#10799;
          </button>
          <img id = "PID-2" src="https://grid-template-teste-gabpsx.netlify.app/img/PID.gif" alt="fluxogram_process">
