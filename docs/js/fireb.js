@@ -1,7 +1,10 @@
 
+
+
   const firebaseConfig = {
     apiKey: "AIzaSyAOXtymwvfDVwl12r7R15zdaxL4BTFboUA",
     authDomain: "gabpsx-6e9e9.firebaseapp.com",
+    
     databaseURL: "https://gabpsx-6e9e9-default-rtdb.firebaseio.com",
     projectId: "gabpsx-6e9e9",
     storageBucket: "gabpsx-6e9e9.appspot.com",
@@ -63,3 +66,5 @@
     
 }
 atualizarTabela_grafico();
+
+
