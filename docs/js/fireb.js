@@ -31,10 +31,8 @@
                 linha.appendChild(colunaVelocidade);
                 tabelaBody.appendChild(linha);
             }
-            
-            // Criando o gráfico
-            var ctx = document.getElementById('myChart').getContext('2d');
-            var chart = new Chart(ctx, {
+            var u = document.getElementById('myChart').getContext('2d');
+            var char = new Chart(u, {
                 type: 'line',
                 data: {
                     labels: vazao,
@@ -42,7 +40,7 @@
                         label: 'Vazão',
                         data: vazao,
                         backgroundColor: 'rgba(255, 99, 132, 0.2)',
-                        borderColor: 'rgba(255, 99, 132, 1)',
+                        borderColor: 'green',
                         borderWidth: 1
                     }, {
                         label: 'Velocidade',
@@ -62,5 +60,6 @@
             });
         });
     });
+    
 }
 atualizarTabela_grafico();
