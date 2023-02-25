@@ -307,7 +307,7 @@
      if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
        // obtém a largura da tela do dispositivo
        var screenWidth = screen.width;
-       if (screenWidth < 500) {
+       if (screenWidth < 600) {
  
          var animation = document.getElementsByClassName("positionabsolute")[0];
  
@@ -338,7 +338,7 @@
    window.onresize = detectDevice;
  
  </script>
- 
+
  <style>
    html {
       overflow: hidden ;
