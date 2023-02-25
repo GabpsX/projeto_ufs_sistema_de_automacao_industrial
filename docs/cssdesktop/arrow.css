@@ -112,7 +112,7 @@
     /*24/02 n bt*/
 
      .btn-2 {
-
+          min-width: 150px;
           background-color: transparent !important;
           position: relative;
           display: inline-block;
@@ -123,8 +123,7 @@
           */
           color: #000000;
           text-transform: uppercase;
-          font-size: 18px;
-          letter-spacing: 2px;
+          font-size: min(1.2vw, 24px);
           background-color: transparent;
 
           cursor: pointer;

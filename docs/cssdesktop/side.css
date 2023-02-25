@@ -38,7 +38,6 @@
         padding: 0.5px;
         background-color: var(--normal-mode-container-menu);
         margin: 0;
-        width: 100% !important;
         padding: 0;
         display: flex;
      
@@ -55,7 +54,7 @@
      {
         
         width: 100% !important;
-        height: 60px !important;
+        height: 50px !important;
         margin-bottom: 40%;
     
     
@@ -73,16 +72,16 @@
     /* button style on-mouse-over */
      {
     
-       
-        background-color: #d1d4d6;
-        opacity: 0.2;
+      
+        background-color: #e5e8eb;
+        opacity: 0.8;
     }
     
     .menu li.active a
     /* active menu item style */
      {
         
-       
+
         text-decoration: none;
        
     }
