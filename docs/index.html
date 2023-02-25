@@ -62,24 +62,71 @@
                      <span onclick="change_background_color()" class="slider round"></span>
                      </label>
                      <script>
+                        document.body.style.backgroundColor =  "#f0f2f5";
                         function darkmode(chang,chang2) {
                         if(chang2 == true) {
                             var x = document.getElementById("header");
                             x.style.backgroundColor = "#242526";
                             
-                        
+                           
                             var y = document.getElementById("container");
                             y.style.backgroundColor = "#18191a";
-                        
+
+                            var z = document.getElementById("men_op");
+                            z.style.backgroundColor = "#242526";
+
+
+                            var u = document.getElementsByClassName("menu")[0];
+                            u.style.backgroundColor = "#242526";
+
+
+                            var elements = document.querySelectorAll(".quote_wb, .set-in-line-bt");
+                            for (var i = 0; i < elements.length; i++) {
+                              elements[i].style.backgroundColor = "#242526";
+                            }
+
+
+                            var elements2 = document.querySelectorAll(".btn-3, .btn-2");
+                            for (var i = 0; i < elements2.length; i++) {
+                              elements2[i].style.color = "#FFFFFF";
+                            }
+                            
+                            document.body.style.backgroundColor =  "#18191a";
+
+                          
                         }                           
                         
                         
                         else {
+
+
                             var x = document.getElementById("header");
-                            x.style.backgroundColor = "white";
+                            x.style.backgroundColor = "#ffffff";
+                            
+                           
                             var y = document.getElementById("container");
                             y.style.backgroundColor = "#f0f2f5";
-                           
+ 
+                            var z = document.getElementById("men_op");
+                            z.style.backgroundColor = "#ffffff";
+ 
+ 
+                            var u = document.getElementsByClassName("menu")[0];
+                            u.style.backgroundColor = "#ffffff";
+
+
+                            var elements = document.querySelectorAll(".quote_wb, .set-in-line-bt");
+                            for (var i = 0; i < elements.length; i++) {
+                              elements[i].style.backgroundColor = "#FFFFFF";
+                            }
+                            
+                            var elements2 = document.querySelectorAll(".btn-3, .btn-2");
+                            for (var i = 0; i < elements2.length; i++) {
+                              elements2[i].style.color = "#838383";
+                            }
+                            
+                            document.body.style.backgroundColor =  "#f0f2f5";
+                            
                         }
                         }
                         
@@ -478,7 +525,7 @@
         if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
           // obtém a largura da tela do dispositivo
           var screenWidth = screen.width;
-          if (screenWidth < 500) {
+          if (screenWidth < 600) {
     
             var animation = document.getElementsByClassName("positionabsolute")[0];
     

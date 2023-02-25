@@ -13,22 +13,26 @@ margin-left: auto;
 margin-right: auto;
 height: 90px;
 border-radius: 10px;
+
 }
 .mario_ani {
 border-radius: 10px;
 position: absolute;
 bottom: 0;
-width: 1.5em;
+width: 0;
+
 top: auto;
 animation: mario-animation 4.1s infinite linear;
+
 }
 .bowser_ani {
 border-radius: 10px;
 position: absolute;
 bottom: 0;
-width: 3.9em;
+width: 0;
 top: auto;
 animation: bowser_animation 4s infinite linear;
+
 }
 @keyframes mario-animation {
 from{
