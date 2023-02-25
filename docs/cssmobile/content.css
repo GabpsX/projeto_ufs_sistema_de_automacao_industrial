@@ -47,8 +47,10 @@
     #center {
         margin-top: 60px;;
         padding: 3em;
-
-  
+        /*
+        display: grid;
+        grid-gap: 2em;
+        */
         max-height: fit-content;
    }
    #fullscreen3,#fullscreen2,#fullscreen{
