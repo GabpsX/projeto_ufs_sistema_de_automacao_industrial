@@ -309,5 +309,15 @@
    table{
     width: 100%;
    }
-
+   #msg {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background-color: #1373e2;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 5px;
+    display: none;
+  }
+  
 }

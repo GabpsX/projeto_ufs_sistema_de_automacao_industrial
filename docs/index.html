@@ -105,6 +105,10 @@
             }
          </script>
       </header>
+      <div id="msg">
+
+      </div>
+
       <div id="container">
       <div id="left" class="section">
          <ul class="nav menu">
@@ -468,15 +472,38 @@
          }
       </script>
    </body>
-   <script>
-      const width = window.innerWidth;
-      const height = window.innerHeight;
-      if (width == 404 && height == 520) {
-         console.log(width,height);
 
-      } else {
-        // nada a fazer
+   <script>
+      function detectDevice() {
+        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+          // obtém a largura da tela do dispositivo
+          var screenWidth = screen.width;
+          if (screenWidth < 600) {
+    
+            var animation = document.getElementsByClassName("positionabsolute")[0];
+    
+            // remove a div
+            animation.remove();
+          }
+    
+          // exibe o balão com a mensagem por 5 segundos
+          var balloon = document.getElementById("msg");
+          if (balloon) {
+            var ms = "Smartphone detectado!";
+            balloon.innerHTML = ms;
+            balloon.style.display = "block";
+
+            setTimeout(function() {
+              balloon.style.display = "none";
+            }, 4000);
+          }
+        }
       }
+    
+      // chama a função detectDevice() quando a página é carregada e quando a janela é redimensionada
+      window.onload = detectDevice;
+      window.onresize = detectDevice;
+    
     </script>
     
 </html>

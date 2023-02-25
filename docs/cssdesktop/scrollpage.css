@@ -1,6 +1,6 @@
 @media (min-width:670px){
     :root{
-
+        scroll-behavior: smooth;
         /*
         --dark-mode-container-menu: #242526;
         --dark-mode-left-right: #18191a;
