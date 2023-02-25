@@ -1,4 +1,5 @@
 @media (min-width:670px){
+  
     #men_op {
       
         padding: 1em !important;
@@ -17,7 +18,7 @@
         height: 60px;
         align-items: center;
         appearance: none;
-    
+        
         border-width: 0;
         box-sizing: border-box;
         color: #838383 !important;
@@ -28,10 +29,9 @@
         line-height: 1;
         list-style: none;
         overflow: hidden;
-        padding-left: 16px;
-        padding-right: 16px;
+
         position: relative;
-        text-align: left;
+        text-align: center !important;
         text-decoration: none;
     
         user-select: none;
@@ -42,13 +42,14 @@
         font-size: 18px;
     }
     
-    
+          /*
     
     .diagramas2d:hover,
     .diagramas3d:hover {
       
         transform: translateY(2px);
     }
+
     .arrow-button {
         display: flex;
         color: #000000;
@@ -104,4 +105,53 @@
         background-color: #141414;
         color: rgb(255, 255, 255) !important;
     }
+*/
+
+
+
+    /*24/02 n bt*/
+
+     .btn-2 {
+
+          background-color: transparent !important;
+          position: relative;
+          display: inline-block;
+       
+          padding: 12px 36px;
+          /*
+          margin: 10px 0;
+          */
+          color: #000000;
+          text-transform: uppercase;
+          font-size: 18px;
+          letter-spacing: 2px;
+          background-color: transparent;
+
+          cursor: pointer;
+          overflow: hidden;
+        }
+        
+        
+        .btn-2:after {
+          backface-visibility: hidden;
+          border: 2.5px solid rgba(255, 255, 255, 0);
+          bottom: 0px;
+          content: " ";
+          display: block;
+          margin: 0 auto;
+          position: absolute;
+          transition: all 280ms ease-in-out;
+          width: 0;
+          left: 50%; /* adicionado */
+          transform: translateX(-50%); /* adicionado */
+        }
+        
+        .btn-2:hover:after {
+         
+          backface-visibility: hidden;
+          border-color: #1373e2;
+          transition: width 350ms ease-in-out;
+          width: 80%;
+        }
+
 }
