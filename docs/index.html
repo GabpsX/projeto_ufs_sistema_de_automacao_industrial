@@ -200,7 +200,7 @@
       </section>
 
       <section class="set-in-line-bt">
-      <button type="button" class="collapsible btn btn-2">Instrumentos necessários para a automação <i class="fa-solid fa-angles-right fa-rotate-90"></i></button>
+      <button type="button" class="collapsible btn btn-2">Instrumentos necessários para automação <i class="fa-solid fa-angles-right fa-rotate-90"></i></button>
       <div class="content">
       <section class="content_1">
 
@@ -472,11 +472,13 @@
    </body>
 
    <script>
+      var balloonDisplayed = false;
+    
       function detectDevice() {
         if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
           // obtém a largura da tela do dispositivo
           var screenWidth = screen.width;
-          if (screenWidth < 600) {
+          if (screenWidth < 500) {
     
             var animation = document.getElementsByClassName("positionabsolute")[0];
     
@@ -484,17 +486,21 @@
             animation.remove();
           }
     
-          // exibe o balão com a mensagem por 5 segundos
+          // exibe o balão com a mensagem por 5 segundos, se ainda não foi exibido
           var balloon = document.getElementById("msg");
-          if (balloon) {
-            var ms = "Smartphone detectado!";
+          if (balloon && !balloonDisplayed) {
+            var ms = "Dispositivo móvel detectado!";
             balloon.innerHTML = ms;
             balloon.style.display = "block";
-
+            balloonDisplayed = true;
+    
             setTimeout(function() {
               balloon.style.display = "none";
             }, 4000);
           }
+        } else {
+          // resetar variável quando não é dispositivo móvel
+          balloonDisplayed = false;
         }
       }
     
@@ -503,5 +509,6 @@
       window.onresize = detectDevice;
     
     </script>
+    
     
 </html>

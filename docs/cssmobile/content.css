@@ -266,8 +266,8 @@
    }
    #msg {
     position: fixed;
-    left: 50%;
-    margin-left: -100px; /* metade do valor da largura */
+    left: 45%;
+    margin-left: -110px; /* metade do valor da largura */
     top: 0;
     z-index: 9999;
     top: 10px;
@@ -275,7 +275,7 @@
     color: #ffffff;
     border-radius: 10px;
     padding: 30px;
-    width: 200px;
+    width: 220px;
     text-align: center;
     box-shadow: 0px 0px 10px rgba(231, 226, 226, 0.5);
     display: none;
