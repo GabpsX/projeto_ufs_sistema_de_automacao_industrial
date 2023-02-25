@@ -65,14 +65,12 @@
   #fullscreen3:hover,#fullscreen2:hover,#fullscreen:hover{
     background-color: #426480;
   }
-  .quote{
-    background-color: var(--normal-mode-container-menu) !important;
-  }
-   .quote_wb{
+
+   .quote{
     display: flex;
+    margin-bottom: 5%;
 
-
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
 
     position: relative;
@@ -82,6 +80,9 @@
 
     border-radius: .3em;
     box-shadow: 0.1px 0.5px 0.5px 0.5px rgba(0,0,0,0.03);
+ }
+ .set-in-line-bt{
+    margin-bottom: 5% !important;
  }
     h1{
         font-size: 1em;
