@@ -156,16 +156,16 @@
       /*div quote*/
 
       .btn-3 {
-        min-width: 150px;
+        min-width: 250px;
         background-color: transparent !important;
         position: relative;
-     
+        padding: 0 !important;
      
         padding: 12px 36px;
         /*
         margin: 10px 0;
         */
-        color: #000000;
+        color: #7e7a7a;
         text-transform: uppercase;
        
         background-color: transparent;
@@ -187,12 +187,25 @@
         left: 50%; /* adicionado */
         transform: translateX(-50%); /* adicionado */
       }
+      @keyframes gradient {
+        from {
+          border-image-source: linear-gradient(to right, #1373e2 0%, #5f5fc4 20%, #a45fb5 50%, #de5f9c 80%, #ff685c 100%);
+        }
+        to {
+          border-image-source: linear-gradient(to right, #ff685c 0%, #de5f9c 20%, #a45fb5 50%, #5f5fc4 80%, #1373e2 100%);
+        }
+      }
 
     .quote:hover .btn-3:after {
         backface-visibility: hidden;
+        /*
         border-color: #1373e2;
+        */
+        border-image-source: linear-gradient(to right, #1373e2 0%, #5f5fc4 20%, #a45fb5 50%, #de5f9c 80%, #ff685c 100%);
+        animation: gradient 5s infinite;
+        border-image-slice: 1;
         transition: width 350ms ease-in-out;
-        width: 80%;
+        width: 90%;
       }
       
 }
