@@ -31,11 +31,14 @@ loader.load('assets/trocador de calor.glb', function(glb){
      console.log(glb)
      const root = glb.scene;
      scene.add(root);
-     root.scale.set(500,500,500)
+     root.scale.set(2,2,2)
+  
 
-     root.position.y = -30; //ajuste a posição do objeto de acordo com a distância
+     root.position.set(0, 0, 0);
 
-     root.rotation.y += 120;
+
+
+   
      root.traverse(function(node){
           if (node.isMesh){
                node.castShadow = true
@@ -78,7 +81,8 @@ const sizes = {
      height: window.innerHeight
 }
 
-var camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 5000 );
+var camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 5000 );
+camera.position.z = -200;
 camera.position.set( 0, 0, 100 ); //Ajuste a posição da câmera de acordo com a posição do objeto
 camera.lookAt( 0, 0, 0 ); //Faz a câmera olhar para o centro do objeto
 
@@ -116,33 +120,12 @@ function animate(){
 animate()
 
 const controls = new OrbitControls(camera, renderer.domElement)
+controls.minDistance = 50;
+controls.maxDistance = 200;
 controls.addEventListener('change',() => {
      renderer.render(scene, camera)
 })
 controls.target.set(0,0,0)
 controls.update()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
