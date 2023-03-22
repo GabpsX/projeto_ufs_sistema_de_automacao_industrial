@@ -587,6 +587,19 @@
       <i class="fa-solid fa-plus icon_style"></i>
       </a>
       <script>
+        document.addEventListener('keydown', function(event) {
+          if (event.key === '+') {
+            var x = document.getElementById("hide_menu");
+            if (x.style.display === "block") {
+              x.style.display = "none";
+              x.style.height = "0";
+            } else {
+              x.style.display = "block";
+              x.style.height = "500px";
+            }
+          }
+        });
+
          function menu_downloads() {
            var x = document.getElementById("hide_menu");
            if (x.style.display === "block") {
