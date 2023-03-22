@@ -214,15 +214,15 @@
       right: 0;
   
       
-      
+      position: absolute;
       box-shadow: 1.1px 1.5px 1.5px 1.5px rgba(0,0,0,0.08);
       border-radius: 5px;
-
+      height: 1px;
   
       background-color: var(--normal-mode-container-menu);
-
-      margin-left: -2em;
-      height: 600px !important;
+      margin-top: 3em;
+      margin-left: -5em;
+  
       transition: ease-in 2s;
     }
   

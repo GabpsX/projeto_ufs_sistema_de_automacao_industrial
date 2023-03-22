@@ -1,10 +1,8 @@
-import * as THREE from 'three'
-import { OrbitControls } from 'OrbitControls';
-import {
-     GLTFLoader
-} from './js/GLTFLoader.js'
+import * as THREE from 'three';
 
 
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 
 
 const canvas = document.querySelector('.webgl');

@@ -1,15 +1,16 @@
-import * as THREE from 'three'
-import { OrbitControls } from 'OrbitControls';
-import {
-     GLTFLoader
-} from './js/GLTFLoader.js'
+import * as THREE from 'three';
+
+
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+
 
 
 
 
 const canvas = document.querySelector('.webgl1');
 
-let button = document.getElementById("fullscreen2");
+let button = document.getElementById("fullscreen");
 button.addEventListener('click', function() {
     if (canvas.requestFullscreen) {
         canvas.requestFullscreen();
@@ -36,11 +37,7 @@ loader.load('assets/Torre de Resfriamento v1.glb', function(glb){
      root.position.y = -30; //ajuste a posição do objeto de acordo com a distância
 
      root.rotation.y += 120;
-     root.traverse(function(node){
-          if (node.isMesh){
-               node.castShadow = true
-          }
-     })
+
 }, function(xhr){
      console.log((xhr.loaded/xhr.total * 100) + "% Loaded")
 }, function(error){
@@ -77,8 +74,9 @@ const sizes = {
      width: window.innerWidth,
      height: window.innerHeight
 }
+var camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 1000 );
+camera.position.z = 200;
 
-var camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 5000 );
 camera.position.set( 0, 0, 100 ); //Ajuste a posição da câmera de acordo com a posição do objeto
 camera.lookAt( 0, 0, 0 ); //Faz a câmera olhar para o centro do objeto
 

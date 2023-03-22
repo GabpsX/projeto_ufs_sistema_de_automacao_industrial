@@ -3,16 +3,23 @@
    <head>
       <meta charset="UTF-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=0.95">
+      <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+
       <meta name="Description" CONTENT="Author: Gabriel GabpsX, Category: Engenharia, Length: 2 pages">
       <title>Projeto UFS</title>
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.css" integrity="sha384-D+9gmBxUQogRLqvARvNLmA9hS2x//eK1FhVb9PiU86gmcrBrJAQT8okdJ4LMp2uv" crossorigin="anonymous">
-      <!-- The loading of KaTeX is deferred to speed up page rendering -->
-      <script src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.js" integrity="sha384-483A6DwYfKeDa0Q52fJmxFXkcPCFfnXMoXblOkJ4JcA8zATN6Tm78UNL72AKk+0O" crossorigin="anonymous"></script>
-      <!-- To automatically render math in text elements, include the auto-render extension: -->
-      <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/contrib/auto-render.min.js" integrity="sha384-yACMu8JWxKzSp/C1YV86pzGiQ/l1YUfE8oPuahJQxzehAjEt2GiQuy/BIvl9KyeF" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
-      <script src="https://kit.fontawesome.com/ce0639bc52.js" crossorigin="anonymous"></script>
 
+      <link rel="stylesheet" href="build offline/katex/katex.min.css" integrity="sha384-D+9gmBxUQogRLqvARvNLmA9hS2x//eK1FhVb9PiU86gmcrBrJAQT8okdJ4LMp2uv" crossorigin="anonymous">
+      <script src="build offline/katex/katex.min.js" integrity="sha384-483A6DwYfKeDa0Q52fJmxFXkcPCFfnXMoXblOkJ4JcA8zATN6Tm78UNL72AKk+0O" crossorigin="anonymous"></script>
+      <script defer src="build offline/katex/auto-render.min.js" integrity="sha384-yACMu8JWxKzSp/C1YV86pzGiQ/l1YUfE8oPuahJQxzehAjEt2GiQuy/BIvl9KyeF" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+<!--
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.css" integrity="sha384-D+9gmBxUQogRLqvARvNLmA9hS2x//eK1FhVb9PiU86gmcrBrJAQT8okdJ4LMp2uv" crossorigin="anonymous">
+
+      <script src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.js" integrity="sha384-483A6DwYfKeDa0Q52fJmxFXkcPCFfnXMoXblOkJ4JcA8zATN6Tm78UNL72AKk+0O" crossorigin="anonymous"></script>
+    
+      <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/contrib/auto-render.min.js" integrity="sha384-yACMu8JWxKzSp/C1YV86pzGiQ/l1YUfE8oPuahJQxzehAjEt2GiQuy/BIvl9KyeF" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+-->
+      <!--<script src="https://kit.fontawesome.com/ce0639bc52.js" crossorigin="anonymous"></script>-->
+      <script src="build offline/ce0639bc52.js"></script>
       <!--DEKTOP TABLET-->
       <link rel="stylesheet" href="cssdesktop/header.css" defer>
       <link rel="stylesheet" href="cssdesktop/side.css" defer>
@@ -37,7 +44,10 @@
       <script src = "js/script2.js" type = "text/javascript"></script>
       <script src = "js/script3.js" type = "text/javascript"></script>
       -->
+      <!--
       <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+      -->
+      <script src="build offline/chart/Chart.min.js"></script>
    </head>
 
    <body>
@@ -186,20 +196,29 @@
          <a onclick="redir_d3()" class="diagramas3d arrow-button"href="#">Modelagem 3D<span class="arrow"></span></a>
          -->
       </div>
+
       <div class="quote span-2" id="projeto_1">
          <div id="article_side_mid_section">
             <h1 class="btn btn-3">Process Flow Diagram - PFD</h1>
-           
+           <!--
             <img onclick="on()" id="PFD" src="https://grid-template-teste-gabpsx.netlify.app/img/pfd.gif" alt="fluxogram_process">
+         -->
+         <img onclick="on()" id="PFD" src="build offline/pfd.gif" alt="fluxogram_process">
          </div>
       </div>
       <div class="quote span-2" id="projeto_2">
          <div id="article_side_mid_section">
             <h1 class="btn btn-3">Piping and Instrumentation Diagram - P&ID</h1>
-          
+            <!--
             <img onclick="on2()" id = "PID" src="https://grid-template-teste-gabpsx.netlify.app/img/PID.gif" alt="fluxogram_process">
+            
             <img onclick="on3()" id = "PID" src="https://grid-template-teste-gabpsx.netlify.app/img/pid.png" alt="fluxogram_process">
+            -->
+            <img onclick="on2()" id = "PID" src="build offline/PID.gif" alt="fluxogram_process">
+            
+            <img onclick="on3()" id = "PID" src="build offline/pid.png" alt="fluxogram_process">
          </div>
+         
       </div>
       <section class="set-in-line-bt">
 
@@ -229,7 +248,7 @@
                      <td>8,000</td>
                   </tr>
                   <tr>
-                     <td>Bomba centrífuga - <strong>4</strong></td>
+                     <td>Bomba centrífuga - <strong>2</strong></td>
                      <td>--</td>
                      <td>3,000</td>
                   </tr>
@@ -349,9 +368,87 @@
        
        <div class="canva">
    
-         <canvas id="myChart"  class="chartjs-render-monitor"></canvas>
-         <img id="img_load_fireb" src="https://firebasestorage.googleapis.com/v0/b/projeto-ufs-gabpsx-pro.appspot.com/o/Fotos%2FFigure_1.png?alt=media&token=062eee06-fa12-4e3c-98a2-45eabb23eb9a" alt="">
+         <canvas id="myChart" class="chartjs-render-monitor"></canvas>
+         <div id="fullscreen-buttons">
+           <button id="add_fc_mychart">Tela Cheia</button>
+           <button id="exit_fullscreen" style="display: none;">Sair</button>
+         </div>
+         <img id="img_load_fireb" src="build offline/Figure_1.png" alt="">
+         <div id="fullscreen-buttons">
+           <button id="add_img">Tela Cheia</button>
+           <button id="exit_fullscreen" style="display: none;">Sair</button>
+         </div>
+
        </div>
+       <style>
+         #add_fc_mychart,
+         #add_img {
+           color: rgb(58, 54, 54);
+           border: 4px solid rgb(45, 201, 180);
+           border-radius: 2px;
+           background-color: white;
+           color: black;
+           padding: 5px 10px;
+           cursor: pointer;
+           transition: opacity 0.5s ease-in-out;
+           opacity: 1;
+         }
+         
+         #add_fc_mychart:hover,
+         #add_img:hover {
+           background-color: rgb(45, 201, 180);
+           color: white;
+           opacity: 0.8;
+         }
+         
+       </style>
+<script>
+   const button = document.getElementById("add_fc_mychart");
+   let canva = document.getElementById('myChart');
+   
+   button.addEventListener('click', function() {
+     if (canva.requestFullscreen) {
+       canva.requestFullscreen();
+     } else if (canva.mozRequestFullScreen) {
+       canva.mozRequestFullScreen();
+     } else if (canva.webkitRequestFullscreen) {
+       canva.webkitRequestFullscreen();
+     }
+   });
+   
+   document.addEventListener('fullscreenchange', function() {
+     if (document.fullscreenElement === canva) {
+       canva.style.backgroundColor = 'white';
+     } else {
+       canva.style.backgroundColor = 'white';
+       canva = document.getElementById('myChart');
+     }
+   });
+   
+   const button2 = document.getElementById("add_img");
+   let img = document.getElementById('img_load_fireb');
+   
+   button2.addEventListener('click', function() {
+     if (img.requestFullscreen) {
+       img.requestFullscreen();
+     } else if (img.mozRequestFullScreen) {
+       img.mozRequestFullScreen();
+     } else if (img.webkitRequestFullscreen) {
+       img.webkitRequestFullscreen();
+     }
+   });
+   
+   document.addEventListener('fullscreenchange', function() {
+     if (document.fullscreenElement === img) {
+       img.style.backgroundColor = 'black';
+     } else {
+       img.style.backgroundColor = 'white';
+       img = document.getElementById('img_load_fireb');
+     }
+   });
+
+</script>
+
 <script>
       var canvas = document.getElementsByTagName('canvas')[0];
       canvas.width  = 400;
@@ -431,9 +528,6 @@
       <li class="item-103 parent">
       <a class="diagramas2d arrow-button" href="#"><i class="fa-solid fa-download fa-shake"></i>P&ID<span class="arrow"></span></a>
       </li>
-      <li class="item-103 parent">
-         <a class="diagramas2d arrow-button" href="app_mb.html"><i class="fa-solid fa-download fa-shake"></i>App<span class="arrow"></span></a>
-         </li>
       </ul>
       </div>
       </div>
@@ -474,19 +568,19 @@
          <button onclick="off()" class="close-pfd">
          &#10799;
          </button>
-         <img id="PFD-1" src="https://grid-template-teste-gabpsx.netlify.app/img/pfd.gif" alt="fluxogram_process">
+         <img id="PFD-1" src="build offline/pfd.gif" alt="fluxogram_process">
       </div>
       <div id="overlay2" >
          <button onclick="off2()" class="close-PID">
          &#10799;
          </button>
-         <img id = "PID-2" src="https://grid-template-teste-gabpsx.netlify.app/img/PID.gif" alt="fluxogram_process">
+         <img id = "PID-2" src="build offline/PID.gif" alt="fluxogram_process">
       </div>
       <div id="overlay3" >
          <button onclick="off3()" class="close-PID">
          &#10799;
          </button>
-         <img id = "PID-3" src="https://grid-template-teste-gabpsx.netlify.app/img/pid.png" alt="fluxogram_process">
+         <img id = "PID-3" src="build offline/pid.png" alt="fluxogram_process">
       </div>
       <script src="js/script.js"></script>
       <a href="javascript:void(0);" class="icon_" onclick="menu_downloads()">

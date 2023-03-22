@@ -6,7 +6,8 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
       <title>Document</title>
-      <script src="https://kit.fontawesome.com/ce0639bc52.js" crossorigin="anonymous"></script>
+      <!--<script src="https://kit.fontawesome.com/ce0639bc52.js" crossorigin="anonymous"></script>-->
+      <script src="build offline/ce0639bc52.js"></script>
       <!--DEKTOP TABLET-->
       <link rel="stylesheet" href="cssdesktop/header.css" defer>
       <link rel="stylesheet" href="cssdesktop/side.css" defer>
@@ -171,6 +172,10 @@
                <a onclick="redir_2d()" class="diagramas2d btn btn-2" href="#">PFD && P&ID<span class="arrow"></span></a>
                <a onclick="redir_d3()" class="diagramas3d btn btn-2"href="#">Modelagem 3D<span class="arrow"></span></a>
             </div>
+            <div class="quote" id="men_op">
+               <a href="projeto_completo.html" class="diagramas2d btn btn-2" href="#">Projeto Completo<span class="arrow"></span></a>
+             
+            </div>
             <div class="quote_wb span-2" id="project_1">
                <div id="article_side_mid_section">
 
@@ -254,13 +259,13 @@
                }
           </style>
           <script type="importmap">
-               {
-                   "imports": {
-                       "three": "https://unpkg.com/three@0.138.0/build/three.module.js",
-                       "OrbitControls": "https://unpkg.com/three@0.138.0/examples/jsm/controls/OrbitControls.js"
-                   }
+            {
+               "imports": {
+                  "three": "./build/three.module.js",
+                  "three/addons/": "./jsm/"
                }
-           </script>    
+            }
+         </script>
            <script type="module" src="Trocador_de_Calor.js"></script>   
            <script type="module" src="Torre_de_Resfriamento.js"></script>   
            <script type="module" src="tanque.js"></script>   
