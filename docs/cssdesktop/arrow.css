@@ -121,7 +121,7 @@
           margin: 10px 0;
           */
           color: #000000;
-          text-transform: uppercase;
+          /*text-transform: uppercase;*/
           font-size: min(1.2vw, 24px);
           background-color: transparent;
 

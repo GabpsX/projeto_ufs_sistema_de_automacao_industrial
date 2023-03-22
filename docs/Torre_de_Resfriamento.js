@@ -10,7 +10,7 @@ import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 
 const canvas = document.querySelector('.webgl1');
 
-let button = document.getElementById("fullscreen");
+let button = document.getElementById("fullscreen2");
 button.addEventListener('click', function() {
     if (canvas.requestFullscreen) {
         canvas.requestFullscreen();
