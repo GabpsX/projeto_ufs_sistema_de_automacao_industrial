@@ -84,7 +84,7 @@
             padding: 5% 5% 5% 5% !important;
         }
         
-        #right,#left
+        #left
         {
     
             background-color: var(--dark-mode-left-right-body) !important;
@@ -97,14 +97,35 @@
             position: -webkit-sticky;
             box-sizing: border-box;
             top: 64px;
-        
             display: block;
-    
-    
             padding: 5px;
     
     
         }
+
+
+        #right
+        {
+            background-color: var(--dark-mode-left-right-body) !important;
+            position: relative;
+            max-height: 95vh;
+            height: 95vh;
+            overflow-y: scroll;
+            overflow-x: hidden;
+            position: sticky;
+            position: -webkit-sticky;
+            box-sizing: border-box;
+            top:20px;
+        
+            display: block;
+            text-align: end !important;
+    
+          
+    
+    
+        }
+
+
         #left:hover{
             overflow-y: scroll;
         }

@@ -1,0 +1,101 @@
+#include <HCSR04.h>
+
+int buzzerPin = 3; // define o pino do buzzer
+int relayPin = 3; // define o pino do relé
+int valvePin = 4; // define o pino da válvula
+
+class set {
+ public:
+      double distancia;
+      double vazao;
+      void buzzer();
+      void acionarValvula();
+      void controle_sistema();
+
+};
+
+
+UltraSonicDistanceSensor distanceSensor(4, 5);  // Initialize sensor that uses digital pins 13 and 12.
+
+
+void setup () {
+    Serial.begin(9600);  
+    pinMode(buzzerPin, OUTPUT); // define o pino do buzzer como saída
+    pinMode(relayPin, OUTPUT); // define o pino do relé como saída
+    pinMode(valvePin, OUTPUT); // define o pino da válvula como saída
+    digitalWrite(relayPin, LOW); // desaciona o relé, mantendo a válvula fechada
+}
+
+
+set lerdistancia(){
+    set valores;
+    valores.distancia = distanceSensor.measureDistanceCm();
+    return valores;
+}
+
+
+
+void set::buzzer(){
+  int i;
+  for(i = 0; i < 5; i++) {
+      Serial.print("buzzer acionado!: ");
+      tone(buzzerPin, 1000); // emite um som de 1000Hz no buzzer
+      delay(500); // espera 1 segundo
+      noTone(buzzerPin); // para o som do buzzer
+      delay(500); // espera 1 segundo
+  }
+}
+
+void set::acionarValvula(){
+  set valores = lerdistancia();
+  set init;
+
+  /*se for igual a 30cm*/
+  if (valores.distancia == 40)
+  {
+
+    digitalWrite(relayPin, LOW); // desaciona o relé, fechando a válvula
+    delay(5000); // espera 5 segundos com a válvula fechada
+
+  }
+  else
+  {
+
+    digitalWrite(relayPin, HIGH); // aciona o relé, abrindo a válvula
+    delay(5000); // espera 5 segundos com a válvula aberta
+
+  }
+
+
+
+
+}
+
+
+void set::controle_sistema(){
+    set valores = lerdistancia();
+    set init;
+    Serial.print("Distancia: ");
+    Serial.println(valores.distancia);
+
+
+
+    if (valores.distancia < 0 || valores.distancia == NULL) {
+       init.buzzer();
+       Serial.println("Erro verifique o sistema!");
+    }
+    else{
+       init.acionarValvula();
+    }
+
+    
+}
+
+
+
+
+void loop () {
+    set init; 
+    init.controle_sistema(); // call method
+    delay(500);
+}
