@@ -232,7 +232,12 @@ textarea {
      border-radius: 10px;
 }
 .btn_model_3d .text-hover, .btn_home .text-hover  {
-     color: rgb(0, 0, 0);
+     color: rgb(255, 255, 255);
+     mix-blend-mode: difference;
+}
+.btn_model_3d:hover::before, .btn_home:hover::before  {
+     background: rgb(41, 44, 46);
+     width: 100%;
 }
 .text-hover {
      display: flex;
@@ -243,7 +248,7 @@ textarea {
      margin-right: 5px;
 }
 .btn_model_3d:hover::before, .btn_home:hover::before  {
-     background: rgb(255, 255, 255);
+     background: rgb(20, 20, 20);
      box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
      width: 100%;
 }

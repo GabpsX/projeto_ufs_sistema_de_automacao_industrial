@@ -194,6 +194,16 @@ textarea {
 .opcoes {
      gap: 20px;
 }
+.opcoes button span i {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+
+}
+.opcoes button span i p{
+     font-weight: 500;
+     font-family: Arial, Helvetica, sans-serif;
+}
 
 .btn_home{
      height: 100%;
@@ -229,7 +239,19 @@ textarea {
      background: rgb(41, 44, 46);
      width: 100%;
 }
-
+.text-hover {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+}
+.text-hover > i {
+     margin-right: 5px;
+}
+.btn_model_3d:hover::before, .btn_home:hover::before  {
+     background: rgb(20, 20, 20);
+     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+     width: 100%;
+}
 
 .login_area {
      display: flex;
