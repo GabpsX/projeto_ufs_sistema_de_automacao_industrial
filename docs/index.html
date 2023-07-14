@@ -1,685 +1,654 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-   <head>
-      <meta charset="UTF-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta name="Description" CONTENT="Author: Gabriel GabpsX, Category: Engenharia, Length: 3 pages">
+     <title>Projeto UFS</title>
+     <link rel="stylesheet" type="text/css" href="static/fontawesome/css/all.css">
+     <link rel="stylesheet" type="text/css" href="/static/css_main/min.css">
+     <link rel="stylesheet" type="text/css" media="screen and (min-width: 1200px)" href="static/SISTEMA_DASHBOARD/responsive.css"/>
+     <link rel="stylesheet" type="text/css" media="screen and (max-width: 1200px)" href="/static/css_main/mobile.css">
+     <link rel="stylesheet" type="text/css" media="screen and (min-width: 1200px)" href="/static/css_main/desktop.css">
+     <script src="/static/build offline/chart/Chart.min.js"></script>
 
-      <meta name="Description" CONTENT="Author: Gabriel GabpsX, Category: Engenharia, Length: 2 pages">
-      <title>Projeto UFS</title>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 
-      <link rel="stylesheet" href="build offline/katex/katex.min.css" integrity="sha384-D+9gmBxUQogRLqvARvNLmA9hS2x//eK1FhVb9PiU86gmcrBrJAQT8okdJ4LMp2uv" crossorigin="anonymous">
-      <script src="build offline/katex/katex.min.js" integrity="sha384-483A6DwYfKeDa0Q52fJmxFXkcPCFfnXMoXblOkJ4JcA8zATN6Tm78UNL72AKk+0O" crossorigin="anonymous"></script>
-      <script defer src="build offline/katex/auto-render.min.js" integrity="sha384-yACMu8JWxKzSp/C1YV86pzGiQ/l1YUfE8oPuahJQxzehAjEt2GiQuy/BIvl9KyeF" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
-<!--
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.css" integrity="sha384-D+9gmBxUQogRLqvARvNLmA9hS2x//eK1FhVb9PiU86gmcrBrJAQT8okdJ4LMp2uv" crossorigin="anonymous">
-
-      <script src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.js" integrity="sha384-483A6DwYfKeDa0Q52fJmxFXkcPCFfnXMoXblOkJ4JcA8zATN6Tm78UNL72AKk+0O" crossorigin="anonymous"></script>
-    
-      <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/contrib/auto-render.min.js" integrity="sha384-yACMu8JWxKzSp/C1YV86pzGiQ/l1YUfE8oPuahJQxzehAjEt2GiQuy/BIvl9KyeF" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
--->
-      <!--<script src="https://kit.fontawesome.com/ce0639bc52.js" crossorigin="anonymous"></script>-->
-      <script src="build offline/ce0639bc52.js"></script>
-      <!--DEKTOP TABLET-->
-      <link rel="stylesheet" href="cssdesktop/header.css" defer>
-      <link rel="stylesheet" href="cssdesktop/side.css" defer>
-      <link rel="stylesheet" href="cssdesktop/content.css" defer>
-      <link rel="stylesheet" href="cssdesktop/scrollpage.css" defer>
-      <link rel="stylesheet" href="cssdesktop/menu.css" defer>
-      <link rel="stylesheet" href="cssdesktop/arrow.css" defer>
-      <link rel="stylesheet" href="cssdesktop/diagram.css" defer>
-      <link rel="stylesheet" href="cssdesktop/animation.css" defer>
-      <!--MOBILE -->
-      <link rel="stylesheet" href="cssmobile/header.css" defer>
-      <link rel="stylesheet" href="cssmobile/menu.css" defer>
-      <link rel="stylesheet" href="cssmobile/animation.css" defer>
-      <link rel="stylesheet" href="cssmobile/side.css" defer>
-      <link rel="stylesheet" href="cssmobile/content.css" defer>
-      <link rel="stylesheet" href="cssmobile/diagram.css" defer>
-      <link rel="stylesheet" href="cssmobile/scrollpage.css" defer>
-      <link rel="stylesheet" href="cssmobile/arrow.css" defer>
-      
-      <!--
-      <script src = "js/script1.js" type = "text/javascript"></script>
-      <script src = "js/script2.js" type = "text/javascript"></script>
-      <script src = "js/script3.js" type = "text/javascript"></script>
-      -->
-      <!--
-      <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
-      -->
-      <script src="build offline/chart/Chart.min.js"></script>
-   </head>
-
-   <body>
-      <header id="header">
-         <div class="header_content">
-            <div class="menu-content">
-               <div class="logo">
-                  <img src="img/engenharia-quimica-logo.png" alt="" class="icon">     
-                  <p class="engenharia">Engenharia Química</p>
+</head>
+<body>
+     <div class="load">
+          <div class="loader">
+               <div></div>
+               <div></div>
+               <div></div>
+               <div></div>
+               <div></div>
+               <div></div>
+               <div></div>
+               <div></div>
+               <div></div>
+          </div>
+     </div>
+     <header>
+          <div class="header_fi">
+               <div class="logo_name">
+                    <img src="static/img/engenharia-quimica-logo.png" alt="logo engenharia" class="logo">  
+                    <h3>Diagramas P&ID && PFD</h3>
+                    <div class="login_area" data-hover = "Fazer login">
+                         <i class="fa-solid fa-right-to-bracket"></i>
+                    </div>
 
                </div>
-               <div class="positionabsolute">
-                  <img src="img/mario_ani.gif" alt="" class="mario_ani">
-                  <img src="img/bowser-ani.gif" alt="" class="bowser_ani">
+               <div class="menu">
+                    <i class="fa-solid fa-grip" style="font-size: 2.5rem; color:#3378c7;"></i>
                </div>
-               <div class="settings">
-                  <div id="opc">
-                     <a onclick="location.href='login.html';"><i class="fa-solid fa-right-to-bracket"></i></a>
-                     <a href="#settings"><i class="fa-solid fa-gear"></i></a>
-                     <a href="#notur"><i class="fa-solid fa-moon"></i></a>
-                     <label class="switch">
-                     <input type="checkbox" value="X" onchange="darkmode(this.id,this.checked)">
-                     <span class="slider round"></span>
-                     </label>
-                     <script>
-                        document.body.style.backgroundColor =  "#f1f2f5";
-                        function darkmode(chang,chang2) {
-                        if(chang2 == true) {
-                            var x = document.getElementById("header");
-                            x.style.backgroundColor = "#242526";
-                            
-                           
-                            var y = document.getElementById("container");
-                            y.style.backgroundColor = "#18191a";
+          </div>
+     </header>
 
-                            var z = document.getElementById("men_op");
-                            z.style.backgroundColor = "#242526";
-
-
-                            var u = document.getElementsByClassName("menu")[0];
-                            u.style.backgroundColor = "#242526";
-
-
-                            var elements = document.querySelectorAll(".quote_wb, .set-in-line-bt");
-                            for (var i = 0; i < elements.length; i++) {
-                              elements[i].style.backgroundColor = "#242526";
-                            }
-
-
-                            var elements2 = document.querySelectorAll(".btn-2");
-                            for (var i = 0; i < elements2.length; i++) {
-                              elements2[i].style.color = "#FFFFFF";
-                            }
-                            
-                            document.body.style.backgroundColor =  "#18191a";
-
-                          
-                        }                           
-                        
-                        
-                        else {
-
-
-                            var x = document.getElementById("header");
-                            x.style.backgroundColor = "#ffffff";
-                            
-                           
-                            var y = document.getElementById("container");
-                            y.style.backgroundColor = "#f0f2f5";
- 
-                            var z = document.getElementById("men_op");
-                            z.style.backgroundColor = "#ffffff";
- 
- 
-                            var u = document.getElementsByClassName("menu")[0];
-                            u.style.backgroundColor = "#ffffff";
-
-
-                            var elements = document.querySelectorAll(".quote_wb, .set-in-line-bt");
-                            for (var i = 0; i < elements.length; i++) {
-                              elements[i].style.backgroundColor = "#FFFFFF";
-                            }
-                            
-                            var elements2 = document.querySelectorAll(".btn-3, .btn-2");
-                            for (var i = 0; i < elements2.length; i++) {
-                              elements2[i].style.color = "#171212";
-                            }
-                            
-                            document.body.style.backgroundColor =  "#f1f2f5";
-                            
-                        }
-                        }
-                        
-                        
-                     </script>
-                  </div>
-                  <a href="javascript:void(0);" class="icon" onclick="menu()">
-                  <i class="fa-solid fa-bars fa-beat"style="--fa-animation-duration: 1.1s;--fa-beat-scale: 1.1;"></i>
-                  </a>
+     <section>
+          <div class="container">
+               <div class="left">
+                    <div class="left_menu">
+                         <ul>
+                              <li><i class="fa-solid fa-diagram-project"></i>&nbsp;Diagrama PFD</li>
+                              <li><i class="fa-solid fa-diagram-project"></i>&nbsp;Diagrama P&ID</li>
+                              <li><i class="fa-solid fa-chart-pie"></i>&nbsp;Análise Técnica</li>
+                              <li><i class="fa-solid fa-industry"></i>&nbsp;Instumentação</li>
+                              <li><i class="fa-solid fa-calculator"></i>&nbsp;Cálculos</li>
+                         </ul>
+                    </div>
                </div>
-            </div>
-         </div>
-         <script>
-            function menu() {
-              var x = document.getElementById("opc");
-              if (x.style.display === "block") {
-                x.style.display = "none";
+               <div class="center">
+                    <div class="opcoes">
+                         <button class="btn_home" href=""><span class="text-hover"><i class="fa-solid fa-diagram-project"></i>&nbsp;PFD && P&ID</span></button>
+                         <button class="btn_model_3d" href=""><span class="text-hover"><i class="fa-brands fa-unity"></i>&nbsp;Modelagem 3D</span></button>
+                    </div>
+                    <div class="fluxogramas">
+
+                         <div class="article_side_mid_section">
+                              <h3 class="btn btn-3">Process Flow Diagram - PFD</h3>
+                              <!--
+                               <img onclick="on()" id="PFD" src="https://grid-template-teste-gabpsx.netlify.app/img/pfd.gif" alt="fluxogram_process">
+                            -->
+                            <img  id="PFD" src="static/build offline/pfd.gif" alt="fluxogram_process">
+                         </div>
+
+                         <div class="article_side_mid_section">
+                              <h3 class="btn btn-3">Piping and Instrumentation Diagram - P&ID</h3>
+                              <!--
+                              <img onclick="on2()" id = "PID" src="https://grid-template-teste-gabpsx.netlify.app/img/PID.gif" alt="fluxogram_process">
+                              
+                              <img onclick="on3()" id = "PID" src="https://grid-template-teste-gabpsx.netlify.app/img/pid.png" alt="fluxogram_process">
+                              -->
+                              <img class="PID" id = "PID" src="static/build offline/PID.gif" alt="fluxogram_process">
+                              
+                              <img class="PID" id = "PID" src="static/build offline/pid.png" alt="fluxogram_process">
+                         </div>
+                    </div>  
+                    <section class="analise_tecnica">
+
+                         <button type="button" class="btn_hover collapsible btn btn-2 equipamentos">Equipamentos Pertinentes ao Protótipo <i class="fa-solid fa-chevron-up fa-rotate-180" style="color: #3378c7; font-size: 1.2rem;"></i></button>
+                         <div class="content">
+                            <section class="content_1">
+                               <table  class="table table-striped table-dark">
+                
+                                  <tr>
+                                     <th>Quantidade</th>
+                                     <th>Especificação e dimensionamento</th>
+                                     <th>Preço - R$</th>
+                                  </tr>
+                                  <tr>
+                                     <td>Trocador de calor - <strong>1</strong></td>
+                                     <td>--</td>
+                                     <td>3,190</td>
+                                  </tr>
+                                  <tr>
+                                     <td>Válvulas - <strong>4</strong></td>
+                                     <td>--</td>
+                                     <td>600</td>
+                                  </tr>
+                                  <tr>
+                                     <td>Tanques - <strong>1</strong></td>
+                                     <td>1000 l</td>
+                                     <td>8,000</td>
+                                  </tr>
+                                  <tr>
+                                     <td>Bomba centrífuga - <strong>2</strong></td>
+                                     <td>--</td>
+                                     <td>3,000</td>
+                                  </tr>
+                                  <tr>
+                                     <td>Ebulidor Industrial - <strong>1</strong></td>
+                                     <td>--</td>
+                                     <td>100</td>
+                                  </tr>
+                                  <tr>
+                                     <td>Tanque de resfriamento - <strong>1</strong></td>
+                                     <td>1000 l</td>
+                                     <td>7,500</td>
+                                  </tr>
+                               </table>
+                            </section>
+                    </section>
+                    <div class="instrumentacao">
+                         <section class="set-in-line-bt">
+                                   <button type="button" class="btn_hover collapsible btn btn-2 automacao">Instrumentos necessários para automação <i class="fa-solid fa-chevron-up fa-rotate-180" style="color: #3378c7; font-size: 1.2rem;"></i></button>
+                                   <div class="content">
+                                        <section class="content_1">
+                              
+                                        <table  class="table table-striped table-dark">
+                                             <tr>
+                                                  <td>Controlador lógico - CLP</td>
+                                                  <td>16 entradas e 16 saídas.</td>
+                                                  <td>3.994</td>
+                                             </tr>
+                                             <tr>
+                                                  <td>Transmissor de Pressão - <strong>4</strong></td>
+                                                  <td>--</td>
+                                                  <td>2.800</td>
+                                             </tr>
+                                             <tr>
+                                                  <td>Transmissor de Temperatura - <strong>4</strong></td>
+                                                  <td>--</td>
+                                                  <td>4.800</td>
+                                             </tr>
+                                             <tr>
+                                                  <td>Sensor de Vazão - <strong>4</strong></td>
+                                                  <td>--</td>
+                                                  <td>5,000</td>
+                                             </tr>
+                                        </table>
+                                        </section>
+                                   </div>
+                              </section>
+                    </div>
+                    <section class="calculos" id="calculos">
+                         <button type="button" class="btn_hover collapsible btn btn-2 calculos_">Cálculos <i class="fa-solid fa-chevron-up fa-rotate-180" style="color: #3378c7; font-size: 1.2rem;"></i></button>
+                         <div class="content">
+                         <section class="content_1">
+                         <nav style="padding: 10px">
+                         <div id="Bombas-hidr">
+                              <h3 id="Bombas-hidr-txt1">Exemplo I:</h3>
+                              <h3 id="Bombas-hidr-txt">Bomba Hidráulica</h3>
+                              <li id="Bombas-hidr-txt2">Cálculo de Vazão:</li>
+                              <h1 id='Vazbombhi'></h1>
+
+                         <li>Q = Vazão➜</li>
+                         <li>v = volume (cm<sup>3</sup>)➜ 5</li>
+                         <li>n = Rotação (rpm)➜ 3.450</li>
+                         <li>η = Eficiência da bomba➜≈ 80 a 90% </li>
+                         <h4>Água fria</h4>
+
+                         <h1 id='Vazbombhi2'></h1>
+
+                         <h1 id='Vazbombhi3'></h1>
+                         <h4>Água quente</h4>
+                         
+                         <h1 id='Vazbombh42'></h1>
+                         <h1 id='Vazbombh4'></h1>
+                         </div>
+           
+                         <script>
+                              
+                         document.getElementById('Vazbombhi').textContent = 'Q = \\(\\frac{v \\cdot n \\cdot \\eta}{1000}\\)';
+                         MathJax.Hub.Queue(['Typeset', MathJax.Hub, 'Vazbombhi']);
+
+                         document.getElementById('Vazbombhi2').textContent = 'Q = \\(\\frac{6 \\cdot 3.450 \\cdot 0.9}{1000} = 18.63 \\, \\text{l/min}\\)';
+                         MathJax.Hub.Queue(['Typeset', MathJax.Hub, 'Vazbombhi2']);
+
+                         document.getElementById('Vazbombhi3').textContent = 'Q = \\(\\frac{18.63}{1000} = 0.01863 \\, \\text{m}^3/\\text{s}\\)';
+                         MathJax.Hub.Queue(['Typeset', MathJax.Hub, 'Vazbombhi3']);
+
+                         document.getElementById('Vazbombh42').textContent = 'Q = \\(\\frac{4 \\cdot 3.450 \\cdot 0.9}{1000} = 12.42 \\, \\text{l/min}\\)';
+                         MathJax.Hub.Queue(['Typeset', MathJax.Hub, 'Vazbombh42']);
+
+                         document.getElementById('Vazbombh4').textContent = 'Q = \\(\\frac{12.42}{1000} = 0.01242 \\, \\text{m}^3/\\text{s}\\)';
+                         MathJax.Hub.Queue(['Typeset', MathJax.Hub, 'Vazbombh4']);
+
+                         
+                         </script>      
+                         <hr>
+                         <h3 style="text-align: left;">Exemplo II:</h3>
+                         <h4>Água fria</h4>
+                         <p>Vazão = 18.63 l/min -> 0.31 l/s</p>
+                         <h4>Água quente</h4>
+                         <p>Vazão = 12.42 l/min -> 0.21 l/s</p>
+                         <hr>
+                         <li>d = 150mm</li>
+                         <li id="area"></li>
+                         <li id="area2"></li>
+                         <li id="velocidade_em_1"></li>
+                         <br>
+                         <li id="velocidade_em_2"></li>
+                         <h4>Balanço de energia</h4>
+                         <li>-Q = m(x1 - x2) = mcp(Tqe-Tqs)</li>
+                         <h4>Determinando a Transferência de Calor</h4>
+                         <li>ṁ = 0.21 kg/s</li>
+                         <li>q = 0.21 ∙ 4.18 ∙ (45 - 15) = 26.334 kj/s</li>
+                         <br>
+                         <h4>Temperatura (Tfs -> Água quente)</h4>
+                         <li id="temp_2"></li>
+                         <li id="temp_3"></li>
+                         <hr>
+                         <h3 style="text-align: left;">Exemplo III:</h3>
+                         
+                         <h4>Geometria do Sistema:</h4>
+                         <img class="geometria_do_sistema" src="static/build offline/geometria_do_sistema.png" alt="">
+
+                         <div id="geometriaSistema"></div>
+                       
+                         <h4>Vazão do Fluido:</h4>
+                         <div id="vazaoFluido"></div>
+                       
+                         <h4>Balanço de Energia:</h4>
+                         <div id="balancoEnergia"></div>
+                       
+                         <h4>Seção Transversal:</h4>
+                         <div id="secaoTransversal"></div>
+                       
+                         <h4>Perda de Carga de Hazen–Williams:</h4>
+                         <div id="perdaCarga"></div>
+
+                         <textarea class="perda_de_carga" style="width: 100%; height: 250px;">
+                         </textarea>
+                         <script>
+                              fetch('static/data_rust/perda_de_carga.txt')
+                              .then(response => response.text())
+                              .then(text => {
+                              const perda_carga = text.split();
+                              document.querySelector(".perda_de_carga").value = perda_carga;
+                              
+                              })
+                         </script>
+                         <br>
+                         <h4>Velocidade de Escoamento do Fluido</h4>
+                         <table id="tabela">
+                         <thead>
+                              <tr>
+                              <th>Vazão da bomba (L/min)</th>
+                              <th>Velocidade de escoamento</th>
+                              </tr>
+                         </thead>
+                         <tbody id="tabela-body">
+                         </tbody>
+                         </table>
+            
+                         <div class="canva">
+                    
+                         <canvas style="max-width: 500px;" id="myChart" class="chartjs-render-monitor"></canvas>
+                         <div id="fullscreen-buttons">
+                              <button id="add_fc_mychart">Tela Cheia</button>
+                              <button id="exit_fullscreen" style="display: none;">Sair</button>
+                         </div>
+                         <img style="max-width: 500px;" id="img_load_fireb" src="static/build offline/Figure_1.png" alt="">
+                         <div id="fullscreen-buttons">
+                              <button id="add_img">Tela Cheia</button>
+                              <button id="exit_fullscreen" style="display: none;">Sair</button>
+                         </div>
+     
+                         </div>
+                     </div>
+
+                     </section>
+               </div>
+               <div class="right">
+                    <div class="right_menu menu-hidden">
+                         <ul>
+                              <li><i class="fa-solid fa-download"></i>&nbsp; PFD</li>
+                              <li><i class="fa-solid fa-download"></i>&nbsp; P&ID</li>
+                              <li><i class="fa-solid fa-download"></i>&nbsp; Análise Técnica</li>
+                              <li><i class="fa-solid fa-download"></i>&nbsp; Aplicativo móvel&nbsp;<i class="fa-solid fa-mobile"></i></li>
+                              <li><i class="fa-solid fa-download"></i>&nbsp; Simulação 3D&nbsp;<i class="fa-brands fa-unity"></i></li>
+                              <li class="close_menu"><i class="fa-solid fa-circle-xmark" style="color: #f55252;"></i>&nbsp;Fechar Menu</li>
+                         </ul>
+                    </div>
+               </div>
+          </div>
+          <footer>
+               <h4>Desenvolvido por GabpsX</h4>
+               <h4>&nbsp; v3.0.8</h4>
+               <h4>&nbsp; 2021 - 2023</h4>
+          </footer>
+     </section>
+
+</body>     
+
+ 
+<script>
+     const button = document.getElementById("add_fc_mychart");
+     let canva = document.getElementById('myChart');
+     
+     button.addEventListener('click', function() {
+       if (canva.requestFullscreen) {
+         canva.requestFullscreen();
+       } else if (canva.mozRequestFullScreen) {
+         canva.mozRequestFullScreen();
+       } else if (canva.webkitRequestFullscreen) {
+         canva.webkitRequestFullscreen();
+       }
+     });
+     
+     document.addEventListener('fullscreenchange', function() {
+       if (document.fullscreenElement === canva) {
+         canva.style.backgroundColor = 'white';
+       } else {
+         canva.style.backgroundColor = 'white';
+         canva = document.getElementById('myChart');
+       }
+     });
+     
+     const button2 = document.getElementById("add_img");
+     let img = document.getElementById('img_load_fireb');
+     
+     button2.addEventListener('click', function() {
+       if (img.requestFullscreen) {
+         img.requestFullscreen();
+       } else if (img.mozRequestFullScreen) {
+         img.mozRequestFullScreen();
+       } else if (img.webkitRequestFullscreen) {
+         img.webkitRequestFullscreen();
+       }
+     });
+     
+     document.addEventListener('fullscreenchange', function() {
+       if (document.fullscreenElement === img) {
+         img.style.backgroundColor = 'black';
+       } else {
+         img.style.backgroundColor = 'white';
+         img = document.getElementById('img_load_fireb');
+       }
+     });
+  
+  </script>
+  <script>
+     var canvas = document.getElementsByTagName('canvas')[0];
+     canvas.width  = 400;
+     canvas.height = 300;
+</script>
+<script>
+     // Geometria do Sistema
+
+ 
+     // Vazão do Fluido
+     document.getElementById('vazaoFluido').innerHTML = 
+          '<h5>'+
+          'Para a água fria (Tanque 1): <br>' +
+          'Q = 18,63 l/min <br>' +
+
+          '\\( Q_{em_kgs} = \\left(\\frac{18.63*1}{60}\\right)\\) <br>'+
+          '\\( Q_{em_kgs} = 0.3105 \\, \\text{kg/s} \\) <br>'+
+          
+          'Para a água quente (Tanque 2): <br>' +
+          'Q = 12,42 l/min <br>' +
+          '\\( Q_{em_kgs} = \\left(\\frac{12.42*1}{60}\\right)\\) <br>'+
+          '\\( Q_{em_kgs} = 0.207 \\, \\text{kg/s} \\) <br>'+
+
+          '</h5>'
+          ;
+     // Balanço de Energia
+     document.getElementById('balancoEnergia').innerHTML = 
+          '<h5>'+
+
+          '\\(q = 0.207 \\times 4.178 \\times (45 - 15) \\)' + '<br>' +
+          '\\(q = 25.94538 \\, \\text{kJ/s}\\)' + '<br>' +
+          '\\(T_{\\text{fs}} = T_{\\text{fe}} + \\left(\\frac{q}{m \\times Cp}\\right)\\)' + '<br>' +
+          '\\(T_{\\text{fs}} = 15 + \\left(\\frac{25.94538}{0.207 \\times 4.178}\\right)\\)' + '<br>' +
+          '\\(T_{\\text{fs}} \\approx 30.00 \\,° \\text{C})\\)' + '<br>' +
+
+          '</h5>'
+          ;
+          
+     // Seção Transversal
+     document.getElementById('secaoTransversal').innerHTML = 
+          '<h5>'+
+          'd = 150 mm <br>' +
+          'φ = π * (d^2/4) <br>' +
+          'φ = 3.14 * (150^2/4) <br>' +
+          'φ ≈ 17.671 mm² <br>' +
+          'φ(m²) = 17.671 / 1e+6 = 0,017671 m²' +
+          '</h5>'
+          ;
+ 
+     // Perda de Carga de Darcy-Weisbach
+     document.getElementById('perdaCarga').innerHTML =
+
+
+               '\\(J = \\frac{{10.65 \\times Q^{1.25}}}{{C^{1.85} \\times D^{4.87}}}\\) <br>' + 
+
+               '\\(Δh = K \\times \\left(\\frac{{V^2}}{{2g}}\\right)\\) <br>' + 
+
+               `
+               <p>
+                    AB
+               </p>
+
+               <p>
+                    Perda de Carga Distribuída : 0.00038 m.
+               </p>
+
+               <p>
+                    Velocidade: 0.0117 m/s
+               </p>
+
+               <p>
+                    Perda de Carga Localizada: 0.0028 m
+               </p>
+
+               <p>
+                    Perda de Carga Total: 0.0032 m
+               </p>
+               -----------------------------
+               <p>
+                     CD
+               </p>
+               <p>          
+                    Perda de Carga Distribuída : 0.00090 m.
+               </p>
+               <p>  
+                    Velocidade: 0.0117 m/s
+               </p>
+               <p>
+                    Perda de Carga Localizada: 0.0034 m
+               </p>
+               <p>
+                    Perda de Carga Total: 0.0043 m
+               </p>
+               -----------------------------
+
+               <p>
+                    EF
+               </p>
+
+               <p>
+                    Perda de Carga Distribuída : 0.00064 m.
+               </p>
+               <p>
+                    Velocidade: 0.0117 m/s
+               </p>
+               <p>
+                    Perda de Carga Localizada: 0.0022 m
+               </p>
+               <p>
+                    Perda de Carga Total: 0.0028 m
+               </p>
+               -----------------------------
+
+               <p>
+                    GH
+               </p>
+               <p>
+                    Perda de Carga Distribuída : 0.00076 m.
+               </p>
+
+               <p>
+                    Velocidade: 0.0175 m/s
+               </p>
+               <p>
+                    Perda de Carga Localizada: 0.0049 m
+               </p>
+               <p>
+                    Perda de Carga Total: 0.0056 m
+               </p>
+               -----------------------------
+
+               <p>
+                    JI
+               </p>
+               <p>
+                    Perda de Carga Distribuída : 0.00221 m.
+               </p>
+               <p>
+                    Velocidade: 0.0175 m/s
+               </p>
+               <p>
+                    Perda de Carga Localizada: 0.0062 m
+               </p>
+               <p>
+                    Perda de Carga Total: 0.0084 m
+               </p>
+               -----------------------------
+               
+
+          `;
+
+     // Processa as fórmulas e notação matemática com MathJax
+     MathJax.Hub.Queue(['Typeset', MathJax.Hub]);
+
+   </script>
+<script>
+
+     
+     document.getElementById('area').textContent = 'φ = \\( π \\cdot r^2 \\)';
+     MathJax.Hub.Queue(['Typeset', MathJax.Hub, 'area']);
+     
+     document.getElementById('area2').textContent = '\\( π \\cdot 0.075^2 = 0.01767 \\, \\text{m}^2 \\)';
+     MathJax.Hub.Queue(['Typeset', MathJax.Hub, 'area2']);
+     
+     document.getElementById('velocidade_em_1').textContent = 'v = \\( \\frac{0.01863}{0.01767} \\rightarrow 1.054 \\, \\text{m/s} \\)';
+     MathJax.Hub.Queue(['Typeset', MathJax.Hub, 'velocidade_em_1']);
+     
+     document.getElementById('velocidade_em_2').textContent = 'v = \\( \\frac{0.01242}{0.01767} \\rightarrow 0.7028 \\, \\text{m/s} \\)';
+     MathJax.Hub.Queue(['Typeset', MathJax.Hub, 'velocidade_em_2']);
+     
+     document.getElementById('temp_2').textContent = 'Tfs = Tfe + \\( \\frac{q}{\\dot{m} \\cdot 4178} \\)';
+     MathJax.Hub.Queue(['Typeset', MathJax.Hub, 'temp_2']);
+     
+     document.getElementById('temp_3').textContent = '100°C + \\( \\frac{26.334 \\, \\text{kJ/s}}{(0.31 \\, \\text{kg/s}) \\cdot 4.18} = 79.67°C \\)';
+     MathJax.Hub.Queue(['Typeset', MathJax.Hub, 'temp_3']);
+     
+     document.getElementById('Vazbombh2').textContent = 'Q = \\( Φ \\cdot V \\rightarrow Φ = \\frac{π \\cdot d^2}{4} \\)';
+     MathJax.Hub.Queue(['Typeset', MathJax.Hub, 'Vazbombh2']);
+     
+     document.getElementById('Vazbombh3').textContent = 'Q = \\( Φ \\cdot V \\rightarrow Φ = \\frac{π \\cdot 0.0508^2}{4} \\)';
+     MathJax.Hub.Queue(['Typeset', MathJax.Hub, 'Vazbombh3']);
+     
+     document.getElementById('Vazbombh4.1').textContent = '\\( \\frac{v^2}{2g} + \\frac{p}{γ} + z = \\frac{v^2}{2g} + \\frac{p}{γ} + z \\)';
+     MathJax.Hub.Queue(['Typeset', MathJax.Hub, 'Vazbombh4.1']);
+     
+     document.getElementById('Vazbombh4').textContent = 'Q = \\( \\frac{15.525}{60} = 0.258755 \\, \\text{m}^3/s \\)';
+     MathJax.Hub.Queue(['Typeset', MathJax.Hub, 'Vazbombh4']);
+     
+
+  </script>
+     
+     <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-app.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-database.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-storage.js"></script>
+     <script type="module" src="js/fireb.js"></script> 
+     <script>
+          var coll = document.getElementsByClassName("collapsible");
+          var i;
+          
+          for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+              this.classList.toggle("active");
+              var content = this.nextElementSibling;
+              if (content.style.display === "block") {
+              content.style.display = "none";
               } else {
-                x.style.display = "block";
+              content.style.display = "block";
               }
-            }
-         </script>
-      </header>
-      <div id="msg">
-
-      </div>
-
-      <div id="container">
-      <div id="left" class="section">
-         <ul class="nav menu">
-            <li class="item-101">
-               
-               <a class="btn btn-2 diagramas2d"  href="#projeto_1">Diagrama PFD</a> 
-
-            </li>
-            <li class="item-102">
-                 
-               <a class="btn btn-2 diagramas2d"  href="#projeto_2">Diagrama P&ID</a> 
-            </li>
-            <li class="item-103">
-               <a class="btn btn-2 diagramas2d" href="#calculos">Cálculos</a>
-            </li>
-         </ul>
-      </div>
-      <style>
-         img{
-         width: 100%;
-         }
-      </style>
-      <div id="center" class="section">
-      <div class="quote" id="men_op">
-         <a onclick="redir_2d()" class="btn btn-2 diagramas2d">PFD && P&ID</a> 
-         <a onclick="redir_d3()"class="btn btn-2 diagramas3d">Modelagem 3D</a> 
-         <!-- 
-         <a onclick="redir_2d()" class="diagramas2d arrow-button" href="#">PFD P&ID<span class="arrow"></span></a>
-         <a onclick="redir_d3()" class="diagramas3d arrow-button"href="#">Modelagem 3D<span class="arrow"></span></a>
-         -->
-      </div>
-
-      <div class="quote span-2" id="projeto_1">
-         <div id="article_side_mid_section">
-            <h1 class="btn btn-3">Process Flow Diagram - PFD</h1>
-           <!--
-            <img onclick="on()" id="PFD" src="https://grid-template-teste-gabpsx.netlify.app/img/pfd.gif" alt="fluxogram_process">
-         -->
-         <img onclick="on()" id="PFD" src="build offline/pfd.gif" alt="fluxogram_process">
-         </div>
-      </div>
-      <div class="quote span-2" id="projeto_2">
-         <div id="article_side_mid_section">
-            <h1 class="btn btn-3">Piping and Instrumentation Diagram - P&ID</h1>
-            <!--
-            <img onclick="on2()" id = "PID" src="https://grid-template-teste-gabpsx.netlify.app/img/PID.gif" alt="fluxogram_process">
-            
-            <img onclick="on3()" id = "PID" src="https://grid-template-teste-gabpsx.netlify.app/img/pid.png" alt="fluxogram_process">
-            -->
-            <img onclick="on2()" id = "PID" src="build offline/PID.gif" alt="fluxogram_process">
-            
-            <img onclick="on3()" id = "PID" src="build offline/pid.png" alt="fluxogram_process">
-         </div>
-         
-      </div>
-      <section class="set-in-line-bt">
-
-         <button type="button" class="collapsible btn btn-2">Equipamentos Pertinentes ao Protótipo <i class="fa-solid fa-angles-right fa-rotate-90"></i></button>
-         <div class="content">
-            <section class="content_1">
-               <table  class="table table-striped table-dark">
-
-                  <tr>
-                     <th>Quantidade</th>
-                     <th>Especificação e dimensionamento</th>
-                     <th>Preço - R$</th>
-                  </tr>
-                  <tr>
-                     <td>Trocador de calor - <strong>1</strong></td>
-                     <td>--</td>
-                     <td>3,190</td>
-                  </tr>
-                  <tr>
-                     <td>Válvulas - <strong>4</strong></td>
-                     <td>--</td>
-                     <td>600</td>
-                  </tr>
-                  <tr>
-                     <td>Tanques - <strong>1</strong></td>
-                     <td>1000 l</td>
-                     <td>8,000</td>
-                  </tr>
-                  <tr>
-                     <td>Bomba centrífuga - <strong>2</strong></td>
-                     <td>--</td>
-                     <td>3,000</td>
-                  </tr>
-                  <tr>
-                     <td>Ebulidor Industrial - <strong>1</strong></td>
-                     <td>--</td>
-                     <td>100</td>
-                  </tr>
-                  <tr>
-                     <td>Tanque de resfriamento - <strong>1</strong</td>
-                     <td>1000 l</td>
-                     <td>7,500</td>
-                  </tr>
-               </table>
-            </section>
-      </section>
-
-      <section class="set-in-line-bt">
-      <button type="button" class="collapsible btn btn-2">Instrumentos necessários para automação <i class="fa-solid fa-angles-right fa-rotate-90"></i></button>
-      <div class="content">
-      <section class="content_1">
-
-      <table>
-      <tr>
-      <td>Controlador lógico - CLP</td>
-      <td>16 entradas e 16 saídas.</td>
-      <td>3.994</td>
-      </tr>
-      <tr>
-      <td>Transmissor de Pressão - <strong>4</strong</td>
-      <td>--</td>
-      <td>2.800</td>
-      </tr>
-      <tr>
-      <td>Transmissor de Temperatura - <strong>4</strong</td>
-      <td>--</td>
-      <td>4.800</td>
-      </tr>
-      <tr>
-      <td>Sensor de Vazão - <strong>4</strong</td>
-      <td>--</td>
-      <td>5,000</td>
-      </tr>
-      </table>
-      </div>
-      </section>
-      </section>
-
-      <section class="set-in-line-bt" id="calculos">
-      <button type="button" class="collapsible btn btn-2">Cálculos <i class="fa-solid fa-angles-right fa-rotate-90"></i></button>
-      <div class="content">
-      <section class="content_1">
-      <nav style="padding: 40px">
-      <div id="Bombas-hidr">
-      <h3 id="Bombas-hidr-txt1">Exemplo I:</h3>
-      <h3 id="Bombas-hidr-txt">Bomba Hidráulica</h3>
-      <li id="Bombas-hidr-txt2">Cálculo de Vazão:</li>
-      <h1 id='Vazbombhi'></h1>
-      <li>Q = Vazão➜</li>
-      <li>v = volume (cm<sup>3</sup>)➜ 5</li>
-      <li>n = Rotação (rpm)➜ 3.450</li>
-      <li>η = Eficiência da bomba➜≈ 80 a 90% </li>
-      <h2>Água fria</h2>
-      <h1 id='Vazbombhi2'></h1>
-      <h1 id='Vazbombhi3'></h1>
-      <h2>Água quente</h2>
-      <h1 id='Vazbombh42'></h1>
-      <h1 id='Vazbombh4'></h1>
-      </div>
-      
-      <script>
-         document.getElementById('Vazbombhi').innerHTML = katex.renderToString('Q = \\frac{v ∙n∙η}{1000}')
-         
-         document.getElementById('Vazbombhi2').innerHTML = katex.renderToString('Q = \\frac{6 ∙3.450∙0.9}{1000} = {18.63 l/min}')
-         document.getElementById('Vazbombhi3').innerHTML = katex.renderToString('Q = \\frac{18.63}{1000} = {0.01863 m^3/s}')
-         
-         document.getElementById('Vazbombh42').innerHTML = katex.renderToString('Q = \\frac{4 ∙3.450∙0.9}{1000} = {12.42 l/min}')
-         document.getElementById('Vazbombh4').innerHTML = katex.renderToString('Q = \\frac{12.42}{1000} = {0.01242 m^3/s}')
-         
-      </script>      
-      <hr>
-      <h3 style="text-align: left;">Exemplo II:</h3>
-      <li>Água fria</li>
-      <p>Vazão = 18.63 l/min -> 0.31 l/s</p>
-      <li>Água quente</li>
-      <p>Vazão = 12.42 l/min -> 0.21 l/s</p>
-      <hr>
-      <li>d = 150mm</li>
-      <li id="area"></li>
-      <li id="velocidade_em_1"></li>
-      <br>
-      <li id="velocidade_em_2"></li>
-      <h4>Balanço de energia</h4>
-      <li>-Q = m(x1 - x2) = mcp(Tqe-Tqs)</li>
-      <h4>Determinando a Transferência de Calor</h4>
-      <li>ṁ = 0.21 kg/s</li>
-      <li>q = 0.21 ∙ 4.18 ∙ (45 - 15) = 26.334 kj/s</li>
-      <br>
-      <h4>Temperatura (Tfs -> Água quente)</h4>
-      <li id="temp_2"></li>
-      
-
-
-
-      <br>
-      <h4>Velocidade de Escoamento do Fluido</h4>
-      <table id="tabela">
-         <thead>
-           <tr>
-             <th>Vazão da bomba (%)</th>
-             <th>Velocidade de escoamento</th>
-           </tr>
-         </thead>
-         <tbody id="tabela-body">
-         </tbody>
-       </table>
-       
-       <div class="canva">
-   
-         <canvas id="myChart" class="chartjs-render-monitor"></canvas>
-         <div id="fullscreen-buttons">
-           <button id="add_fc_mychart">Tela Cheia</button>
-           <button id="exit_fullscreen" style="display: none;">Sair</button>
-         </div>
-         <img id="img_load_fireb" src="build offline/Figure_1.png" alt="">
-         <div id="fullscreen-buttons">
-           <button id="add_img">Tela Cheia</button>
-           <button id="exit_fullscreen" style="display: none;">Sair</button>
-         </div>
-
-       </div>
-       <style>
-         #add_fc_mychart,
-         #add_img {
-           color: rgb(58, 54, 54);
-           border: 4px solid rgb(45, 201, 180);
-           border-radius: 2px;
-           background-color: white;
-           color: black;
-           padding: 5px 10px;
-           cursor: pointer;
-           transition: opacity 0.5s ease-in-out;
-           opacity: 1;
-         }
-         
-         #add_fc_mychart:hover,
-         #add_img:hover {
-           background-color: rgb(45, 201, 180);
-           color: white;
-           opacity: 0.8;
-         }
-         
-       </style>
-<script>
-   const button = document.getElementById("add_fc_mychart");
-   let canva = document.getElementById('myChart');
-   
-   button.addEventListener('click', function() {
-     if (canva.requestFullscreen) {
-       canva.requestFullscreen();
-     } else if (canva.mozRequestFullScreen) {
-       canva.mozRequestFullScreen();
-     } else if (canva.webkitRequestFullscreen) {
-       canva.webkitRequestFullscreen();
-     }
-   });
-   
-   document.addEventListener('fullscreenchange', function() {
-     if (document.fullscreenElement === canva) {
-       canva.style.backgroundColor = 'white';
-     } else {
-       canva.style.backgroundColor = 'white';
-       canva = document.getElementById('myChart');
-     }
-   });
-   
-   const button2 = document.getElementById("add_img");
-   let img = document.getElementById('img_load_fireb');
-   
-   button2.addEventListener('click', function() {
-     if (img.requestFullscreen) {
-       img.requestFullscreen();
-     } else if (img.mozRequestFullScreen) {
-       img.mozRequestFullScreen();
-     } else if (img.webkitRequestFullscreen) {
-       img.webkitRequestFullscreen();
-     }
-   });
-   
-   document.addEventListener('fullscreenchange', function() {
-     if (document.fullscreenElement === img) {
-       img.style.backgroundColor = 'black';
-     } else {
-       img.style.backgroundColor = 'white';
-       img = document.getElementById('img_load_fireb');
-     }
-   });
-
-</script>
-
-<script>
-      var canvas = document.getElementsByTagName('canvas')[0];
-      canvas.width  = 400;
-      canvas.height = 300;
-</script>
-      </nav>
-
-
-      </section>
-      <script>
-         document.getElementById('area').innerHTML = katex.renderToString('φ = {π  ∙ r^2} -> {π∙0.075^2} = {0.01767m²}')
-         document.getElementById('velocidade_em_1').innerHTML = katex.renderToString('v = \\frac{0.01863}{0.01767} -> {1.054 m/s}')
-         
-         document.getElementById('velocidade_em_2').innerHTML = katex.renderToString('v = \\frac{0.01242}{0.01767} -> {0.7028 m/s}')
-         document.getElementById('temp_2').innerHTML = katex.renderToString('Tfs = Tfe +\\frac{ q}{ṁ ∙ 4178} -> 100°C+\\frac{26.334 kj/s}{(0.31 kg/s)∙4,.18}=79.67°C')
-         
-         document.getElementById('Vazbombh2').innerHTML = katex.renderToString('Q = {Φ ∙ V} -> Φ = \\frac{π∙d^2}{4}')
-         
-         document.getElementById('Vazbombh3').innerHTML = katex.renderToString('Q = {Φ ∙ V} -> Φ = \\frac{π∙0.0508^2}{4}')
-         
-         document.getElementById('Vazbombh4.1').innerHTML = katex.renderToString('\\frac{v^2}{2g}+\\frac{p}{γ}+z = \\frac{v^2}{2g}+\\frac{p}{γ}+z\\subsubsection{subsubsection}')
-                                    
-         document.getElementById('Vazbombh4').innerHTML = katex.renderToString('Q = \\frac{15.525}{60} = {0.258755 m³/s}')
-         
-
-      </script>
-      </section>
-      <style>
-
-
-
-
-      .collapsible {
-      background-color:#ffffff;
-      color: rgb(58, 54, 54);
-      cursor: pointer;
-      padding: 18px;
-      width: 100%;
-      border: none;
-      text-align: center;
-      outline: none;
-      font-size: 15px;
-      }
-      .active, .collapsible:hover {
-      background-color: rgb(243, 242, 242);
-      }
-
-      .content {
-
-    
-      display: none;
-      overflow: hidden;
-      background-color:#ffffff;
-      }
-      .set-in-line-bt{
-      border-radius: .3em;
-      font-size: 1em;
-      padding-top: 6%;
-      padding-bottom: 6%;
-      background-color:#ffffff;
-      text-align: center;
-      color: white;
-      color: #fff;
-      margin-bottom: 0;
-      position: relative;
-      }
-      </style>
-      </div>
-      <div id="right" class="section">
-        <ul class="nav menu" id="hide_menu">
-          <li class="item-101">
-             
-             <a class="btn btn-2 diagramas2d"  href="#">Unity P 3D</a> 
-
-          </li>
-          <li class="item-102">
-               
-             <a class="btn btn-2 diagramas2d"  href="#">PFD</a> 
-
-          </li>
-          <li class="item-103">
-
-             <a class="btn btn-2 diagramas2d" href="#">P&ID</a>
-
-          </li>
-
-          <li class="item-104">
-
-            <a class="btn btn-2 diagramas2d" href="controle_sistema.html">Controle</a>
-
-         </li>
-       </ul>
-      
-      </div>
-
-      <script>
-         function on() {
-           document.getElementById("overlay").style.display = "block";
-         }
-         
-         function off() {
-           document.getElementById("overlay").style.display = "none";
-         }
-         
-         function on2() {
-           document.getElementById("overlay2").style.display = "block";
-         }
-         
-         function off2() {
-           document.getElementById("overlay2").style.display = "none";
-         }
-         
-         function on3() {
-           document.getElementById("overlay3").style.display = "block";
-         }
-         
-         function off3() {
-           document.getElementById("overlay3").style.display = "none";
-         }
-       
-      </script>
-
-<script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-database.js"></script>
-<script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-storage.js"></script>
-<script type="module" src="js/fireb.js"></script>  
-      <section class="hiddensec">
-      <div id="overlay">
-         <button onclick="off()" class="close-pfd">
-         &#10799;
-         </button>
-         <img id="PFD-1" src="build offline/pfd.gif" alt="fluxogram_process">
-      </div>
-      <div id="overlay2" >
-         <button onclick="off2()" class="close-PID">
-         &#10799;
-         </button>
-         <img id = "PID-2" src="build offline/PID.gif" alt="fluxogram_process">
-      </div>
-      <div id="overlay3" >
-         <button onclick="off3()" class="close-PID">
-         &#10799;
-         </button>
-         <img id = "PID-3" src="build offline/pid.png" alt="fluxogram_process">
-      </div>
-      <script src="js/script.js"></script>
-      <a href="javascript:void(0);" class="icon_" onclick="menu_downloads()">
-      <i class="fa-solid fa-plus icon_style"></i>
-      </a>
-      <script>
-        document.addEventListener('keydown', function(event) {
-          if (event.key === '+') {
-            var x = document.getElementById("hide_menu");
-            if (x.style.display === "block") {
-              x.style.display = "none";
-              x.style.height = "0";
-            } else {
-              x.style.display = "block";
-              x.style.height = "fit-content";
-            }
+          });
           }
-        });
+       </script>
+       <dialog class="pfd_imagem_open">
+          <button class="fechar_pfd_imagem">Fechar</button>
+          <div class="img_dialog_pid">
+               <img src="static/build offline/pfd.gif" alt="fluxogram_process">
+          </div>
+       </dialog>
+       <dialog class="pid_imagem_open">
+          <button class="pid_imagem">Fechar</button>
+          <div class="img_dialog_pid">
+               <img src="static/build offline/PID.gif" alt="fluxogram_process">
+                    
+               <img src="static/build offline/pid.png" alt="fluxogram_process">
+          </div>
 
-         function menu_downloads() {
-           var x = document.getElementById("hide_menu");
-           if (x.style.display === "block") {
-             x.style.display = "none";
-             x.style.height = "0";
-           } else {
-             x.style.display = "block";
-             x.style.height = "fit-content";
-            
-           }
-         }
-      </script>
-      <script>
-         var coll = document.getElementsByClassName("collapsible");
-         var i;
-         
-         for (i = 0; i < coll.length; i++) {
-         coll[i].addEventListener("click", function() {
-             this.classList.toggle("active");
-             var content = this.nextElementSibling;
-             if (content.style.display === "block") {
-             content.style.display = "none";
-             } else {
-             content.style.display = "block";
-             }
-         });
-         }
-      </script>
-   </body>
+       </dialog>
+       <script>
+          const dialog_PFD = document.querySelector(".pfd_imagem_open");
+          const dialog_PID = document.querySelector(".pid_imagem_open");
+          
+          const PFD = document.getElementById("PFD");
+          PFD.addEventListener("click", ()=> {
+              dialog_PFD.showModal();
+          })
 
-   <script>
-      var balloonDisplayed = false;
-    
-      function detectDevice() {
-        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-          // obtém a largura da tela do dispositivo
-          var screenWidth = screen.width;
-          if (screenWidth < 600) {
-    
-            var animation = document.getElementsByClassName("positionabsolute")[0];
-    
-            // remove a div
-            animation.remove();
+          const PID = document.querySelectorAll(".PID");
+          PID.forEach((element) => {
+            element.addEventListener("click", () => {
+               dialog_PID.showModal();
+            });
+          });
+          
+          const pid_imagem = document.querySelector(".pid_imagem");
+          pid_imagem.addEventListener("click", () => {
+               dialog_PID.close();
+          })
+
+          const fechar_pfd_imagem = document.querySelector(".fechar_pfd_imagem");
+          fechar_pfd_imagem.addEventListener("click", () => {
+               dialog_PFD.close();
+          })
+
+          const menu = document.querySelector(".fa-grip");
+          const right_menu = document.querySelector(".right_menu");
+          const close_menu = document.querySelector(".close_menu");
+
+          menu.addEventListener("click", ()=> {
+
+               if (right_menu.classList.contains("menu-hidden")) {
+                    right_menu.classList.remove("menu-hidden");
+                    right_menu.classList.add("menu-visible");
+                    menu.style.color = "red";
+               } else {
+                    right_menu.classList.remove("menu-visible");
+                    right_menu.classList.add("menu-hidden");
+                    menu.style.color = "";
+               }
+
+          })
+          //fecha o menu
+          close_menu.addEventListener("click", ()=> {
+               right_menu.classList.remove("menu-visible");
+               right_menu.classList.add("menu-hidden");
+               menu.style.color = "";
+          })
+          //fecha o menu quando clicar fora
+          function fecharMenu(event) {
+               if (!menu.contains(event.target) && !right_menu.contains(event.target)) {
+               right_menu.classList.remove("menu-visible");
+               right_menu.classList.add("menu-hidden");
+               menu.style.color = "";
+               }
           }
-    
-          // exibe o balão com a mensagem por 5 segundos, se ainda não foi exibido
-          var balloon = document.getElementById("msg");
-          if (balloon && !balloonDisplayed) {
-            var ms = "Dispositivo móvel detectado!";
-            balloon.innerHTML = ms;
-            balloon.style.display = "block";
-            balloonDisplayed = true;
-    
-            setTimeout(function() {
-              balloon.style.display = "none";
-            }, 4000);
-          }
-        } else {
-          // resetar variável quando não é dispositivo móvel
-          balloonDisplayed = false;
-        }
-      }
-    
-      // chama a função detectDevice() quando a página é carregada e quando a janela é redimensionada
-      window.onload = detectDevice;
-      window.onresize = detectDevice;
-    
-    </script>
-    
-    
+          
+          // Adicionar evento de clique no documento
+          document.addEventListener("click", fecharMenu);
+       </script>
+
+       <script src="static/js/alterar_tex.js"></script>
+       <style>body{overflow-x: hidden !important;}</style>
+
 </html>

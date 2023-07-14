@@ -6,7 +6,7 @@ import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 
 
 const canvas = document.querySelector('.webgl');
-
+/*
 let button = document.getElementById("fullscreen");
 button.addEventListener('click', function() {
     if (canvas.requestFullscreen) {
@@ -18,7 +18,7 @@ button.addEventListener('click', function() {
     }
 });
 
- 
+*/ 
 
 
 
@@ -36,7 +36,9 @@ loader.load('assets/trocador de calor.glb', function(glb){
 
 
 
-   
+     root.position.y = -10; 
+     root.rotation.y += 100;
+
      root.traverse(function(node){
           if (node.isMesh){
                node.castShadow = true
@@ -79,9 +81,9 @@ const sizes = {
      height: window.innerHeight
 }
 
-var camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 5000 );
+var camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 4000 );
 camera.position.z = -200;
-camera.position.set( 0, 0, 100 ); //Ajuste a posição da câmera de acordo com a posição do objeto
+camera.position.set( 0, 0, 150 ); //Ajuste a posição da câmera de acordo com a posição do objeto
 camera.lookAt( 0, 0, 0 ); //Faz a câmera olhar para o centro do objeto
 
 

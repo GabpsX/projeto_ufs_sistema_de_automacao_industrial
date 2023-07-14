@@ -8,7 +8,7 @@ import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 
 
 const canvas = document.querySelector('.webgl2');
-
+/*
 let button = document.getElementById("fullscreen3");
 button.addEventListener('click', function() {
     if (canvas.requestFullscreen) {
@@ -19,7 +19,7 @@ button.addEventListener('click', function() {
         canvas.webkitRequestFullscreen();
     }
 });
-
+*/
  
 
 
@@ -33,9 +33,9 @@ loader.load('assets/tanque.glb', function(glb){
      scene.add(root);
      root.scale.set(500,500,500)
 
-     root.position.y = -30; //ajuste a posição do objeto de acordo com a distância
+     root.position.y = -10; //ajuste a posição do objeto de acordo com a distância
 
-     root.rotation.y += 120;
+     root.rotation.y += 50;
      root.traverse(function(node){
           if (node.isMesh){
                node.castShadow = true
@@ -78,8 +78,8 @@ const sizes = {
      height: window.innerHeight
 }
 
-var camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 5000 );
-camera.position.set( 0, 0, 100 ); //Ajuste a posição da câmera de acordo com a posição do objeto
+var camera = new THREE.PerspectiveCamera( 40, window.innerWidth / window.innerHeight, 0.1, 5000 );
+camera.position.set( 0, 0, 120 ); //Ajuste a posição da câmera de acordo com a posição do objeto
 camera.lookAt( 0, 0, 0 ); //Faz a câmera olhar para o centro do objeto
 
 

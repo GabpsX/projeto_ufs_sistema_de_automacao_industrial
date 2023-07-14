@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta name="Description" CONTENT="Author: Gabriel GabpsX, Category: Engenharia, Length: 3 pages">
+     <title>Projeto UFS</title>
+     <link rel="stylesheet" type="text/css" href="static/fontawesome/css/all.css">
+     <link rel="stylesheet" type="text/css" href="/static/css_main/min.css">
+     <link rel="stylesheet" type="text/css" media="screen and (min-width: 1200px)" href="static/SISTEMA_DASHBOARD/responsive.css"/>
+     <link rel="stylesheet" type="text/css" media="screen and (max-width: 1200px)" href="/static/css_main/mobile.css">
+     <link rel="stylesheet" type="text/css" media="screen and (min-width: 1200px)" href="/static/css_main/desktop.css">
+     <link rel="stylesheet" type="text/css" media="screen and (max-width: 1200px)" href="/static/css_main/model3d_mobile.css">
+     <link rel="stylesheet" type="text/css" media="screen and (min-width: 1200px)" href="/static/css_main/model3d_desktop.css">
+     <script src="/static/build offline/chart/Chart.min.js"></script>
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+</head>
+<body>
+     <div class="load">
+          <div class="loader">
+               <div></div>
+               <div></div>
+               <div></div>
+               <div></div>
+               <div></div>
+               <div></div>
+               <div></div>
+               <div></div>
+               <div></div>
+          </div>
+     </div>
+     <header>
+          <div class="header_fi">
+               <div class="logo_name">
+                    <img src="static/img/engenharia-quimica-logo.png" alt="logo engenharia" class="logo">  
+                    <h3>&nbsp;Modelagem 3D</h3>
+                    <div class="login_area" data-hover = "Fazer login">
+                         <i class="fa-solid fa-right-to-bracket"></i>
+                    </div>
+
+               </div>
+               <div class="menu">
+                    <i class="fa-solid fa-grip" style="font-size: 2.5rem; color:#3378c7;"></i>
+               </div>
+          </div>
+     </header>
+
+     <section>
+          <div class="container">
+               <div class="left">
+                    <div class="left_menu">
+                         <ul>
+                              <li><i class="fa-solid fa-diagram-project"></i>&nbsp;Diagrama de Fluxo</li>
+                              <li><i class="fa-solid fa-diagram-project"></i>&nbsp;Diagrama de Fluxo</li>
+                              <li><i class="fa-solid fa-industry"></i>&nbsp;Trocador de Calor</li>
+                              <li><i class="fa-solid fa-industry"></i>&nbsp;Torre de Resfriamento</li>
+                              <li><i class="fa-solid fa-industry"></i>&nbsp;Tanque</li>
+                         </ul>
+                    </div>
+               </div>
+               <div class="center">
+                    <div class="opcoes">
+                         <button class="btn_home" href=""><span class="text-hover"><i class="fa-solid fa-diagram-project"></i>&nbsp;PFD && P&ID</span></button>
+                         <button class="btn_model_3d" href=""><span class="text-hover"><i class="fa-brands fa-unity"></i>&nbsp;Modelagem 3D</span></button>
+                    </div>
+                    <div class="fluxogramas">
+
+                         <div class="article_side_mid_section">
+                              <h3 class="btn btn-3">Modelo 3D - Diagrama de Fluxo</h3>
+                              <!--
+                               <img onclick="on()" id="PFD" src="https://grid-template-teste-gabpsx.netlify.app/img/pfd.gif" alt="fluxogram_process">
+                            -->
+                            <model-viewer src="Projeto_1.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls shadow-intensity="2" environment-image="spruit_sunrise_1k_HDR.hdr" skybox-image="spruit_sunrise_1k_HDR.hdr" auto-rotate exposure="2.00" metallic-factor="5" shadow-softness="2" > </model-viewer>
+                              <div class="progress-bar hide" slot="progress-bar">
+                                   <div class="update-bar"></div>
+                              </div>
+                            </model-viewer>
+                         </div>
+                         <div class="article_side_mid_section">
+                              <h3 class="btn btn-3">Modelo 3D - Diagrama de Fluxo</h3>
+                              <!--
+                               <img onclick="on()" id="PFD" src="https://grid-template-teste-gabpsx.netlify.app/img/pfd.gif" alt="fluxogram_process">
+                            -->
+                            <model-viewer src="Projeto_2.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls  shadow-intensity="2" environment-image="spruit_sunrise_1k_HDR.hdr" skybox-image="spruit_sunrise_1k_HDR.hdr" auto-rotate exposure="1.02"> </model-viewer>
+                              <div class="progress-bar hide" slot="progress-bar">
+                                   <div class="update-bar"></div>
+                              </div>
+                            </model-viewer>
+                         </div>
+                         <div class="article_side_mid_section">
+                              <h3 class="btn btn-3">Modelo 3D - Trocador de Calor</h3>
+                              <!--
+                               <img onclick="on()" id="PFD" src="https://grid-template-teste-gabpsx.netlify.app/img/pfd.gif" alt="fluxogram_process">
+                            -->
+                            <model-viewer src="assets/trocador de calor.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls  shadow-intensity="2" environment-image="" skybox-image="" auto-rotate exposure="1.02"> </model-viewer>
+                              <div class="progress-bar hide" slot="progress-bar">
+                                   <div class="update-bar"></div>
+                              </div>
+                            </model-viewer>
+                         </div>
+                         <div class="article_side_mid_section">
+                              <h3 class="btn btn-3">Modelo 3D - Torre de Resfriamento</h3>
+                              <!--
+                               <img onclick="on()" id="PFD" src="https://grid-template-teste-gabpsx.netlify.app/img/pfd.gif" alt="fluxogram_process">
+                            -->
+                            <model-viewer src="assets/Torre de Resfriamento v1.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls  shadow-intensity="2" environment-image="" skybox-image="" auto-rotate exposure="1.02"> </model-viewer>
+                              <div class="progress-bar hide" slot="progress-bar">
+                                   <div class="update-bar"></div>
+                              </div>
+                            </model-viewer>
+                           
+                         </div>
+                         <div class="article_side_mid_section">
+                              <h3 class="btn btn-3">Modelo 3D - Tanque</h3>
+                              <!--
+                               <img onclick="on()" id="PFD" src="https://grid-template-teste-gabpsx.netlify.app/img/pfd.gif" alt="fluxogram_process">
+                            -->
+                            <model-viewer src="assets/tanque.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls  shadow-intensity="2" environment-image="" skybox-image="" auto-rotate exposure="1.02"> </model-viewer>
+                              <div class="progress-bar hide" slot="progress-bar">
+                                   <div class="update-bar"></div>
+                              </div>
+                            </model-viewer>
+                         </div>
+
+                    </div>  
+
+
+               </div>
+               <div class="right">
+                    <div class="right_menu menu-hidden">
+                         <ul>
+                              <li><i class="fa-solid fa-download"></i>&nbsp; Diagrama de Fluxo 3D - 1</li>
+                              <li><i class="fa-solid fa-download"></i>&nbsp; Diagrama de Fluxo 3D - 2</li>
+                              <li><i class="fa-solid fa-download"></i>&nbsp; Trocador de Calor</li>
+                              <li><i class="fa-solid fa-download"></i>&nbsp; Torre de Resfriamento&nbsp;</li>
+                              <li><i class="fa-solid fa-download"></i>&nbsp; Tanque</li>
+                              <li><i class="fa-solid fa-download"></i>&nbsp; Simulação 3D</li>
+                              <li class="projeto_completo"><i class="fas fa-play"></i>&nbsp; Simulação 3D&nbsp;<i class="fa-brands fa-unity"></i></li>
+                              <li class="close_menu"><i class="fa-solid fa-circle-xmark" style="color: #f55252;"></i>&nbsp;Fechar Menu</li>
+                         </ul>
+                    </div>
+               </div>
+          </div>
+          <footer>
+               <h4>Desenvolvido por GabpsX</h4>
+               <h4>&nbsp; v3.0.8</h4>
+               <h4>&nbsp; 2021 - 2023</h4>
+          </footer>
+     </section>
+
+</body>     
+
+ 
+
+       <dialog class="pfd_imagem_open">
+          <button class="fechar_pfd_imagem">Fechar</button>
+          <div class="img_dialog_pid">
+               <img src="static/build offline/pfd.gif" alt="fluxogram_process">
+          </div>
+       </dialog>
+       <dialog class="pid_imagem_open">
+          <button class="pid_imagem">Fechar</button>
+          <div class="img_dialog_pid">
+               <img src="static/build offline/PID.gif" alt="fluxogram_process">
+                    
+               <img src="static/build offline/pid.png" alt="fluxogram_process">
+          </div>
+
+       </dialog>
+       <script>
+
+
+          const menu = document.querySelector(".fa-grip");
+          const right_menu = document.querySelector(".right_menu");
+          const close_menu = document.querySelector(".close_menu");
+
+          menu.addEventListener("click", ()=> {
+
+               if (right_menu.classList.contains("menu-hidden")) {
+                    right_menu.classList.remove("menu-hidden");
+                    right_menu.classList.add("menu-visible");
+                    menu.style.color = "red";
+               } else {
+                    right_menu.classList.remove("menu-visible");
+                    right_menu.classList.add("menu-hidden");
+                    menu.style.color = "";
+               }
+
+          })
+          //fecha o menu
+          close_menu.addEventListener("click", ()=> {
+               right_menu.classList.remove("menu-visible");
+               right_menu.classList.add("menu-hidden");
+               menu.style.color = "";
+          })
+          //fecha o menu quando clicar fora
+          function fecharMenu(event) {
+               if (!menu.contains(event.target) && !right_menu.contains(event.target)) {
+               right_menu.classList.remove("menu-visible");
+               right_menu.classList.add("menu-hidden");
+               menu.style.color = "";
+               }
+          }
+          
+          // Adicionar evento de clique no documento
+          document.addEventListener("click", fecharMenu);
+       </script>
+
+       <script src="static/js/alterar_tex.js"></script>
+       <script type="importmap">
+          {
+             "imports": {
+                "three": "./build/three.module.js",
+                "three/addons/": "./jsm/"
+             }
+          }
+       </script>
+       <!-- 
+       <script type="module" src="Trocador_de_Calor.js"></script>   
+       <script type="module" src="Torre_de_Resfriamento.js"></script>   
+       <script type="module" src="tanque.js"></script>   
+       -->
+       <script type="module" src="model-viewer.min.js"></script>
+       <style>body{overflow-x: hidden !important;}</style>
+
+</html>

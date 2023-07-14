@@ -1,71 +1,80 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/auth.css">
-    <script src="https://kit.fontawesome.com/ce0639bc52.js" crossorigin="anonymous"></script>
-    <title>Auth</title>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Gerado automaticamente pelo Sistema ClienteXport</title>
+     <link rel="stylesheet" href="static/fontawesome/css/all.css">
+     <link rel="stylesheet" href="static/SISTEMA_LOGIN/CSS/main.css">
+     <link rel="stylesheet" type="text/css" media="screen and (min-width: 1200px)" href="static/SISTEMA_DASHBOARD/responsive.css"/>
+     <link rel="stylesheet" href="static/SISTEMA_LOGIN/CSS/animation.css">
+     <script src="/static/frameworks/jquery-3.6.0.min.js"></script>
+
+
 </head>
-
 <body>
-
-
-    <section class="container">
-
-        <div class="main_">
-
-           
-            <form>
-                <div class="img_ct"></div>
-                <div class="user">
-                    <i class="fa-solid fa-user fa-bounce"></i>
-                    <input id="user" maxlength="8" placeholder="  Usuário" type="text">
-                </div>
-                
-                <div class="pass">
-                    <i class="fa-solid fa-lock fa-shake"></i>
-                    <input id="pass" maxlength="10" placeholder="  Senha" type="password">
-                </div>
-                <!--
-               <input class="enter_bt" type="submit" value="Entrar"/>
-                -->
-
-               <input  type="button" class="enter_bt" onclick="location.href='index.html';" value="Entrar" />
-
-               <input class="criar_bt" type="submit" value="Criar Usuário"/>
-
-
-            </form>
-
-        </div>
-    </section>
-
+     <section class="animation_load">
+          <div class="typewriter">
+               <h1 class="texto"></h1>
+           </div>
+          <div class="loader">
+               <div></div>
+               <div></div>
+               <div></div>
+               <div></div>
+               <div></div>
+               <div></div>
+               <div></div>
+               <div></div>
+               <div></div>
+          </div>
+     </section>
+     <section class="container_form">
+          <div class="top-grid">
+               <i class="fa-solid fa-wifi"></i>
+               <p id="hora"></p>
+          </div>
+          <div class="left_container">
+               <form>
+                    <div class="image_user">
+          
+                    </div>
+                    <div class="user">
+                         <i class="fa-solid fa-user fa-bounce"></i>
+                         <input placeholder="Usuário" type="text" aria-autocomplete="none" class="user_" required>
+                     </div>
+     
+                     <div class="pass">
+                         <i class="fa-solid fa-lock fa-shake"></i>
+                         <input placeholder="Senha" type="password" aria-autocomplete="none" class="pass_" id="pass" required>
+                     </div>
+                                     
+                    <button class="autenticar_usuario">Entrar</button>
+                    
+                    <div class="mostrar_senha">
+                         <input type="checkbox" onclick="showPassword.mostrar_pass();"><h4>Mostrar senha</h4>
+                    </div>
+                    <button class="criar_usuario">Criar Usuário</button>
+               </form>
+          </div>
+          <div class="pop-up" id="popUp">
+               <h4 class="pop-mensagem">Mensagem</h4>
+               <div class="barra-progresso"></div>
+          </div>
+     </section>
+     
+        
+        
+     <script src="/static/SISTEMA_LOGIN/JS/get_date.js"></script>
+     <script type="module" src="/static/SISTEMA_LOGIN/JS/popup.js"></script>
+     <script  src="/static/SISTEMA_LOGIN/JS/try_connection.js"></script>
+     <script type="module" src="/static/SISTEMA_LOGIN/JS/redir.js"></script>
+     <script  src="/static/SISTEMA_LOGIN/JS/inps.js"></script>
+     <script type="module" src="/static/SISTEMA_LOGIN/JS/entrar_no_sistema.js"></script>
+     <script type="module" src="/static/SISTEMA_LOGIN/JS/typewriter.js"></script>
+     <script src="static/JS/atv.js"></script>
 </body>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<style>
-     .img_ct{
-         background: url(assets/user.png) no-repeat;
-         background-position: center;
-         background-size: 10em;
-     }
-</style>
-
-
+<style>body{overflow-y: hidden !important;}</style>
 
 </html>

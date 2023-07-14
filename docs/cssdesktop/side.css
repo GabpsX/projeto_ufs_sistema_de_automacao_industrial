@@ -38,10 +38,8 @@
         padding: 0.5px;
         background-color: var(--normal-mode-container-menu);
         margin: 0;
-        padding: 0;
         display: flex;
-     
-    
+        overflow: hidden;
         flex-direction: column;
     
       

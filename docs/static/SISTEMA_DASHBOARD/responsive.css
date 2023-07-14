@@ -1,0 +1,158 @@
+ 
+/* Para resoluções entre 1367x767 e 1380x780 */
+@media (min-width: 1367px) and (max-width: 1380px) {
+     html {
+         zoom: 1.05;
+    }
+}
+/* Para resoluções entre 1381x781 e 1390x790 */
+ @media (min-width: 1381px) and (max-width: 1390px) {
+     html {
+         zoom: 1.07;
+    }
+}
+/* Para resoluções entre 1391x791 e 1400x800 */
+ @media (min-width: 1391px) and (max-width: 1400px) {
+     html {
+         zoom: 1.09;
+    }
+}
+/* Para resoluções entre 1401x801 e 1410x810 */
+ @media (min-width: 1401px) and (max-width: 1410px) {
+     html {
+         zoom: 1.12;
+    }
+}
+/* Para resoluções entre 1411x811 e 1420x820 */
+ @media (min-width: 1411px) and (max-width: 1420px) {
+     html {
+         zoom: 1.14;
+    }
+}
+/* Para resoluções entre 1421x821 e 1430x830 */
+ @media (min-width: 1421px) and (max-width: 1430px) {
+     html {
+         zoom: 1.16;
+    }
+}
+/* Para resoluções entre 1431x831 e 1440x840 */
+ @media (min-width: 1431px) and (max-width: 1440px) {
+     html {
+         zoom: 1.15;
+    }
+}
+ @media (min-width: 1440px) and (max-width: 1919px) {
+     html{
+         zoom: 1.28;
+    }
+}
+/* Para resoluções entre 1080p (1920x1080) e 2K (2560x1440) */
+ @media (min-width: 1920px) and (max-width: 2282px) {
+     html{
+         zoom: 1.5;
+    }
+}
+
+@media (min-width: 2282px) and (max-width: 2390.4px) {
+     html {
+       zoom: 1.4;
+     }
+   }
+@media (min-width: 2390.5px) and (max-width:  2559.9px) {
+     html {
+       zoom: 1.5;
+     }
+}
+      
+
+/* Para resoluções de 2K (2560x1440) */
+ @media (min-width: 2560px) {
+     html{
+         zoom: 2.05;
+    }
+}
+/* Para resoluções de 4K (3840x2160) */
+ @media (min-width: 3840px) {
+     html{
+         zoom: 3.1;
+    }
+}
+/* Para resoluções de 5K (5120x2880) */
+ @media (min-width: 5120px) {
+     html{
+         zoom: 3.8;
+    }
+}
+/* Para resoluções de 6K (6144x3456) */
+ @media (min-width: 6144px) {
+     html{
+         zoom: 4.8;
+    }
+}
+/* Para resoluções de 8K (7680x4320) */
+ @media (min-width: 7680px) {
+     html{
+         zoom: 5.8;
+    }
+}
+/* Para resoluções entre 1440px e 1455px */
+ @media (min-width: 1440px) and (max-width: 1455px) {
+     html {
+         zoom: 1.105;
+    }
+}
+/* Para resoluções entre 1456px e 1471px */
+ @media (min-width: 1456px) and (max-width: 1471px) {
+     html {
+         zoom: 1.11;
+    }
+}
+/* Para resoluções entre 1472px e 1487px */
+ @media (min-width: 1472px) and (max-width: 1487px) {
+     html {
+         zoom: 1.115;
+    }
+}
+/* Para resoluções entre 1488px e 1503px */
+ @media (min-width: 1488px) and (max-width: 1503px) {
+     html {
+         zoom: 1.12;
+    }
+}
+/* Para resoluções entre 1504px e 1519px */
+ @media (min-width: 1504px) and (max-width: 1519px) {
+     html {
+         zoom: 1.125;
+    }
+}
+/* Para resoluções entre 1520px e 1535px */
+ @media (min-width: 1520px) and (max-width: 1535px) {
+     html {
+         zoom: 1.13;
+    }
+}
+/* Para resoluções entre 1536px e 1551px */
+ @media (min-width: 1536px) and (max-width: 1551px) {
+     html {
+         zoom: 1.135;
+    }
+}
+/* Para resoluções entre 1552px e 1567px */
+ @media (min-width: 1552px) and (max-width: 1567px) {
+     html {
+         zoom: 1.14;
+    }
+}
+/* Para resoluções entre 1568px e 1583px */
+ @media (min-width: 1568px) and (max-width: 1583px) {
+     html {
+         zoom: 1.145;
+    }
+}
+/* Para resoluções entre 1584px e 1599px */
+ @media (min-width: 1584px) and (max-width: 1599px) {
+     html {
+         zoom: 1.15;
+    }
+}
+ 

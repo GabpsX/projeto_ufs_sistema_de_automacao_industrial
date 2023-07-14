@@ -9,7 +9,7 @@ import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 
 
 const canvas = document.querySelector('.webgl1');
-
+/*
 let button = document.getElementById("fullscreen2");
 button.addEventListener('click', function() {
     if (canvas.requestFullscreen) {
@@ -20,7 +20,7 @@ button.addEventListener('click', function() {
         canvas.webkitRequestFullscreen();
     }
 });
-
+*/
  
 
 
@@ -77,7 +77,7 @@ const sizes = {
 var camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 1000 );
 camera.position.z = 200;
 
-camera.position.set( 0, 0, 100 ); //Ajuste a posição da câmera de acordo com a posição do objeto
+camera.position.set( 0, 0, 200 ); //Ajuste a posição da câmera de acordo com a posição do objeto
 camera.lookAt( 0, 0, 0 ); //Faz a câmera olhar para o centro do objeto
 
 

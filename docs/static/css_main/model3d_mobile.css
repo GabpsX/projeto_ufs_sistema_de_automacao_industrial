@@ -1,0 +1,13 @@
+.article_side_mid_section{
+     height: 350px;
+     max-height: 450px !important;
+}
+.article_side_mid_section:last-child {
+     margin-bottom: 60px;
+}
+model-viewer{
+     width: 90%;
+     height: 80%;
+     border-radius: 5px;
+}
+

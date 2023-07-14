@@ -1,0 +1,86 @@
+use std::f64::consts::PI;
+
+struct TrechoPerdaCarga {
+    nome: String,
+    vazao: f64,
+    constante: f64,
+    diametro: f64,
+    distancia: f64,
+    coeficiente_k: f64,
+}
+
+impl TrechoPerdaCarga {
+    fn calcular_perda_de_carga(&self) {
+        println!("{}", self.nome);
+        let J: f64 = 10.65 * (self.vazao.powf(1.25) / (self.constante.powf(1.85) * self.diametro.powf(4.87)));
+        let hf: f64 = J * self.distancia;
+
+        println!("Perda de Carga Distribuída : {:.5} m.", hf);
+
+        let area: f64 = PI * (self.diametro.powi(2) / 4.0);
+        let velocidade: f64 = self.vazao / area;
+
+        println!("Velocidade: {:.4} m/s", velocidade);
+
+        let deltaH: f64 = self.coeficiente_k * ((velocidade.powi(2)) / 2.0 * 9.865);
+
+        println!("Perda de Carga Localizada: {:.4} m", deltaH);
+
+        let perda_total: f64 = hf + deltaH;
+        println!("Perda de Carga Total: {:.4} m", perda_total);
+        println!("-----------------------------");
+    }
+}
+
+fn main() {
+    let trecho_ab = TrechoPerdaCarga {
+        nome: String::from("AB"),
+        vazao: 0.000207,
+        constante: 150.0,
+        diametro: 0.15,
+        distancia: 1.5,
+        coeficiente_k: 4.1,
+    };
+
+    let trecho_cd = TrechoPerdaCarga {
+        nome: String::from("CD"),
+        vazao: 0.000207,
+        constante: 150.0,
+        diametro: 0.15,
+        distancia: 3.5,
+        coeficiente_k: 5.0,
+    };
+
+    let trecho_ef = TrechoPerdaCarga {
+        nome: String::from("EF"),
+        vazao: 0.000207,
+        constante: 150.0,
+        diametro: 0.15,
+        distancia: 2.5,
+        coeficiente_k: 3.2,
+    };
+
+    let trecho_gh = TrechoPerdaCarga {
+        nome: String::from("GH"),
+        vazao: 0.000310,
+        constante: 150.0,
+        diametro: 0.15,
+        distancia: 1.8,
+        coeficiente_k: 3.2,
+    };
+
+    let trecho_ji = TrechoPerdaCarga {
+        nome: String::from("JI"),
+        vazao: 0.000310,
+        constante: 150.0,
+        diametro: 0.15,
+        distancia: 5.2,
+        coeficiente_k: 4.1,
+    };
+
+    trecho_ab.calcular_perda_de_carga();
+    trecho_cd.calcular_perda_de_carga();
+    trecho_ef.calcular_perda_de_carga();
+    trecho_gh.calcular_perda_de_carga();
+    trecho_ji.calcular_perda_de_carga();
+}

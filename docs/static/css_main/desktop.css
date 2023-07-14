@@ -1,0 +1,253 @@
+@import url(/min.css);
+.container {
+     display: flex;
+     flex-direction: row;
+     grid-gap: 10px;
+
+}
+
+.opcoes{
+     background-color: var(--mainColorDiv);
+     padding: 1em;
+     height: 90px;
+     border-radius: var(--padrBorderRadius);
+     display: var(--diplayFlex);
+     align-items: var(--alignCenter);
+     justify-content: var(--justifyContentBetween);
+     justify-content: var(--justifyContentEvenly);
+     box-shadow: var(--boxShad);
+}
+
+.article_side_mid_section {
+     margin: 1rem 0 1rem 0 ;
+     padding: 1rem;
+     background-color: var(--mainColorDiv);
+     border-radius: var(--padrBorderRadius);
+     display: var(--diplayFlex);
+     align-items: var(--alignCenter);
+     justify-content: var(--justifyContentBetween);
+     justify-content: var(--justifyContentEvenly);
+     box-shadow: var(--boxShad);
+     display: var(--diplayFlex);
+     flex-direction: column;
+     text-align: center;
+     overflow: hidden;
+}
+
+.left_menu, .right_menu {
+     box-shadow: var(--boxShad);
+     background-color: var(--mainColorDiv);
+     border-radius: var(--padrBorderRadius);
+     position: var(--positionSticky);
+     position: sticky;
+     top: 96px;
+}
+
+.left_menu, .right_menu{
+     padding: 3rem;
+     width: 100%;
+}
+
+.left_menu li:first-child, .right_menu li:first-child {
+     margin-top: 0px !important;
+}
+.left_menu li , .right_menu li{
+     background-color: rgb(236, 233, 233);
+     border-radius: 5px;
+     margin-top: 10px;
+     height: 40px;
+     line-height: 40px; 
+     padding: 0 10px; 
+     transition: background-color 0.3s;
+}
+   
+.left_menu li:hover,  .right_menu li:hover {
+     background-color: #635e5e;
+     color: white;
+     
+}
+
+#PFD, #PID{
+     width: 90%;
+}
+#img_load_fireb {
+     width:100%
+}
+.logo_name {
+     display: var(--diplayFlex);
+     align-items: var(--alignCenter);
+}
+.logo_name > *:last-child {
+     margin-left: 1rem;
+}
+.logo{
+     width: 50px;
+}
+
+.analise_tecnica, .instrumentacao, .calculos {
+     border-radius: .3em;
+     font-size: 1em;
+     padding-top: 3%;
+     padding-bottom: 3%;
+     background-color: #ffffff;
+     text-align: left;
+     color: white;
+     margin-bottom: 0;
+     position: relative;
+     margin-bottom: 1rem;
+}
+
+.calculos > * {
+     color: #2a2a2b !important;
+     font-size: 1.1rem;
+     line-height: 2;
+}
+td,th{
+     margin-top: 10px;
+     font-size: 1.0em;
+     color: white;
+     font-weight: 700;
+}
+strong{
+     color: white;
+}
+td,th{
+     background-color: #426480;
+     border-radius: 3px;
+     height: 30px;
+}
+table{
+     padding: 0.5rem;
+     width: 100%;
+}
+
+
+.collapsible {
+     background-color:#ffffff;
+     color: rgb(58, 54, 54);
+     cursor: pointer;
+     padding: 18px;
+     width: 100%;
+     border: none;
+     text-align: center;
+     outline: none;
+     font-size: 15px;
+   }
+.active, .collapsible:hover {
+   background-color: rgb(243, 242, 242);
+}
+
+
+
+#add_fc_mychart,
+#add_img {
+  color: rgb(58, 54, 54);
+  border: 4px solid rgb(45, 201, 180);
+  border-radius: 2px;
+  background-color: white;
+  color: black;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: opacity 0.5s ease-in-out;
+  opacity: 1;
+}
+
+#add_fc_mychart:hover,
+#add_img:hover {
+  background-color: rgb(45, 201, 180);
+  color: white;
+  opacity: 0.8;
+}
+
+footer {
+     width: 100%;
+     position: fixed;
+     background-color: #2a2a2b;
+     height: 30px;
+     bottom: 0;
+     color: white;
+     z-index: 8999;
+     display: var(--diplayFlex);
+     align-items: var(--alignCenter);
+     justify-content: var(--alignCenter);
+}
+
+
+dialog {
+     padding-top: 15px;
+     border-radius: 10px;
+     position: fixed;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     width: 1000px;
+     height: 700px;
+     background-color: #fff;
+     border: 1px solid #000;
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+     z-index: 9999;
+     overflow-x: hidden;
+}
+ 
+/* Estilos para a camada de sobreposição escura */
+dialog::backdrop {
+     background-color: rgba(0, 0, 0, 0.5);
+}
+ 
+/* Estilos para o botão de fechar */
+.close-button {
+     position: absolute;
+     top: 10px;
+     right: 10px;
+     background-color: #f00;
+     color: #fff;
+     padding: 10px 15px;
+     border-radius: 5px;
+     border: none;
+     cursor: pointer;
+}
+
+.img_dialog_pid{
+     display: var(--diplayFlex);
+     align-items: var(--alignCenter);
+     justify-content:  var(--alignCenter);
+     flex-direction: column;
+     width: 100%;
+     transition: transform 500ms ease-in-out;
+}
+.img_dialog_pid:hover {
+     transform: scale(1.05);
+     transition: transform 500ms ease-in-out;
+}
+.img_dialog_pid > * {
+     width: 90%;
+     display: block;
+     margin: 0 auto;
+}
+.pid_imagem_open .fechar_pfd_imagem{
+     text-align: center;
+     position: relative;
+     padding: 1rem;
+}
+.pid_imagem, .fechar_pfd_imagem{
+     position: absolute;
+     top: 20px;
+     right: 20px;
+     border-radius: 5px;
+     z-index: 9999;
+     background-color: #2a2a2b;
+     color: white;
+     padding: 10px 20px;
+     border: 0;
+     width: 100px;
+}
+.center {
+     min-width: 600px;
+     max-width: 600px;
+}
+.menu{
+     display: none;
+}
+.close_menu{
+     display: none;
+}

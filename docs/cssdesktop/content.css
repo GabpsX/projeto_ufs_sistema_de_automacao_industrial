@@ -324,5 +324,8 @@
     display: none;
     justify-items: center;
   }
-  
+  #article_side_mid_section {
+    padding: 2rem;
+    border: 0;
+  }
 }

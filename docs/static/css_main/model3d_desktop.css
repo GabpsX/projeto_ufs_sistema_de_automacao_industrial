@@ -1,0 +1,9 @@
+.article_side_mid_section{
+     height: 350px;
+     max-height: 450px !important;
+}
+model-viewer{
+     width: 90%;
+     height: 80%;
+     border-radius: 5px;
+}
