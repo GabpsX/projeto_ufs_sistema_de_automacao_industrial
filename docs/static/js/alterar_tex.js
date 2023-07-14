@@ -61,8 +61,8 @@ try {
           cl_instance.time_to_reload("index.html");
      });
 }
-catch {
-     console.log("erro: elemento não encontrado");
+catch (error) {
+     console.log("erro: elemento não encontrado ->", error);
 }
 
 try {
@@ -70,8 +70,8 @@ try {
           cl_instance.time_to_reload("index2.html");
      });
 }
-catch {
-     console.log("erro: elemento não encontrado");
+catch (error) {
+     console.log("erro: elemento não encontrado ->", error);
 }
 
 try {
@@ -79,8 +79,8 @@ try {
           cl_instance.time_to_reload("projeto_completo.html");
      });
 }
-catch {
-     console.log("erro: elemento não encontrado");
+catch (error) {
+     console.log("erro: elemento não encontrado ->", error);
 }
 
 try {
@@ -90,8 +90,8 @@ try {
      });
      
 }
-catch {
-     console.log("erro: elemento não encontrado");
+catch (error) {
+     console.log("erro: elemento não encontrado ->", error);
 }
 
 
