@@ -55,17 +55,49 @@ setInterval(() => {
 }
 
 const cl_instance = new Redir();
-const btn_home = document.querySelector(".btn_home").addEventListener("click", () => {
-     cl_instance.time_to_reload("index.html");
-});
-const btn_model_3d = document.querySelector(".btn_model_3d").addEventListener("click", () => {
-     cl_instance.time_to_reload("index2.html");
-});
-const projeto_completo = document.querySelector(".projeto_completo").addEventListener("click", () => {
-     cl_instance.time_to_reload("projeto_completo.html");
-})
 
-const login_area = document.querySelector(".login_area").addEventListener("click", () => {
-     cl_instance.time_to_reload("login.html");
-})
+try {
+     const btn_home = document.querySelector(".btn_home").addEventListener("click", () => {
+          cl_instance.time_to_reload("index.html");
+     });
+}
+catch {
+     console.log("erro: elemento não encontrado");
+}
+
+try {
+     const btn_model_3d = document.querySelector(".btn_model_3d").addEventListener("click", () => {
+          cl_instance.time_to_reload("index2.html");
+     });
+}
+catch {
+     console.log("erro: elemento não encontrado");
+}
+
+try {
+     const projeto_completo = document.querySelector(".projeto_completo").addEventListener("click", () => {
+          cl_instance.time_to_reload("projeto_completo.html");
+     });
+}
+catch {
+     console.log("erro: elemento não encontrado");
+}
+
+try {
+     const login_area = document.querySelector(".login_area").addEventListener("click", () => {
+          console.log("redire");
+          cl_instance.time_to_reload("login.html");
+     });
+     
+}
+catch {
+     console.log("erro: elemento não encontrado");
+}
+
+
+
+
+
+
+
 
