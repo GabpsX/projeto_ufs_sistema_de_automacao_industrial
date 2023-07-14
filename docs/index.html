@@ -401,17 +401,14 @@
      document.getElementById('secaoTransversal').innerHTML = 
           '<h5>'+
           'd = 150 mm <br>' +
-          'φ = π * (d^2/4) <br>' +
-          'φ = 3.14 * (150^2/4) <br>' +
-          'φ ≈ 17.671 mm² <br>' +
-          'φ(m²) = 17.671 / 1e+6 = 0,017671 m²' +
+          '\\(φ = (π \\times \\left(\\frac{{r^2}}{{1000}}\\right)^2)\\)'+ '<br>' +
+          'φ(m²) = 0,017671' +
           '</h5>'
           ;
  
      // Perda de Carga de Darcy-Weisbach
      document.getElementById('perdaCarga').innerHTML =
-
-
+     
                '\\(J = \\frac{{10.65 \\times Q^{1.25}}}{{C^{1.85} \\times D^{4.87}}}\\) <br>' + 
 
                '\\(Δh = K \\times \\left(\\frac{{V^2}}{{2g}}\\right)\\) <br>' + 

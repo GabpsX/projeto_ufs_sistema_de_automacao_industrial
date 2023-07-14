@@ -141,7 +141,10 @@ header {
 }
 
 
-
+#secaoTransversal {
+     overflow-wrap: break-word;
+     line-height:3;
+}
 #balancoEnergia {
      overflow-wrap: break-word;
      line-height: 3;
