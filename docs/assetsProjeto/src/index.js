@@ -20,8 +20,8 @@ function main() {
       // Configuração da câmera
       const camera = new BABYLON.ArcRotateCamera("camera", -Math.PI / 2, Math.PI / 4, 20, BABYLON.Vector3.Zero(), scene);
 
-      camera.lowerRadiusLimit = 8; // Distância mínima
-      camera.upperRadiusLimit = 40; //d max  
+      camera.lowerRadiusLimit = 10; // Distância mínima
+      camera.upperRadiusLimit = 35; //d max  
 
       camera.upperBetaLimit = Math.PI / 2.3;
 
