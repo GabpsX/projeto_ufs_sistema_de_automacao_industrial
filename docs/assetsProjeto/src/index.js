@@ -44,7 +44,7 @@ function main() {
       const skyboxMaterial = new BABYLON.StandardMaterial("skyboxMaterial", scene);
       skyboxMaterial.backFaceCulling = false;
 
-      const skyboxTexture = new BABYLON.CubeTexture("/assetsProjeto/textures/skybox/", scene);
+      const skyboxTexture = new BABYLON.CubeTexture("assetsProjeto/skybox", scene);
       skyboxMaterial.reflectionTexture = skyboxTexture;
 
       const skybox = BABYLON.MeshBuilder.CreateBox("skybox", {
