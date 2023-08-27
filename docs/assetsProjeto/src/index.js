@@ -71,7 +71,7 @@ function main() {
       scene.fogMode = BABYLON.Scene.FOGMODE_LINEAR;
       scene.fogColor = scene.clearColor;
       scene.fogStart = 5.0;
-      scene.fogEnd = 140.0;
+      scene.fogEnd = 120.0;
       scene.gravity = new BABYLON.Vector3(0, -0.9, 0);
       scene.collisionsEnabled = true;
       camera.checkCollisions = true;
