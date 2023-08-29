@@ -1,4 +1,4 @@
-@import url(/min.css);
+@import url(min.css);
 .container {
      display: flex;
      flex-direction: row;
