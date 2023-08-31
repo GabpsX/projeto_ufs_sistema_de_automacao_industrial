@@ -1,3 +1,4 @@
+//
 async function downloadImageUsingFetch(url) {
   try {
     let url_download;
